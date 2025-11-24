@@ -1,0 +1,94 @@
+.header {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 80px 20px 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  overflow: visible;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  margin-top: -90px;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -60px;
+  margin-left: 40%;
+}
+
+.logoCircle {
+  background-color: #fcfcfc;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoTextWrapper {
+  display: flex;
+  align-items: baseline;
+  line-height: 1;
+  font-family: var(--font-body, sans-serif);
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.logoSymbolMain {
+  color: var(--color-main);
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.logoTextDark {
+  color: var(--color-dark);
+}
+
+.tagline {
+  font-family: var(--font-body, sans-serif);
+  font-size: 1.75rem;
+  color: var(--color-dark);
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navLink {
+  text-decoration: none;
+  font-family: var(--font-title, sans-serif);
+  color: var(--color-main);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.navLink:hover {
+  color: var(--color-main);
+}

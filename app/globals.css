@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* Garante que a altura da página seja 100% da viewport */
+  height: 100%;
+  /* Força a remoção de qualquer espaçamento oculto */
+  overflow-x: hidden;
+}
+
+:root {
+  --color-main: #0384fa;
+  --color-secondary: #7bc0e3;
+  --color-dark: #292525;
+}
