@@ -4,9 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  /* Garante que a altura da página seja 100% da viewport */
   height: 100%;
-  /* Força a remoção de qualquer espaçamento oculto */
   overflow-x: hidden;
 }
 
