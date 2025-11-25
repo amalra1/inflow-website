@@ -6,6 +6,7 @@ export default function IntroSection() {
     <section className={styles.introSection}>
       <div className={styles.innerWrapper}>
         <div className={styles.textColumn}>
+          <div className={styles.blueLine}></div>
           <h1 className={styles.title}>Software House</h1>
           <p className={styles.subtitle}>
             Especializada em desenvolvimento sob medida, unindo tecnologia e
