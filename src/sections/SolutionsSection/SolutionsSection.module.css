@@ -1,6 +1,6 @@
 .solutionsSection {
   background-color: #dff0ff;
-  padding-top: 180px;
+  padding-top: 80px;
   padding-bottom: 80px;
 }
 
@@ -15,7 +15,7 @@
 .title {
   font-family: var(--font-title, sans-serif);
   color: var(--color-dark);
-  font-size: 3rem;
+  font-size: 2.2rem;
   margin-bottom: 60px;
   text-transform: none;
 }

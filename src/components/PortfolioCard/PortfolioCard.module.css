@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.descriptionWrapper {
+  padding: 20px 0;
+  color: #000000;
+  text-align: left;
+}
+
+.description {
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+}
