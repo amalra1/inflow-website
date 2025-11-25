@@ -1,21 +1,18 @@
 import Link from 'next/link';
 import styles from './Header.module.css';
+import Button from '../Button/Button';
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.headerLeft}>
-        <div className={styles.logoContainer}>
-          <div className={styles.logoCircle}>
-            <span className={styles.logoWrapper}>
-              <span className={styles.logoTextWrapper}>
-                <span className={styles.logoSymbolMain}>{'<'}</span>
-                <span className={styles.logoTextDark}>Inflow</span>
-                <span className={styles.logoSymbolMain}>{'>'}</span>
-              </span>
-              <div className={styles.tagline}>Software House</div>
-            </span>
-          </div>
+        <div className={styles.logoCircle}>
+          <span className={styles.logoTextWrapper}>
+            <span className={styles.logoSymbolMain}>{'<'}</span>
+            <span className={styles.logoTextDark}>Inflow</span>
+            <span className={styles.logoSymbolMain}>{'>'}</span>
+          </span>
+          <div className={styles.tagline}>Software House</div>
         </div>
       </div>
 
@@ -34,6 +31,15 @@ export default function Header() {
             Portfólio
           </Link>
         </nav>
+
+        <Button
+          href="/contato"
+          backgroundColor="white"
+          textColor="var(--color-main)"
+          borderColor="#07003b17"
+        >
+          Fale conosco
+        </Button>
       </div>
     </header>
   );

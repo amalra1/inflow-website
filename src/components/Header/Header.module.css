@@ -20,15 +20,8 @@
 .headerRight {
   display: flex;
   align-items: center;
-  margin-top: -90px;
-}
-
-.logoContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -60px;
-  margin-left: 40%;
+  margin-top: -100px;
+  gap: 30px;
 }
 
 .logoCircle {
@@ -37,15 +30,11 @@
   height: 20rem;
   border-radius: 50%;
 
+  margin-top: -50px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-
-.logoWrapper {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
