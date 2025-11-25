@@ -1,0 +1,27 @@
+.solutionsSection {
+  background-color: #dff0ff;
+  padding-top: 180px;
+  padding-bottom: 80px;
+}
+
+.innerWrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-title, sans-serif);
+  color: var(--color-dark);
+  font-size: 3rem;
+  margin-bottom: 60px;
+  text-transform: none;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}

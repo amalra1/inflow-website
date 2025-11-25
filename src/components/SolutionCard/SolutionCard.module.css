@@ -1,0 +1,87 @@
+.card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: left;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-main);
+}
+
+.iconContainer {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 30px;
+}
+
+.iconBackground {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #dff0ff;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.iconImage {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.title {
+  font-family: var(--font-title, sans-serif);
+  color: var(--color-dark);
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.description {
+  font-family: var(--font-body, sans-serif);
+  color: #555555;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.link {
+  font-family: var(--font-body, sans-serif);
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--color-dark);
+}
