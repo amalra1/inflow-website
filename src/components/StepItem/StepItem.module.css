@@ -1,0 +1,49 @@
+.stepItem {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.stepNumberCircle {
+  flex-shrink: 0;
+  width: 75px;
+  height: 75px;
+  min-width: 50px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 25px 12px rgba(0, 0, 0, 0.1);
+
+  color: var(--color-secondary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-body, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  position: relative;
+  z-index: 2;
+}
+
+.content {
+  padding-left: 20px;
+}
+
+.title {
+  font-family: var(--font-title, sans-serif);
+  color: var(--color-main);
+  font-size: 1.25rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-family: var(--font-body, sans-serif);
+  color: var(--color-dark);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}

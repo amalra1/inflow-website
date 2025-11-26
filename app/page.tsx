@@ -2,6 +2,7 @@ import Header from '@/src/components/Header/Header';
 import IntroSection from '@/src/sections/IntroSection/IntroSection';
 import SolutionsSection from '@/src/sections/SolutionsSection/SolutionsSection';
 import PortfolioSection from '@/src/sections/PortfolioSection/PortfolioSection';
+import StepsSection from '@/src/sections/StepsSection/StepsSection';
 import styles from './page.module.css';
 
 export default function HomePage() {
@@ -11,6 +12,7 @@ export default function HomePage() {
       <IntroSection />
       <SolutionsSection />
       <PortfolioSection />
+      <StepsSection />
     </main>
   );
 }
