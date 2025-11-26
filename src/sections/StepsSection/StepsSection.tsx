@@ -1,5 +1,6 @@
 import styles from './StepsSection.module.css';
 import StepItem from '@/src/components/StepItem/StepItem';
+import CircleDesign from '@/src/components/CircleDesign/CircleDesign';
 
 export default function StepsSection() {
   const steps = [
@@ -27,6 +28,24 @@ export default function StepsSection() {
 
   return (
     <section className={styles.stepsSection}>
+      <CircleDesign
+        color="var(--color-secondary)"
+        visibility={{ circle1: true, circle2: true, circle3: true }}
+        className={styles.circleDesignTopLeft}
+      />
+
+      <CircleDesign
+        color="var(--color-secondary)"
+        visibility={{ circle1: true, circle2: true, circle3: true }}
+        className={styles.circleDesignTopRight}
+      />
+
+      <CircleDesign
+        color="#0d0f45"
+        visibility={{ circle1: true, circle2: true, circle3: true }}
+        className={styles.circleDesignPlaceholder}
+      />
+
       <div className={styles.innerWrapper}>
         <h2 className={styles.sectionTitle}>
           Transforme sua ideia em

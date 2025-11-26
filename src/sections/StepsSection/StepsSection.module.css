@@ -74,4 +74,27 @@
   font-family: var(--font-title, sans-serif);
   font-size: 2rem;
   color: white;
+  z-index: 2;
+}
+
+.circleDesignTopLeft {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-130px) translateY(-580px);
+}
+
+.circleDesignTopRight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(84%) translateY(-50%);
+}
+
+.circleDesignPlaceholder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(57%) translateY(15%);
+  z-index: 0;
 }
