@@ -1,6 +1,7 @@
 import styles from './PortfolioSection.module.css';
 import PortfolioCard from '@/src/components/PortfolioCard/PortfolioCard';
 import Button from '@/src/components/Button/Button';
+import CircleDesign from '@/src/components/CircleDesign/CircleDesign';
 
 export default function PortfolioSection() {
   const portfolioItems = [
@@ -26,6 +27,17 @@ export default function PortfolioSection() {
 
   return (
     <section className={styles.portfolioSection}>
+      <CircleDesign
+        color="var(--color-secondary)"
+        visibility={{ circle1: true, circle2: true, circle3: true }}
+      />
+
+      <CircleDesign
+        color="var(--color-secondary)"
+        visibility={{ circle1: false, circle2: false, circle3: true }}
+        className={styles.circleDesignRight}
+      />
+
       <div className={styles.innerWrapper}>
         <h2 className={styles.title}>Portfólio</h2>
 
@@ -36,15 +48,17 @@ export default function PortfolioSection() {
             </svg>
           </div>
 
-          <div className={styles.cardGrid}>
-            {portfolioItems.map((item, index) => (
-              <PortfolioCard
-                key={index}
-                imageUrl={item.imageUrl}
-                description={item.description}
-                link={item.link}
-              />
-            ))}
+          <div className={styles.carouselWrapper}>
+            <div className={styles.cardGrid}>
+              {portfolioItems.map((item, index) => (
+                <PortfolioCard
+                  key={index}
+                  imageUrl={item.imageUrl}
+                  description={item.description}
+                  link={item.link}
+                />
+              ))}
+            </div>
           </div>
 
           <div className={styles.arrowRight}>

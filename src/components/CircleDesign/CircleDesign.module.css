@@ -1,0 +1,41 @@
+.base {
+  position: absolute;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.circle-1 {
+  top: 25%;
+  left: 28px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.2;
+
+  border-right-color: transparent !important;
+  transform: rotate(45deg);
+}
+
+.circle-2 {
+  top: 28%;
+  left: 60px;
+  width: 240px;
+  height: 240px;
+  opacity: 0.2;
+
+  border-left-color: transparent !important;
+  transform: rotate(60deg);
+}
+
+.circle-3 {
+  top: 31%;
+  left: 90px;
+  width: 180px;
+  height: 180px;
+  opacity: 0.2;
+
+  border-bottom-color: transparent !important;
+  transform: rotate(15deg);
+}
