@@ -1,0 +1,77 @@
+.footerSection {
+  color: white;
+}
+
+.topFooter {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+.innerWrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.logoColumn {
+  flex: 2;
+}
+
+.column {
+  flex: 1;
+}
+
+.logo {
+  margin-bottom: 5px;
+  padding-right: 30px;
+}
+
+.columnTitle {
+  font-family: var(--font-title, sans-serif);
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: black;
+}
+.navList li {
+  margin-bottom: 8px;
+}
+
+.navList a,
+.contactInfo {
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.95rem;
+  color: var(--color-dark);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.navList a:hover {
+  opacity: 1;
+  color: var(--color-main);
+}
+
+.contactInfo {
+  margin: 5px 0;
+  color: var(--color-dark);
+}
+
+.bottomFooter {
+  background-color: var(--color-main);
+  padding-bottom: 10px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.copyright {
+  font-family: var(--font-title, sans-serif);
+  color: white;
+  font-size: 1rem;
+}

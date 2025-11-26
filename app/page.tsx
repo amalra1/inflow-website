@@ -4,6 +4,7 @@ import SolutionsSection from '@/src/sections/SolutionsSection/SolutionsSection';
 import PortfolioSection from '@/src/sections/PortfolioSection/PortfolioSection';
 import StepsSection from '@/src/sections/StepsSection/StepsSection';
 import ContactSection from '@/src/sections/ContactSection/ContactSection';
+import Footer from '@/src/components/Footer/Footer';
 import styles from './page.module.css';
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
       <PortfolioSection />
       <StepsSection />
       <ContactSection title="Tem interesse em trabalhar conosco?" />
+      <Footer />
     </main>
   );
 }
