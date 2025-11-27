@@ -2,6 +2,7 @@ import Footer from '@/src/components/Footer/Footer';
 import styles from './page.module.css';
 import Header from '@/src/components/Header/Header';
 import Image from 'next/image';
+import Button from '@/src/components/Button/Button';
 
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
 const WHATSAPP_NUMBER = 'TODO';
@@ -11,12 +12,35 @@ export default function AboutPage() {
   return (
     <main className={styles.mainContainer}>
       <Header variant="alternate" />
+
       <section className={styles.highlightSection}>
         <div className={styles.highlightWrapper}>
           <h2 className={styles.title}>INFLOW</h2>
           <h2 className={styles.title}>Software House</h2>
         </div>
       </section>
+
+      <div className={styles.ctaContainer}>
+        <div className={styles.ctaGroup}>
+          <Button
+            href="/"
+            backgroundColor="var(--color-main)"
+            textColor="white"
+            borderColor="var(--color-dark)"
+          >
+            Contate-nos
+          </Button>
+          <Button
+            href="/"
+            backgroundColor="transparent"
+            textColor="var(--color-main)"
+            borderColor="#07003B17"
+          >
+            Conheça nossos Cases
+          </Button>
+        </div>
+      </div>
+
       <Footer />
       <a
         href={whatsappLink}

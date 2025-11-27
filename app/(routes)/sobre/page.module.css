@@ -24,6 +24,21 @@
   text-transform: none;
 }
 
+.ctaContainer {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 40px 60px 40px;
+  text-align: left;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+
 .whatsappFixedButton {
   position: fixed;
   bottom: 30px;
