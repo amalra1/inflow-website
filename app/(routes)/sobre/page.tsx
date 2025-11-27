@@ -4,6 +4,7 @@ import Header from '@/src/components/Header/Header';
 import Image from 'next/image';
 import Button from '@/src/components/Button/Button';
 import HistorySection from '@/src/sections/HistorySection/HistorySection';
+import ValuesSection from '@/src/sections/ValuesSection/ValuesSection';
 
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
 const WHATSAPP_NUMBER = 'TODO';
@@ -43,6 +44,7 @@ export default function AboutPage() {
       </div>
 
       <HistorySection />
+      <ValuesSection />
 
       <Footer />
       <a
