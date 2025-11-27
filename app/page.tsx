@@ -6,8 +6,13 @@ import StepsSection from '@/src/sections/StepsSection/StepsSection';
 import ContactSection from '@/src/sections/ContactSection/ContactSection';
 import Footer from '@/src/components/Footer/Footer';
 import styles from './page.module.css';
+import Image from 'next/image';
+
+const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
+const WHATSAPP_NUMBER = 'TODO';
 
 export default function HomePage() {
+  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`;
   return (
     <main className={styles.mainContainer}>
       <Header />
@@ -17,6 +22,20 @@ export default function HomePage() {
       <StepsSection />
       <ContactSection title="Tem interesse em trabalhar conosco?" />
       <Footer />
+      <a
+        href={whatsappLink}
+        className={styles.whatsappFixedButton}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={WHATSAPP_ICON_PATH}
+          alt="WhatsApp"
+          width={35}
+          height={35}
+          className={styles.whatsappIcon}
+        />
+      </a>
     </main>
   );
 }

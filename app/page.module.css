@@ -2,3 +2,32 @@
   background-color: white;
   overflow: hidden;
 }
+
+.whatsappFixedButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10000;
+  transition: transform 0.2s ease;
+}
+
+.whatsappFixedButton:hover {
+  transform: scale(1.05);
+}
+
+.whatsappIcon {
+  filter: brightness(0) invert(1);
+  width: 35px;
+  height: 35px;
+}
