@@ -3,7 +3,6 @@
   position: static;
   z-index: 1000;
   overflow: visible;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
 }
 
 .socialBarWrapper {
@@ -59,7 +58,7 @@
 }
 
 .alternateContentWrapper {
-  padding: 10px 0;
+  padding-bottom: 5px;
 }
 
 .headerLeft {
@@ -72,7 +71,6 @@
   align-items: center;
   gap: 20px;
   margin-left: 100px;
-  margin-top: -40px;
 }
 
 .alternateLogoTextWrapper {
@@ -138,7 +136,8 @@
 }
 
 .alternateHeaderRight {
-  margin-top: -40px;
+  margin-top: 0;
+  transform: translateY(0);
 }
 
 .logoSymbolMain {
