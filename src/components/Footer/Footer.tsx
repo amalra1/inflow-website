@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 const INFLOW_LOGO_PATH = '/inflow-logo-2.png';
 const INSTAGRAM_ICON_PATH = '/social-networks-logos/instagram.svg';
+const THREADS_ICON_PATH = '/social-networks-logos/threads.svg';
+const TIKTOK_ICON_PATH = '/social-networks-logos/tiktok.svg';
 
 export default function Footer() {
   return (
@@ -17,54 +19,6 @@ export default function Footer() {
               height={180}
               className={styles.logo}
             />
-          </div>
-
-          <div className={styles.column}>
-            <h3 className={styles.columnTitle}>Soluções</h3>
-            <ul className={styles.navList}>
-              <li>
-                <p className={styles.contactInfo}>APIs</p>
-              </li>
-              <li>
-                <p className={styles.contactInfo}>APPs</p>
-              </li>
-              <li>
-                <p className={styles.contactInfo}>Automações</p>
-              </li>
-              <li>
-                <p className={styles.contactInfo}>CRM</p>
-              </li>
-              <li>
-                <p className={styles.contactInfo}>Consultoria em Tecnologia</p>
-              </li>
-              <li>
-                <p className={styles.contactInfo}>IA</p>
-              </li>
-            </ul>
-          </div>
-
-          <div className={styles.column}>
-            <h3 className={styles.columnTitle}>&nbsp;</h3>{' '}
-            <ul className={styles.navList}>
-              <li>
-                <p className={styles.contactInfo}>Mensalidade</p>
-              </li>
-              <li>
-                <p className={styles.contactInfo}>SAAS</p>
-              </li>
-              <li>
-                <p className={styles.contactInfo}>Serviço de Hospedagem</p>
-              </li>
-              <li>
-                <p className={styles.contactInfo}>Sites</p>
-              </li>
-              <li>
-                <p className={styles.contactInfo}>Sistemas</p>
-              </li>
-              <li>
-                <p className={styles.contactInfo}>Suporte Técnico</p>
-              </li>
-            </ul>
           </div>
 
           <div className={styles.column}>
@@ -98,6 +52,59 @@ export default function Footer() {
               <p className={styles.contactInfo}>@agencia.inflow</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className={styles.socialBarBottom}>
+        <div className={styles.socialIconsBottom}>
+          <a
+            href="https://www.instagram.com/inflow.softwarehouse/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={INSTAGRAM_ICON_PATH}
+              alt="Instagram"
+              width={24}
+              height={24}
+              className={styles.socialIcon}
+            />
+          </a>
+          <a
+            href="https://www.threads.com/@inflow.softwarehouse?xmt=AQF0tv1FSWvdOB3V-KuYkLPtkxfHljEyn9qOaHVBSEEBgoA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={THREADS_ICON_PATH}
+              alt="Threads"
+              width={24}
+              height={24}
+              className={styles.socialIcon}
+            />
+          </a>
+          <a
+            href="https://www.tiktok.com/@inflow.softwarehouse"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={TIKTOK_ICON_PATH}
+              alt="TikTok"
+              width={24}
+              height={24}
+              className={styles.socialIcon}
+            />
+          </a>
+
+          <Link
+            href="https://www.tiktok.com/@inflow.softwarehouse"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.socialHandleText}
+          >
+            @inflow.softwarehouse
+          </Link>
         </div>
       </div>
 

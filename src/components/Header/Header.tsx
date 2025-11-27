@@ -22,7 +22,7 @@ export default function Header() {
       <div className={styles.socialBarWrapper}>
         <div className={styles.socialIconsWrapper}>
           <a
-            href="https://www.instagram.com/agencia.inflow/"
+            href="https://www.instagram.com/inflow.softwarehouse/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -35,7 +35,7 @@ export default function Header() {
             />
           </a>
           <a
-            href="https://www.threads.com/@agencia.inflow?xmt=AQF0x0BiWIeoRzH8HmczmkbzsxeoMSTz2CLmZnbxvIVL9F4"
+            href="https://www.threads.com/@inflow.softwarehouse?xmt=AQF0tv1FSWvdOB3V-KuYkLPtkxfHljEyn9qOaHVBSEEBgoA"
             target="_blank"
             rel="noopener noreferrer"
           >
