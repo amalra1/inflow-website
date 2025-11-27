@@ -1,46 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import styles from './Header.module.css';
+import styles from './AlternateHeader.module.css';
 import Button from '../Button/Button';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-type HeaderProps = {
-  variant: 'default' | 'alternate';
-};
-
-const Logo = ({ variant }: { variant: 'default' | 'alternate' }) => {
-  const isDefault = variant === 'default';
-
-  const logoClasses = isDefault ? styles.logoCircle : styles.alternateLogo;
-  const logoWrapperClasses = isDefault
-    ? styles.logoTextWrapper
-    : styles.alternateLogoTextWrapper;
-
-  const symbolClasses = isDefault
-    ? styles.logoSymbolMain
-    : styles.alternateLogoSymbolMain;
-  const textClasses = isDefault
-    ? styles.logoTextDark
-    : styles.alternateLogoTextDark;
-  const taglineClasses = isDefault ? styles.tagline : styles.alternateTagline;
-
-  return (
-    <div className={logoClasses}>
-      <Link href="/" className={styles.logoLink}>
-        <div className={logoWrapperClasses}>
-          <span className={symbolClasses}>{'<'}</span>
-          <span className={textClasses}>Inflow</span>
-          <span className={symbolClasses}>{'>'}</span>
-        </div>
-        <div className={taglineClasses}>Software House</div>
-      </Link>
-    </div>
-  );
-};
-
-export default function Header({ variant }: HeaderProps) {
+export default function AlternateHeader() {
   const ICON_BASE_PATH = '/social-networks-logos/';
   const pathname = usePathname();
 
@@ -50,15 +16,6 @@ export default function Header({ variant }: HeaderProps) {
     { name: 'Soluções', href: '/solucoes' },
     { name: 'Portfólio', href: '/portfolio' },
   ];
-
-  const isAlternate = variant === 'alternate';
-  const headerRightClasses = `${styles.headerRight} ${
-    isAlternate ? styles.alternateHeaderRight : ''
-  }`;
-
-  const contentWrapperClasses = `${styles.contentAndNavWrapper} ${
-    isAlternate ? styles.alternateContentWrapper : ''
-  }`;
 
   return (
     <header className={styles.header}>
@@ -78,7 +35,7 @@ export default function Header({ variant }: HeaderProps) {
             />
           </a>
           <a
-            href="https://www.threads.com/@inflow.softwarehouse"
+            href="https://www.threads.com/@inflow.softwarehouse?xmt=AQF0tv1FSWvdOB3V-KuYkLPtkxfHljEyn9qOaHVBSEEBgoA"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -100,7 +57,7 @@ export default function Header({ variant }: HeaderProps) {
             />
           </a>
           <a
-            href="https://www.tiktok.com/@inflow.softwarehouse"
+            href="https://www.tiktok.com/@inflow.softwarehouse?_r=1&_t=ZS-91kWD406Ub3"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -116,15 +73,23 @@ export default function Header({ variant }: HeaderProps) {
       </div>
 
       <div className={styles.headerInnerWrapper}>
-        <div className={contentWrapperClasses}>
+        <div className={styles.contentAndNavWrapper}>
           <div className={styles.headerLeft}>
-            <Logo variant={variant} />
+            <div className={styles.logoCircle}>
+              <span className={styles.logoTextWrapper}>
+                <span className={styles.logoSymbolMain}>{'<'}</span>
+                <span className={styles.logoTextDark}>Inflow</span>
+                <span className={styles.logoSymbolMain}>{'>'}</span>
+              </span>
+              <div className={styles.tagline}>Software House</div>
+            </div>
           </div>
 
-          <div className={headerRightClasses}>
+          <div className={styles.headerRight}>
             <nav className={styles.nav}>
               {navItems.map((item) => {
                 const isActive = pathname === item.href;
+
                 return (
                   <Link
                     key={item.name}

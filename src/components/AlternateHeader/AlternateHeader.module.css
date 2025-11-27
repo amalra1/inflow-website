@@ -1,15 +1,14 @@
 .header {
   background-color: rgb(255, 255, 255);
   position: static;
-  z-index: 1000;
+  z-index: 1;
   overflow: visible;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
 }
 
 .socialBarWrapper {
   position: relative;
   width: 100%;
-  z-index: 50;
+  z-index: 2;
 }
 
 .socialIconsWrapper {
@@ -24,10 +23,6 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
-}
-
-.alternateSocialIcons {
-  gap: 8px;
 }
 
 .socialIcon {
@@ -58,59 +53,26 @@
   padding-bottom: 20px;
 }
 
-.alternateContentWrapper {
-  padding: 10px 0;
-}
-
 .headerLeft {
   display: flex;
   align-items: center;
+  margin-left: 12%;
 }
 
-.alternateLogo {
+.headerRight {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin-left: 100px;
-  margin-top: -40px;
-}
-
-.alternateLogoTextWrapper {
-  display: flex;
-  align-items: baseline;
-  line-height: 1;
-  font-family: var(--font-body, sans-serif);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.alternateLogoSymbolMain {
-  color: var(--color-main);
-  font-weight: 400;
-  font-size: 1.5rem;
-}
-
-.alternateLogoTextDark {
-  color: var(--color-dark);
-  font-family: var(--font-body, sans-serif);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.alternateTagline {
-  font-family: var(--font-body, sans-serif);
-  font-size: 0.75rem;
-  color: var(--color-dark);
-  font-weight: 500;
+  margin-top: -30px;
+  gap: 30px;
 }
 
 .logoCircle {
   background-color: #fcfcfc;
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
+  width: 7rem;
+  height: 4rem;
+  border-radius: 46%;
 
-  margin-top: -100px;
+  margin-top: -25px;
 
   display: flex;
   flex-direction: column;
@@ -126,25 +88,14 @@
   align-items: baseline;
   line-height: 1;
   font-family: var(--font-body, sans-serif);
-  font-size: 4rem;
+  font-size: 1.5rem;
   font-weight: 700;
-}
-
-.headerRight {
-  display: flex;
-  align-items: center;
-  margin-top: -137px;
-  gap: 30px;
-}
-
-.alternateHeaderRight {
-  margin-top: -40px;
 }
 
 .logoSymbolMain {
   color: var(--color-main);
   font-weight: 400;
-  font-size: 4rem;
+  font-size: 1.5rem;
 }
 
 .logoTextDark {
@@ -153,9 +104,8 @@
 
 .tagline {
   font-family: var(--font-body, sans-serif);
-  font-size: 1.75rem;
+  font-size: 0.75rem;
   color: var(--color-dark);
-  margin-top: 3px;
   font-weight: 500;
 }
 
