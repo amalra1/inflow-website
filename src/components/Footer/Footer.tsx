@@ -21,55 +21,38 @@ export default function Footer() {
           <div className={styles.column}>
             <h3 className={styles.columnTitle}>Soluções</h3>
             <ul className={styles.navList}>
-              <li>
-                <Link href="/">APIs</Link>
-              </li>
-              <li>
-                <Link href="/">APPs</Link>
-              </li>
-              <li>
-                <Link href="/">Automações</Link>
-              </li>
-              <li>
-                <Link href="/">CRM</Link>
-              </li>
-              <li>
-                <Link href="/">Consultoria em Tecnologia</Link>
-              </li>
-              <li>
-                <Link href="/">IA</Link>
-              </li>
+              <p className={styles.contactInfo}>APIs</p>
+              <p className={styles.contactInfo}>APPs</p>
+              <p className={styles.contactInfo}>Automações</p>
+              <p className={styles.contactInfo}>CRM</p>
+              <p className={styles.contactInfo}>Consultoria em Tecnologia</p>
+              <p className={styles.contactInfo}>IA</p>
             </ul>
           </div>
 
           <div className={styles.column}>
             <h3 className={styles.columnTitle}>&nbsp;</h3>{' '}
             <ul className={styles.navList}>
-              <li>
-                <Link href="/">Mensalidade</Link>
-              </li>
-              <li>
-                <Link href="/">SAAS</Link>
-              </li>
-              <li>
-                <Link href="/">Serviço de Hospedagem</Link>
-              </li>
-              <li>
-                <Link href="/">Sites</Link>
-              </li>
-              <li>
-                <Link href="/">Sistemas</Link>
-              </li>
-              <li>
-                <Link href="/">Suporte Técnico</Link>
-              </li>
+              <p className={styles.contactInfo}>Mensalidade</p>
+              <p className={styles.contactInfo}>SAAS</p>
+              <p className={styles.contactInfo}>Serviço de Hospedagem</p>
+              <p className={styles.contactInfo}>Sites</p>
+              <p className={styles.contactInfo}>Sistemas</p>
+              <p className={styles.contactInfo}>Suporte Técnico</p>
             </ul>
           </div>
 
           <div className={styles.column}>
-            <h3 className={styles.columnTitle}>Sobre a Inflow</h3>
-            <h3 className={styles.columnTitle}>Portfólio</h3>
-            <h3 className={styles.columnTitle}>Fale Conosco</h3>
+            <Link href="/" className={styles.columnTitle}>
+              Sobre a Inflow
+            </Link>
+            <Link href="/" className={styles.columnTitle}>
+              Portfólio
+            </Link>
+            <Link href="/" className={styles.columnTitle}>
+              Fale Conosco
+            </Link>
+
             <p className={styles.contactInfo}>Email</p>
             <p className={styles.contactInfo}>inflow.agencia@gmail.com</p>
           </div>
