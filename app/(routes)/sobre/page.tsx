@@ -11,6 +11,12 @@ export default function AboutPage() {
   return (
     <main className={styles.mainContainer}>
       <Header variant="alternate" />
+      <section className={styles.highlightSection}>
+        <div className={styles.highlightWrapper}>
+          <h2 className={styles.title}>INFLOW</h2>
+          <h2 className={styles.title}>Software House</h2>
+        </div>
+      </section>
       <Footer />
       <a
         href={whatsappLink}
