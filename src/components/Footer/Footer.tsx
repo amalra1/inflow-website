@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.column}>
-            <Link href="/" className={styles.columnTitle}>
+            <Link href="/sobre" className={styles.columnTitle}>
               Sobre a Inflow
             </Link>
             <Link href="/" className={styles.columnTitle}>
