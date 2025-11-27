@@ -46,6 +46,16 @@ export default function AboutPage() {
       <HistorySection />
       <ValuesSection />
 
+      <section className={styles.missionSection}>
+        <div className={styles.missionWrapper}>
+          <h2 className={styles.missionTitle}>Nossa missão</h2>
+          <p className={styles.missionSubtitle}>
+            Transformar ideias complexas em soluções digitais simples,
+            escaláveis e humanas.
+          </p>
+        </div>
+      </section>
+
       <Footer />
       <a
         href={whatsappLink}
