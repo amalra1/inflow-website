@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Button from '@/src/components/Button/Button';
 import HistorySection from '@/src/sections/HistorySection/HistorySection';
 import ValuesSection from '@/src/sections/ValuesSection/ValuesSection';
+import TeamSection from '@/src/sections/TeamSection/TeamSection';
 
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
 const WHATSAPP_NUMBER = '4891186726';
@@ -72,6 +73,16 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <section className={styles.visionSection}>
+        <div className={styles.visionWrapper}>
+          <h2 className={styles.visionTitle}>Nossa Visão</h2>
+          <div className={styles.visionDescriptionWrapper}></div>
+          <p className={styles.visionDescription}></p>
+        </div>
+      </section>
+
+      <TeamSection />
 
       <Footer />
       <a

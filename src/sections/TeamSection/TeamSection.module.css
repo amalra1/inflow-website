@@ -1,0 +1,27 @@
+.teamSection {
+  background-color: #dff0ff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.innerWrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-title, sans-serif);
+  color: var(--color-main);
+  font-size: var(--font-size-title);
+  margin-bottom: 60px;
+  text-transform: none;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
