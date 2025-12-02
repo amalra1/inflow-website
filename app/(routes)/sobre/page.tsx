@@ -6,6 +6,7 @@ import Button from '@/src/components/Button/Button';
 import HistorySection from '@/src/sections/HistorySection/HistorySection';
 import ValuesSection from '@/src/sections/ValuesSection/ValuesSection';
 import TeamSection from '@/src/sections/TeamSection/TeamSection';
+import ContactSection from '@/src/sections/ContactSection/ContactSection';
 
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
 const WHATSAPP_NUMBER = '4891186726';
@@ -83,6 +84,7 @@ export default function AboutPage() {
       </section>
 
       <TeamSection />
+      <ContactSection title="Entre em contato e vamos tirar a sua ideia do papel?" />
 
       <Footer />
       <a
