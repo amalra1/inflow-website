@@ -13,8 +13,8 @@ export default function ValueCard({ iconPath, title }: ValueCardProps) {
         <Image
           src={iconPath}
           alt={`Ícone para ${title}`}
-          width={50}
-          height={50}
+          width={120}
+          height={120}
           className={styles.iconImage}
         />
       </div>

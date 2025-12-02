@@ -4,8 +4,10 @@ import Image from 'next/image';
 
 const CIRCLE_IMAGE_PATH = '/circles/intro-large-blue-circle.svg';
 const INTRO_IMAGE_PATH = '/intro-image.svg';
+const WHATSAPP_NUMBER = '4891186726';
 
 export default function IntroSection() {
+  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`;
   return (
     <section className={styles.introSection}>
       <Image
@@ -26,7 +28,7 @@ export default function IntroSection() {
           </p>
           <div className={styles.ctaGroup}>
             <Button
-              href="/"
+              href={whatsappLink}
               backgroundColor="var(--color-main)"
               textColor="white"
               borderColor="var(--color-dark)"

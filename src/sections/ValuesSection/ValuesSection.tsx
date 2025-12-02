@@ -3,26 +3,26 @@ import ValueCard from '@/src/components/ValueCard/ValueCard';
 
 export default function ValuesSection() {
   const values = [
-    { title: 'Transparência', icon: 'solutions-section-icons/web-site.svg' },
+    { title: 'Transparência', icon: 'values-icons/transparency-icon.svg' },
     {
       title: 'Simplicidade Inteligente',
-      icon: 'solutions-section-icons/web-site.svg',
+      icon: 'values-icons/simplicity-icon.svg',
     },
     {
       title: 'Obsessão por usabilidade',
-      icon: 'solutions-section-icons/web-site.svg',
+      icon: 'values-icons/usability-icon.svg',
     },
     {
       title: 'Código com propósito',
-      icon: 'solutions-section-icons/web-site.svg',
+      icon: 'values-icons/purpouse-icon.svg',
     },
     {
       title: 'Evolução contínua',
-      icon: 'solutions-section-icons/web-site.svg',
+      icon: 'values-icons/evolution-icon.svg',
     },
     {
       title: 'Performance acima de tudo',
-      icon: 'solutions-section-icons/web-site.svg',
+      icon: 'values-icons/performance-icon.svg',
     },
   ];
 

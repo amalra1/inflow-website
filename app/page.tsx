@@ -9,7 +9,7 @@ import styles from './page.module.css';
 import Image from 'next/image';
 
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
-const WHATSAPP_NUMBER = 'TODO';
+const WHATSAPP_NUMBER = '4891186726';
 
 export default function HomePage() {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`;

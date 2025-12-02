@@ -5,7 +5,7 @@
 
 .highlightSection {
   background-color: var(--color-main);
-  padding: 80px 0;
+  padding: 140px 0;
   color: white;
 }
 
@@ -20,7 +20,7 @@
 .title {
   font-family: var(--font-title, sans-serif);
   color: white;
-  font-size: 2.2rem;
+  font-size: 50px;
   text-transform: none;
 }
 
@@ -40,10 +40,10 @@
 }
 
 .missionSection {
-  background-color: var(--color-main); /* Fundo Azul */
+  background-color: var(--color-main);
   padding: 80px 0;
   color: white;
-  text-align: center; /* Centraliza o conteúdo */
+  text-align: center;
 }
 
 .missionWrapper {
@@ -56,11 +56,12 @@
 .missionTitle {
   font-family: var(--font-title, sans-serif);
   color: white;
-  font-size: 2.2rem;
+  font-size: 50px;
   text-transform: none;
   margin-bottom: 20px;
   position: relative;
   display: inline-block;
+  margin-bottom: 55px;
 }
 
 .missionTitle::after {
@@ -74,11 +75,15 @@
   background-color: white;
 }
 
-.missionSubtitle {
+.missionDescriptionWrapper {
+  padding-bottom: 60px;
+}
+
+.missionDescription {
   font-family: var(--font-body, sans-serif);
   font-size: 1.5rem;
-  margin-top: 35px;
-  padding-bottom: 80px;
+  padding-bottom: 30px;
+  text-align: justify;
 }
 
 .whatsappFixedButton {
