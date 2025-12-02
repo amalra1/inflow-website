@@ -78,7 +78,7 @@
 .blueCircleRight {
   position: absolute;
   top: -150px;
-  left: 1050px;
+  left: 85%;
   z-index: 1;
   opacity: 0.8;
 }
@@ -86,7 +86,7 @@
 .greyCircle {
   position: absolute;
   top: 650px;
-  left: 900px;
+  left: 65%;
   z-index: 1;
   opacity: 0.8;
 }
