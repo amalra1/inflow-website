@@ -2,7 +2,7 @@
   background-color: white;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -10,7 +10,6 @@
   overflow: hidden;
   transition: transform 0.3s ease;
   text-align: left;
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
@@ -27,45 +26,42 @@
   background-color: var(--color-main);
 }
 
-.iconContainer {
-  position: relative;
-  width: 70px;
-  height: 70px;
-  margin-bottom: 30px;
-}
-
-.iconBackground {
-  position: absolute;
-  top: 5px;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  background-color: #dff0ff;
-  border-radius: 50%;
-  z-index: 0;
-}
-
-.iconImage {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 70px;
-  height: 70px;
-  z-index: 1;
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .title {
+  padding-top: 20px;
   font-family: var(--font-title, sans-serif);
   color: var(--color-dark);
-  font-size: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 10px;
-  text-align: left;
+  font-size: 20px;
+  flex-grow: 1;
+  margin-right: 15px;
+}
+
+.iconContainer {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.iconImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: static;
 }
 
 .description {
   font-family: var(--font-body, sans-serif);
-  color: #555555;
+  color: #000000;
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 20px;

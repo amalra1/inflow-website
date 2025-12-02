@@ -13,4 +13,10 @@ body {
   --color-main: #0384fa;
   --color-secondary: #7bc0e3;
   --color-dark: #292525;
+  --font-size-title: 50px;
+  --font-size-mainText: 45px;
+  --font-size-subtitle: 40px;
+  --font-size-text: 33px;
+  --font-size-button: 20px;
+  --font-size-little-text: 16px;
 }

@@ -1,7 +1,9 @@
 import styles from './PortfolioSection.module.css';
 import PortfolioCard from '@/src/components/PortfolioCard/PortfolioCard';
 import Button from '@/src/components/Button/Button';
-import CircleDesign from '@/src/components/CircleDesign/CircleDesign';
+import Image from 'next/image';
+
+const CIRCLE_BACKGROUND_PATH = '/circles/intro-large-blue-circle.svg';
 
 export default function PortfolioSection() {
   const portfolioItems = [
@@ -27,15 +29,12 @@ export default function PortfolioSection() {
 
   return (
     <section className={styles.portfolioSection}>
-      <CircleDesign
-        color="var(--color-secondary)"
-        visibility={{ circle1: true, circle2: true, circle3: true }}
-      />
-
-      <CircleDesign
-        color="var(--color-secondary)"
-        visibility={{ circle1: false, circle2: false, circle3: true }}
-        className={styles.circleDesignRight}
+      <Image
+        src={CIRCLE_BACKGROUND_PATH}
+        alt="Círculos de design de fundo"
+        width={350}
+        height={350}
+        className={styles.circlesDesignImageLeft}
       />
 
       <div className={styles.innerWrapper}>

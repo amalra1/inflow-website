@@ -1,6 +1,10 @@
 import styles from './StepsSection.module.css';
 import StepItem from '@/src/components/StepItem/StepItem';
-import CircleDesign from '@/src/components/CircleDesign/CircleDesign';
+import Image from 'next/image';
+
+const STEPS_IMAGE_PATH = '/steps-image.png';
+const BLUE_CIRCLE_IMAGE_PATH = '/circles/intro-large-blue-circle.svg';
+const GREY_CIRCLE_IMAGE_PATH = '/circles/grey-circle.svg';
 
 export default function StepsSection() {
   const steps = [
@@ -28,22 +32,28 @@ export default function StepsSection() {
 
   return (
     <section className={styles.stepsSection}>
-      <CircleDesign
-        color="var(--color-secondary)"
-        visibility={{ circle1: true, circle2: true, circle3: true }}
-        className={styles.circleDesignTopLeft}
+      <Image
+        src={BLUE_CIRCLE_IMAGE_PATH}
+        alt="Círculos de design de fundo"
+        width={300}
+        height={300}
+        className={styles.blueCircle}
       />
 
-      <CircleDesign
-        color="var(--color-secondary)"
-        visibility={{ circle1: true, circle2: true, circle3: true }}
-        className={styles.circleDesignTopRight}
+      <Image
+        src={BLUE_CIRCLE_IMAGE_PATH}
+        alt="Círculos de design de fundo"
+        width={300}
+        height={300}
+        className={styles.blueCircleRight}
       />
 
-      <CircleDesign
-        color="#0d0f45"
-        visibility={{ circle1: true, circle2: true, circle3: true }}
-        className={styles.circleDesignPlaceholder}
+      <Image
+        src={GREY_CIRCLE_IMAGE_PATH}
+        alt="Círculos de design de fundo"
+        width={400}
+        height={400}
+        className={styles.greyCircle}
       />
 
       <div className={styles.innerWrapper}>
@@ -65,8 +75,14 @@ export default function StepsSection() {
             ))}
           </div>
 
-          <div className={styles.placeholderColumn}>
-            <div className={styles.placeholder}>PLACE HOLDER</div>
+          <div className={styles.imageColumn}>
+            <Image
+              src={STEPS_IMAGE_PATH}
+              alt="Imagem que ilustra as etapas de desenvolvimento"
+              width={1200}
+              height={1200}
+              className={styles.stepsImage}
+            />
           </div>
         </div>
       </div>

@@ -17,18 +17,19 @@ export default function SolutionCard({
 }: SolutionCardProps) {
   return (
     <div className={styles.card}>
-      <div className={styles.iconContainer}>
-        <div className={styles.iconBackground}></div>
-        <Image
-          src={iconPath}
-          alt={`Ícone para ${title}`}
-          width={70}
-          height={70}
-          className={styles.iconImage}
-        />
+      <div className={styles.headerContent}>
+        <h3 className={styles.title}>{title}</h3>
+        <div className={styles.iconContainer}>
+          <Image
+            src={iconPath}
+            alt={`Ícone para ${title}`}
+            width={70}
+            height={70}
+            className={styles.iconImage}
+          />
+        </div>
       </div>
 
-      <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
 
       <Link href={href} className={styles.link}>

@@ -40,17 +40,6 @@ export default function Footer() {
             <p className={styles.contactInfo}>Atendimento</p>
             <p className={styles.contactInfo}>De segunda a sexta</p>
             <p className={styles.contactInfo}>09:00 às 18:00</p>
-            <h3 className={styles.columnTitle}>&nbsp;</h3>{' '}
-            <div className={styles.socialHandle}>
-              <Image
-                src={INSTAGRAM_ICON_PATH}
-                alt="Instagram Icon"
-                width={16}
-                height={16}
-                className={styles.instagramIcon}
-              />
-              <p className={styles.contactInfo}>@agencia.inflow</p>
-            </div>
           </div>
         </div>
       </div>

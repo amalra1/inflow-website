@@ -5,6 +5,13 @@
   overflow: hidden;
 }
 
+.circlesDesignImage {
+  position: absolute;
+  bottom: -330px;
+  z-index: 1;
+  opacity: 0.8;
+}
+
 .innerWrapper {
   width: 100%;
   max-width: 1280px;
@@ -53,7 +60,6 @@
   position: relative;
   z-index: 10;
 }
-
 
 .placeholderColumn {
   flex: 1;
@@ -106,46 +112,17 @@
   z-index: 0;
 }
 
-.spiral {
-  content: '';
-  position: absolute;
-  top: 15%;
-  right: -10%;
-  width: 230px;
-  height: 230px;
-  background-color: transparent;
-  border: 3px solid #0d0f45;
-  border-radius: 50%;
-  opacity: 0.1;
-  z-index: 0;
-
-  border-left-color: transparent;
-  border-top-color: transparent;
-  transform: rotate(230deg);
+.imageColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.introSection::after {
-  content: '';
-  position: absolute;
-  left: -200px;
-  bottom: -400px;
-  width: 700px;
-  height: 700px;
-  border: 3px solid var(--color-secondary);
-  border-radius: 50%;
-  opacity: 0.3;
-  z-index: 1;
-}
-
-.introSection::before {
-  content: '';
-  position: absolute;
-  left: -300px;
-  bottom: -500px;
-  width: 900px;
-  height: 900px;
-  border: 3px solid var(--color-main);
-  border-radius: 50%;
-  opacity: 0.1;
-  z-index: 1;
+.introImage {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  display: block;
 }

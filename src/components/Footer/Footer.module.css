@@ -4,7 +4,8 @@
 
 .topFooter {
   background-color: #ffffff;
-  padding: 60px 0;
+  padding-top: 100px;
+  padding-bottom: 60px;
 }
 
 .innerWrapper {
@@ -35,7 +36,7 @@
 .columnTitle {
   display: block;
   font-family: var(--font-title, sans-serif);
-  font-size: 1.1rem;
+  font-size: 22px;
   margin-top: 0;
   margin-bottom: 15px;
   color: #000000;
@@ -58,22 +59,10 @@
 
 .contactInfo {
   font-family: var(--font-body, sans-serif);
-  font-size: 0.95rem;
+  font-size: 22px;
   color: var(--color-dark);
   opacity: 0.8;
   margin: 5px 0;
-}
-
-.socialHandle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 5px;
-}
-
-.instagramIcon {
-  width: 16px;
-  height: 16px;
 }
 
 .socialBarBottom {
@@ -90,8 +79,8 @@
 }
 
 .socialIcon {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   transition: opacity 0.2s ease;
 }
 
@@ -101,7 +90,7 @@
 
 .socialHandleText {
   font-family: var(--font-body, sans-serif);
-  font-size: 1rem;
+  font-size: 30px;
   color: var(--color-dark);
   text-decoration: none;
   opacity: 0.8;
