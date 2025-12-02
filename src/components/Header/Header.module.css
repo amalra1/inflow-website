@@ -59,6 +59,7 @@
 
 .alternateContentWrapper {
   padding-bottom: 5px;
+  margin-top: 11px;
 }
 
 .headerLeft {
@@ -85,21 +86,22 @@
 .alternateLogoSymbolMain {
   color: var(--color-main);
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 30px;
 }
 
 .alternateLogoTextDark {
   color: var(--color-dark);
   font-family: var(--font-body, sans-serif);
-  font-size: 1.5rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .alternateTagline {
   font-family: var(--font-body, sans-serif);
-  font-size: 0.75rem;
+  font-size: 15px;
   color: var(--color-dark);
   font-weight: 500;
+  text-align: center;
 }
 
 .logoCircle {
