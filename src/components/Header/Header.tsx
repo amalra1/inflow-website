@@ -28,7 +28,7 @@ const Logo = ({ variant }: { variant: 'default' | 'alternate' }) => {
 
   return (
     <div className={logoClasses}>
-      <Link href="/" className={styles.logoLink}>
+      <Link href="/">
         <div className={logoWrapperClasses}>
           <span className={symbolClasses}>{'<'}</span>
           <span className={textClasses}>Inflow</span>
