@@ -14,11 +14,21 @@
   align-items: center;
 }
 
+.textWrapper {
+  margin-bottom: 60px;
+}
+
 .title {
   font-family: var(--font-title, sans-serif);
   color: white;
   font-size: var(--font-size-title);
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-family: var(--font-body, sans-serif);
+  color: #ffffff;
+  font-size: 20px;
 }
 
 .contactSection a {
