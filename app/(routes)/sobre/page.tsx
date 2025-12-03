@@ -79,7 +79,15 @@ export default function AboutPage() {
         <div className={styles.visionWrapper}>
           <h2 className={styles.visionTitle}>Nossa Visão</h2>
           <div className={styles.visionDescriptionWrapper}></div>
-          <p className={styles.visionDescription}></p>
+          <p className={styles.visionDescription}>
+            Nossa visão é ser reconhecida como referência nacional em
+            desenvolvimento de software e aplicativos personalizados,
+            destacando-se pela excelência técnica, simplicidade inteligente e
+            foco absoluto na experiência do usuário. Queremos liderar a
+            transformação digital, antecipando tendências e oferecendo soluções
+            inovadoras que superem expectativas, consolidando uma cultura de
+            evolução contínua e impacto positivo no mercado.
+          </p>
         </div>
       </section>
 

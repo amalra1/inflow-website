@@ -6,17 +6,17 @@ export default function TeamSection() {
     {
       name: 'Andrielle Senna',
       role: 'Designer',
-      photo: 'https://placehold.co/150x150/d1d1d1/555555?text=ANDRIELLE',
+      photo: 'team-photos/andri.png',
     },
     {
       name: 'Felipe Ribas',
       role: 'Comercial',
-      photo: 'https://placehold.co/150x150/d1d1d1/555555?text=FELIPE',
+      photo: 'team-photos/felipe.jpeg',
     },
     {
       name: 'Gabriel Lima',
       role: 'Desenvolvedor',
-      photo: 'https://placehold.co/150x150/d1d1d1/555555?text=GABRIEL',
+      photo: 'team-photos/gabriel.png',
     },
     {
       name: 'Pedro Amaral',
@@ -29,6 +29,8 @@ export default function TeamSection() {
     <section className={styles.teamSection}>
       <div className={styles.innerWrapper}>
         <h2 className={styles.title}>Nossa Equipe</h2>
+
+        <div className={styles.titleLine}></div>
 
         <div className={styles.cardGrid}>
           {teamMembers.map((member, index) => (
