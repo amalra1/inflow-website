@@ -1,28 +1,105 @@
+'use client';
+
 import styles from './AlternateSolutionsSection.module.css';
 import SolutionCard from '@/src/components/SolutionCard/SolutionCard';
+import SolutionDetails from '@/src/components/SolutionDetails/SolutionDetails';
+import {
+  detailedSolutions,
+  SolutionDetail,
+} from '@/src/utils/data/SolutionsData';
+import { useSearchParams, useRouter } from 'next/navigation';
+import { useState, useRef, useEffect, useCallback } from 'react';
 
 export default function AlternateSolutionSection() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const serviceId = searchParams.get('service');
+
+  const [selectedSolutionId, setSelectedSolutionId] = useState<string | null>(
+    serviceId,
+  );
+
+  const detailsRef = useRef<HTMLDivElement>(null);
+
+  const scrollToDetails = useCallback(() => {
+    if (detailsRef.current) {
+      detailsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (selectedSolutionId) {
+      scrollToDetails();
+    }
+
+    if (serviceId) {
+      setTimeout(() => {
+        router.replace('/solucoes', { scroll: false });
+      }, 500);
+    }
+  }, [selectedSolutionId, serviceId, scrollToDetails, router]);
+
+  const handleSelectSolution = (id: string) => {
+    setSelectedSolutionId(id);
+  };
+
+  const selectedSolution: SolutionDetail | undefined = detailedSolutions.find(
+    (s) => s.id.toLowerCase() === selectedSolutionId?.toLowerCase(),
+  );
+
   const solutions = [
-    { title: "API's", icon: '/solutions-section-icons/apis.svg' },
-    { title: 'Automações', icon: '/solutions-section-icons/automations.svg' },
-    { title: 'CRM', icon: '/solutions-section-icons/crms.svg' },
-    { title: 'Sites', icon: '/solutions-section-icons/sites.svg' },
-
-    { title: 'Mensalidade', icon: '/solutions-section-icons/mensalidade.svg' },
-    { title: 'Suporte Técnico', icon: '/solutions-section-icons/technical-support.svg' },
     {
+      id: 'APIS',
+      title: "API's",
+      iconPath: '/solutions-section-icons/apis.svg',
+    },
+    {
+      id: 'AUTOMATIONS',
+      title: 'Automações',
+      iconPath: '/solutions-section-icons/automations.svg',
+    },
+    { id: 'CRM', title: 'CRM', iconPath: '/solutions-section-icons/crms.svg' },
+    {
+      id: 'SITES',
+      title: 'Sites',
+      iconPath: '/solutions-section-icons/sites.svg',
+    },
+    {
+      id: 'MONTHLY_FEE',
+      title: 'Mensalidade',
+      iconPath: '/solutions-section-icons/mensalidade.svg',
+    },
+    {
+      id: 'SUPPORT',
+      title: 'Suporte Técnico',
+      iconPath: '/solutions-section-icons/technical-support.svg',
+    },
+    {
+      id: 'HOSTING',
       title: 'Serviço de hospedagem',
-      icon: '/solutions-section-icons/hosting-service.svg',
+      iconPath: '/solutions-section-icons/hosting-service.svg',
     },
-    { title: 'IA', icon: '/solutions-section-icons/ai.svg' },
-
-    { title: 'SAAS', icon: '/solutions-section-icons/saas.svg' },
-    { title: 'Sistemas', icon: '/solutions-section-icons/systems.svg' },
+    { id: 'AI', title: 'IA', iconPath: '/solutions-section-icons/ai.svg' },
     {
-      title: 'Consultoria em tecnologia',
-      icon: '/solutions-section-icons/consultancy.svg',
+      id: 'SAAS',
+      title: 'SAAS',
+      iconPath: '/solutions-section-icons/saas.svg',
     },
-    { title: 'APPS', icon: '/solutions-section-icons/apps.svg' },
+    {
+      id: 'SYSTEMS',
+      title: 'Sistemas',
+      iconPath: '/solutions-section-icons/systems.svg',
+    },
+    {
+      id: 'CONSULTING',
+      title: 'Consultoria em tecnologia',
+      iconPath: '/solutions-section-icons/consultancy.svg',
+    },
+    {
+      id: 'APPS',
+      title: 'APPS',
+      iconPath: '/solutions-section-icons/apps.svg',
+    },
   ];
 
   return (
@@ -34,12 +111,20 @@ export default function AlternateSolutionSection() {
           {solutions.map((solution, index) => (
             <SolutionCard
               key={index}
-              iconPath={solution.icon}
+              iconPath={solution.iconPath}
               title={solution.title}
               description={''}
-              href={'/'}
+              solutionId={solution.id}
+              isActive={
+                selectedSolutionId?.toLowerCase() === solution.id.toLowerCase()
+              }
+              onClick={() => handleSelectSolution(solution.id)}
             />
           ))}
+        </div>
+
+        <div ref={detailsRef} className={styles.detailsContainer}>
+          {selectedSolution && <SolutionDetails solution={selectedSolution} />}
         </div>
       </div>
     </section>

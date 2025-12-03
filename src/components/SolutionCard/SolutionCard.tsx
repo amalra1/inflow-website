@@ -6,25 +6,42 @@ type SolutionCardProps = {
   iconPath: string;
   title: string;
   description: string;
-  href: string;
+  solutionId: string;
+  onClick?: () => void;
+  isActive?: boolean;
 };
 
 export default function SolutionCard({
   iconPath,
   title,
   description,
-  href,
+  solutionId,
+  onClick,
+  isActive = false,
 }: SolutionCardProps) {
+  const destinationHref = `/solucoes?service=${solutionId}`;
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (onClick) {
+      e.preventDefault();
+      onClick();
+    }
+  };
+
   return (
-    <div className={styles.card}>
+    <Link
+      href={destinationHref}
+      className={`${styles.card} ${isActive ? styles.active : ''}`}
+      onClick={handleLinkClick}
+    >
       <div className={styles.headerContent}>
         <h3 className={styles.title}>{title}</h3>
         <div className={styles.iconContainer}>
           <Image
             src={iconPath}
             alt={`Ícone para ${title}`}
-            width={90}
-            height={90}
+            width={70}
+            height={70}
             className={styles.iconImage}
           />
         </div>
@@ -32,9 +49,7 @@ export default function SolutionCard({
 
       <p className={styles.description}>{description}</p>
 
-      <Link href={href} className={styles.link}>
-        Saiba mais →
-      </Link>
-    </div>
+      <div className={styles.link}>Saiba mais →</div>
+    </Link>
   );
 }
