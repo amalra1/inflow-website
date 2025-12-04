@@ -5,6 +5,7 @@ import styles from './Header.module.css';
 import Button from '../Button/Button';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 type HeaderProps = {
   variant: 'default' | 'alternate';
@@ -43,6 +44,7 @@ const Logo = ({ variant }: { variant: 'default' | 'alternate' }) => {
 export default function Header({ variant }: HeaderProps) {
   const ICON_BASE_PATH = '/social-networks-logos/';
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
     { name: 'Início', href: '/' },
@@ -114,15 +116,18 @@ export default function Header({ variant }: HeaderProps) {
           </a>
         </div>
       </div>
-
       <div className={styles.headerInnerWrapper}>
         <div className={contentWrapperClasses}>
           <div className={styles.headerLeft}>
             <Logo variant={variant} />
           </div>
-
           <div className={headerRightClasses}>
-            <nav className={styles.nav}>
+            <nav
+              className={`${styles.nav} ${
+                isMenuOpen ? styles.mobileNavOpen : ''
+              }`}
+              id="mobile-navigation"
+            >
               {navItems.map((item) => {
                 const isActive = pathname === item.href;
                 return (
@@ -132,13 +137,13 @@ export default function Header({ variant }: HeaderProps) {
                     className={`${styles.navLink} ${
                       isActive ? styles.active : ''
                     }`}
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
                 );
               })}
             </nav>
-
             <Button
               href="/"
               backgroundColor="white"
@@ -147,6 +152,16 @@ export default function Header({ variant }: HeaderProps) {
             >
               Fale conosco
             </Button>
+            <button
+              className={styles.hamburgerMenu}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
+            >
+              <div className={styles.hamburgerIcon} />
+              <div className={styles.hamburgerIcon} />
+              <div className={styles.hamburgerIcon} />
+            </button>
           </div>
         </div>
       </div>
