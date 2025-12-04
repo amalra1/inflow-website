@@ -108,3 +108,68 @@
   color: white;
   font-size: 1rem;
 }
+
+@media (max-width: 600px) {
+  .topFooter {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .innerWrapper {
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .logoColumn {
+    flex: 1.5;
+  }
+
+  .column {
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .logo {
+    margin-bottom: 5px;
+    padding-right: 0;
+    width: 180px;
+    height: auto;
+  }
+
+  .columnTitle {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .contactInfo {
+    font-size: 12px;
+    margin: 2px 0;
+  }
+
+  .socialBarBottom {
+    padding-bottom: 10px;
+    padding-left: 15px;
+  }
+
+  .socialIconsBottom {
+    gap: 10px;
+  }
+
+  .socialIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .socialHandleText {
+    font-size: 12px;
+  }
+
+  .bottomFooter {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+  }
+}
