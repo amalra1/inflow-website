@@ -257,13 +257,13 @@
   }
 
   .logoTextWrapper {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .logoSymbolMain {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .tagline {
-    font-size: 16px;
+    font-size: 12px;
     margin-top: 0;
     text-align: center;
   }
@@ -274,13 +274,14 @@
     gap: 5px;
   }
   .alternateLogoSymbolMain {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .alternateLogoTextDark {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .alternateTagline {
-    font-size: 16px;
+    font-size: 12px;
+    text-align: center;
   }
 
   .nav {
