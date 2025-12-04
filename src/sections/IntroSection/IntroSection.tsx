@@ -47,7 +47,6 @@ export default function IntroSection() {
         </div>
 
         <div className={styles.imageColumn}>
-          {' '}
           <Image
             src={INTRO_IMAGE_PATH}
             alt="Ilustração da Inflow Software House"

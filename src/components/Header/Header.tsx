@@ -92,7 +92,7 @@ export default function Header({ variant }: HeaderProps) {
               className={styles.socialIcon}
             />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/4891186726" target="_blank" rel="noopener noreferrer">
             <Image
               src={`${ICON_BASE_PATH}whatsapp.svg`}
               alt="WhatsApp"
@@ -145,7 +145,7 @@ export default function Header({ variant }: HeaderProps) {
               })}
             </nav>
             <Button
-              href="/"
+              href="https://wa.me/4891186726"
               backgroundColor="white"
               textColor="var(--color-main)"
               borderColor="#07003B17"
