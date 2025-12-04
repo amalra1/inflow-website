@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './PortfolioCard.module.css';
+import Link from 'next/link';
 
 type PortfolioCardProps = {
   imageUrl: string;
@@ -13,7 +14,7 @@ export default function PortfolioCard({
   link,
 }: PortfolioCardProps) {
   return (
-    <a
+    <Link
       href={link}
       className={styles.card}
       target="_blank"
@@ -33,6 +34,6 @@ export default function PortfolioCard({
       <div className={styles.descriptionWrapper}>
         <p className={styles.description}>{description}</p>
       </div>
-    </a>
+    </Link>
   );
 }

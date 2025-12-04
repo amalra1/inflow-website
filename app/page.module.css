@@ -1,6 +1,7 @@
 .mainContainer {
   background-color: white;
   overflow: hidden;
+  z-index: 0;
 }
 
 .whatsappFixedButton {
