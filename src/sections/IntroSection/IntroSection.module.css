@@ -126,3 +126,72 @@
   max-width: 600px;
   display: block;
 }
+
+@media (max-width: 600px) {
+  .introSection {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+
+  .innerWrapper {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .textColumn {
+    max-width: 100%;
+    flex: none;
+    order: 0;
+  }
+
+  .imageColumn {
+    flex: none;
+    order: 1;
+    padding-top: 0;
+  }
+
+  .blueLine {
+    display: none;
+  }
+
+  .title {
+    color: var(--color-main);
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .subtitle {
+    color: var(--color-main);
+    font-size: 1.25rem;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .ctaGroup {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .ctaGroup :nth-child(2) {
+    display: none;
+  }
+
+  .ctaGroup :first-child {
+    padding: 15px 80px;
+    background-color: var(--color-main);
+    color: white;
+    border-color: var(--color-main) !important;
+  }
+
+  .introImage {
+    max-width: 300px;
+  }
+
+  .circlesDesignImage {
+    display: none;
+  }
+}
