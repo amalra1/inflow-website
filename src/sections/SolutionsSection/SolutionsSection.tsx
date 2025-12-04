@@ -2,9 +2,8 @@
 
 import styles from './SolutionsSection.module.css';
 import SolutionCard from '@/src/components/SolutionCard/SolutionCard';
-import { useState, useEffect } from 'react'; // Importar useState e useEffect
+import { useState, useEffect } from 'react';
 import {
-  // Importar componentes do Carrossel
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -15,20 +14,15 @@ import {
 export default function SolutionsSection() {
   const [isMobile, setIsMobile] = useState(false);
 
-  // Lógica para determinar se é mobile (<= 600px)
   useEffect(() => {
     const checkMobile = () => {
-      // Usamos 600 como ponto de corte, conforme solicitado
       setIsMobile(window.innerWidth <= 600);
     };
 
-    // Verifica no carregamento
     checkMobile();
 
-    // Adiciona listener para redimensionamento
     window.addEventListener('resize', checkMobile);
 
-    // Limpa o listener ao desmontar o componente
     return () => {
       window.removeEventListener('resize', checkMobile);
     };
@@ -122,11 +116,10 @@ export default function SolutionsSection() {
   ];
 
   const renderSolutions = () => {
-    // Renderiza o Carrossel para mobile
     if (isMobile) {
       return (
         <Carousel
-          className={styles.carouselContainer} // Adiciona classe para estilização específica
+          className={styles.carouselContainer}
           opts={{
             align: 'start',
             loop: true,
@@ -158,7 +151,6 @@ export default function SolutionsSection() {
       );
     }
 
-    // Renderiza o Grid para desktop e tamanhos maiores
     return (
       <div className={styles.cardGrid}>
         {solutions.map((solution, index) => (
