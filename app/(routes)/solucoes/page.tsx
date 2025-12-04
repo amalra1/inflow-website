@@ -4,6 +4,7 @@ import Header from '@/src/components/Header/Header';
 import Image from 'next/image';
 import AlternateSolutionsSection from '@/src/sections/AlternateSolutionsSection/AlternateSolutionsSection';
 import ContactSection from '@/src/sections/ContactSection/ContactSection';
+import { Suspense } from 'react';
 
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
 const WHATSAPP_NUMBER = '4891186726';
@@ -13,7 +14,9 @@ export default function SolutionsPage() {
   return (
     <main className={styles.mainContainer}>
       <Header variant="alternate" />
-      <AlternateSolutionsSection />
+      <Suspense>
+        <AlternateSolutionsSection />
+      </Suspense>
       <ContactSection
         title="Vamos marcar uma conversa?"
         subtitle="Peça um orçamento sem compromisso"
