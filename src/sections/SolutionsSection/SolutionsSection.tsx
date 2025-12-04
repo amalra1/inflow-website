@@ -2,8 +2,38 @@
 
 import styles from './SolutionsSection.module.css';
 import SolutionCard from '@/src/components/SolutionCard/SolutionCard';
+import { useState, useEffect } from 'react'; // Importar useState e useEffect
+import {
+  // Importar componentes do Carrossel
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 export default function SolutionsSection() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Lógica para determinar se é mobile (<= 600px)
+  useEffect(() => {
+    const checkMobile = () => {
+      // Usamos 600 como ponto de corte, conforme solicitado
+      setIsMobile(window.innerWidth <= 600);
+    };
+
+    // Verifica no carregamento
+    checkMobile();
+
+    // Adiciona listener para redimensionamento
+    window.addEventListener('resize', checkMobile);
+
+    // Limpa o listener ao desmontar o componente
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
+
   const solutions = [
     {
       id: 'APIS',
@@ -91,21 +121,64 @@ export default function SolutionsSection() {
     },
   ];
 
+  const renderSolutions = () => {
+    // Renderiza o Carrossel para mobile
+    if (isMobile) {
+      return (
+        <Carousel
+          className={styles.carouselContainer} // Adiciona classe para estilização específica
+          opts={{
+            align: 'start',
+            loop: true,
+          }}
+        >
+          <CarouselContent className={styles.carouselContent}>
+            {solutions.map((solution, index) => (
+              <CarouselItem key={index} className="pl-1">
+                <div className="p-3">
+                  <SolutionCard
+                    iconPath={solution.iconPath}
+                    title={solution.title}
+                    description={solution.description}
+                    solutionId={solution.id}
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious
+            className="-left-4 z-1 w-12 h-12"
+            style={{ color: 'var(--color-main)' }}
+          />
+          <CarouselNext
+            className="-right-4 z-1 w-12 h-12"
+            style={{ color: 'var(--color-main)' }}
+          />
+        </Carousel>
+      );
+    }
+
+    // Renderiza o Grid para desktop e tamanhos maiores
+    return (
+      <div className={styles.cardGrid}>
+        {solutions.map((solution, index) => (
+          <SolutionCard
+            key={index}
+            iconPath={solution.iconPath}
+            title={solution.title}
+            description={solution.description}
+            solutionId={solution.id}
+          />
+        ))}
+      </div>
+    );
+  };
+
   return (
     <section className={styles.solutionsSection}>
       <div className={styles.innerWrapper}>
         <h2 className={styles.title}>Soluções</h2>
-        <div className={styles.cardGrid}>
-          {solutions.map((solution, index) => (
-            <SolutionCard
-              key={index}
-              iconPath={solution.iconPath}
-              title={solution.title}
-              description={solution.description}
-              solutionId={solution.id}
-            />
-          ))}
-        </div>
+        {renderSolutions()}
       </div>
     </section>
   );
