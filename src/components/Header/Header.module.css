@@ -248,7 +248,6 @@
   }
 
   .logoCircle {
-    padding-left: 50px;
     width: auto;
     height: auto;
     border-radius: 0;
@@ -269,7 +268,6 @@
   }
 
   .alternateLogo {
-    padding-left: 50px;
     margin-left: 0;
     gap: 5px;
   }
