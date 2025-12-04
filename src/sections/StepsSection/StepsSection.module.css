@@ -13,7 +13,7 @@
 
 .sectionTitle {
   font-family: var(--font-title, sans-serif);
-  color: var(--color-dark);
+  color: #000000;
   font-size: var(--font-size-title);
   margin-bottom: 60px;
   text-align: left;
@@ -89,4 +89,44 @@
   left: 65%;
   z-index: 1;
   opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .stepsSection {
+    padding: 40px 0;
+  }
+
+  .innerWrapper {
+    padding: 0 20px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .contentGrid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .stepsColumn {
+    flex: 0 0 100%;
+  }
+
+  .stepsColumn::before {
+    bottom: 230px;
+  }
+
+  .imageColumn {
+    display: none;
+  }
+
+  .blueCircle,
+  .blueCircleRight,
+  .greyCircle {
+    display: none;
+  }
 }
