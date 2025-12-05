@@ -5,7 +5,7 @@ import styles from './SolutionCard.module.css';
 type SolutionCardProps = {
   iconPath: string;
   title: string;
-  description: string;
+  description: string[];
   solutionId: string;
   onClick?: () => void;
   isActive?: boolean;
@@ -47,7 +47,13 @@ export default function SolutionCard({
         </div>
       </div>
 
-      <p className={styles.description}>{description}</p>
+      <div className={styles.descriptionContainer}>
+        {description.map((line, index) => (
+          <p key={index} className={styles.descriptionLine}>
+            {line}
+          </p>
+        ))}
+      </div>
 
       <div className={styles.link}>Saiba mais →</div>
     </Link>
