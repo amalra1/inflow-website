@@ -6,39 +6,10 @@ import Button from '../Button/Button';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import Logo from '../Logo/Logo';
 
 type HeaderProps = {
   variant: 'default' | 'alternate';
-};
-
-const Logo = ({ variant }: { variant: 'default' | 'alternate' }) => {
-  const isDefault = variant === 'default';
-
-  const logoClasses = isDefault ? styles.logoCircle : styles.alternateLogo;
-  const logoWrapperClasses = isDefault
-    ? styles.logoTextWrapper
-    : styles.alternateLogoTextWrapper;
-
-  const symbolClasses = isDefault
-    ? styles.logoSymbolMain
-    : styles.alternateLogoSymbolMain;
-  const textClasses = isDefault
-    ? styles.logoTextDark
-    : styles.alternateLogoTextDark;
-  const taglineClasses = isDefault ? styles.tagline : styles.alternateTagline;
-
-  return (
-    <div className={logoClasses}>
-      <Link href="/">
-        <div className={logoWrapperClasses}>
-          <span className={symbolClasses}>{'<'}</span>
-          <span className={textClasses}>Inflow</span>
-          <span className={symbolClasses}>{'>'}</span>
-        </div>
-        <div className={taglineClasses}>Software House</div>
-      </Link>
-    </div>
-  );
 };
 
 export default function Header({ variant }: HeaderProps) {
@@ -54,9 +25,9 @@ export default function Header({ variant }: HeaderProps) {
   ];
 
   const isAlternate = variant === 'alternate';
-  const headerRightClasses = `${styles.headerRight} ${
-    isAlternate ? styles.alternateHeaderRight : ''
-  }`;
+
+  const mainFontSize = isAlternate ? '30px' : '4rem';
+  const taglineFontSize = isAlternate ? '15px' : '28px';
 
   const contentWrapperClasses = `${styles.contentAndNavWrapper} ${
     isAlternate ? styles.alternateContentWrapper : ''
@@ -92,7 +63,11 @@ export default function Header({ variant }: HeaderProps) {
               className={styles.socialIcon}
             />
           </a>
-          <a href="https://wa.me/4891186726" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://wa.me/4891186726"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src={`${ICON_BASE_PATH}whatsapp.svg`}
               alt="WhatsApp"
@@ -119,9 +94,13 @@ export default function Header({ variant }: HeaderProps) {
       <div className={styles.headerInnerWrapper}>
         <div className={contentWrapperClasses}>
           <div className={styles.headerLeft}>
-            <Logo variant={variant} />
+            <Logo
+              variant={variant}
+              mainFontSize={mainFontSize}
+              taglineFontSize={taglineFontSize}
+            />
           </div>
-          <div className={headerRightClasses}>
+          <div className={styles.headerRight}>
             <nav
               className={`${styles.nav} ${
                 isMenuOpen ? styles.mobileNavOpen : ''

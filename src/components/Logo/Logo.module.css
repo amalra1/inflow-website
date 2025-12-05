@@ -1,0 +1,84 @@
+.textWrapper {
+  display: flex;
+  align-items: baseline;
+  line-height: 1;
+  font-family: var(--font-body, sans-serif);
+  font-weight: 700;
+
+  font-size: var(--logo-main-font-size, 4rem);
+}
+
+.defaultTagline {
+  font-family: var(--font-body, sans-serif);
+  color: var(--color-dark);
+  font-weight: 500;
+  text-align: center;
+  margin-top: 4px;
+  font-size: var(--logo-tagline-font-size, 28px);
+}
+
+.alternateTagline {
+  font-family: var(--font-body, sans-serif);
+  color: var(--color-dark);
+  font-weight: 500;
+  text-align: center;
+  margin-top: 4px;
+  font-size: var(--logo-tagline-font-size, 28px);
+}
+
+.defaultLogoWrapper {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.alternateLogoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 100px;
+}
+
+.defaultSymbol,
+.alternateSymbol {
+  color: var(--color-main);
+  font-weight: 400;
+}
+
+.defaultText,
+.alternateText {
+  color: var(--color-dark);
+}
+
+@media (max-width: 600px) {
+  .textWrapper {
+    font-size: 1.5rem;
+  }
+
+  .defaultSymbol,
+  .alternateSymbol,
+  .defaultText,
+  .alternateText {
+    font-size: 1.5rem;
+  }
+
+  .defaultTagline,
+  .alternateTagline {
+    font-size: 12px;
+    margin-top: 0;
+  }
+
+  .defaultLogoWrapper {
+    width: auto;
+    height: auto;
+  }
+
+  .alternateLogoWrapper {
+    margin-left: 0;
+    gap: 5px;
+  }
+}
