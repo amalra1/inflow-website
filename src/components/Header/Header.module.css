@@ -1,5 +1,5 @@
 .header {
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
   position: static;
   z-index: 1000;
   overflow: visible;
@@ -9,6 +9,7 @@
   position: relative;
   width: 100%;
   z-index: 50;
+  background-color: transparent;
 }
 
 .socialIconsWrapper {
@@ -90,7 +91,7 @@
 }
 
 .navLink:hover {
-  color: var(--color-dark);
+  color: var(--color-base);
 }
 
 .navLink::after {
@@ -100,7 +101,7 @@
   left: 0;
   width: 0%;
   height: 3px;
-  background-color: var(--color-dark);
+  background-color: var(--color-base);
   transition: width 0.3s ease;
 }
 
@@ -109,16 +110,16 @@
 }
 
 .active {
-  color: var(--color-dark);
+  color: var(--color-base);
 }
 
 .active::after {
   width: 100%;
-  background-color: var(--color-dark);
+  background-color: var(--color-base);
 }
 
 .active:hover {
-  color: var(--color-dark);
+  color: var(--color-base);
 }
 
 .hamburgerMenu {

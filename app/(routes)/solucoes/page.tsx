@@ -13,10 +13,15 @@ export default function SolutionsPage() {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`;
   return (
     <main className={styles.mainContainer}>
-      <Header variant="alternate" />
-      <Suspense>
-        <AlternateSolutionsSection />
-      </Suspense>
+      <div className={styles.gradientWrapper}>
+        <Header variant="alternate" />
+
+        <div className={styles.highlightLine}></div>
+
+        <Suspense>
+          <AlternateSolutionsSection />
+        </Suspense>
+      </div>
       <ContactSection
         title="Vamos marcar uma conversa?"
         subtitle="Peça um orçamento sem compromisso"

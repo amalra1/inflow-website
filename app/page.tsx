@@ -15,8 +15,10 @@ export default function HomePage() {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`;
   return (
     <main className={styles.mainContainer}>
-      <Header variant="default" />
-      <IntroSection />
+      <div className={styles.IntroSectionWrapper}>
+        <Header variant="default" />
+        <IntroSection />
+      </div>
       <SolutionsSection />
       <PortfolioSection />
       <StepsSection />

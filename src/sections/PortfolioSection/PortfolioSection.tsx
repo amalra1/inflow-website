@@ -94,9 +94,9 @@ export default function PortfolioSection() {
         <div className={styles.ctaWrapper}>
           <Button
             href="/"
-            backgroundColor="var(--color-dark)"
-            textColor="white"
-            borderColor="var(--color-dark)"
+            backgroundColor="var(--color-base)"
+            textColor="var(--color-secondary)"
+            borderColor="transparent"
           >
             Ver mais
           </Button>

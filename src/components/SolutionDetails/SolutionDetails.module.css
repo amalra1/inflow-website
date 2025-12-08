@@ -1,5 +1,5 @@
 .detailsSection {
-  background-color: white;
+  background-color: transparent;
   padding: 60px 0;
   margin-top: 40px;
   scroll-margin-top: 100px;
@@ -63,8 +63,9 @@
 
 .offeringsTitle {
   font-family: var(--font-body, sans-serif);
-  color: #000000;
-  font-size: 22px;
+  color: var(--color-main);
+  font-weight: 700;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
@@ -92,4 +93,8 @@
 .image {
   padding-top: 60px;
   width: 100%;
+}
+
+.buttonWrapper {
+  margin-left: auto;
 }

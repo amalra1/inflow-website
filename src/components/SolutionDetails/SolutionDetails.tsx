@@ -23,7 +23,7 @@ export default function SolutionDetails({ solution }: SolutionDetailsProps) {
           ))}
 
           <div className={styles.offerings}>
-            <h3 className={styles.offeringsTitle}>Oferecemos:</h3>
+            <h3 className={styles.offeringsTitle}>O que entregamos:</h3>
             <ul className={styles.offeringsList}>
               {solution.detailsList.map((item, index) => (
                 <li key={index} className={styles.offeringsItem}>
@@ -35,14 +35,6 @@ export default function SolutionDetails({ solution }: SolutionDetailsProps) {
         </div>
 
         <div className={styles.imageColumn}>
-          <Button
-            href="/"
-            backgroundColor="var(--color-dark)"
-            textColor="white"
-            borderColor="var(--color-dark)"
-          >
-            Solicitar orçamento gratuito
-          </Button>
           <Image
             src={solution.imageUrl}
             alt={`Ilustração de ${solution.title}`}
@@ -50,6 +42,16 @@ export default function SolutionDetails({ solution }: SolutionDetailsProps) {
             height={700}
             className={styles.image}
           />
+          <div className={styles.buttonWrapper}>
+            <Button
+              href="/"
+              backgroundColor="var(--color-dark)"
+              textColor="white"
+              borderColor="var(--color-dark)"
+            >
+              Solicitar orçamento
+            </Button>
+          </div>
         </div>
       </div>
       <p className={styles.paragraphBottom}>{solution.conclusion}</p>

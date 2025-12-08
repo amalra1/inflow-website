@@ -3,8 +3,8 @@
 }
 
 .topFooter {
-  background-color: #ffffff;
-  padding-top: 100px;
+  background-color: var(--color-base);
+  padding-top: 20px;
   padding-bottom: 60px;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .columnTitle:hover {
-  color: var(--color-main);
+  color: var(--color-dark);
 }
 
 .navList {
@@ -60,7 +60,7 @@
 .contactInfo {
   font-family: var(--font-body, sans-serif);
   font-size: 22px;
-  color: var(--color-dark);
+  color: #000000;
   opacity: 0.8;
   margin: 5px 0;
 }
@@ -68,6 +68,7 @@
 .socialBarBottom {
   padding-bottom: 10px;
   padding-left: 20px;
+  background-color: var(--color-base);
 }
 
 .socialIconsBottom {
@@ -79,8 +80,8 @@
 }
 
 .socialIcon {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   transition: opacity 0.2s ease;
 }
 
@@ -90,14 +91,14 @@
 
 .socialHandleText {
   font-family: var(--font-body, sans-serif);
-  font-size: 30px;
-  color: var(--color-dark);
+  font-size: 24px;
+  color: #000000;
   text-decoration: none;
   opacity: 0.8;
 }
 
 .bottomFooter {
-  background-color: var(--color-main);
+  background-color: var(--color-secondary);
   padding-bottom: 10px;
   padding-top: 20px;
   text-align: center;

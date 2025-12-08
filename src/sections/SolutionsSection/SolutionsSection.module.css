@@ -1,5 +1,5 @@
 .solutionsSection {
-  background-color: #dff0ff;
+  background-color: var(--color-secondary);
   padding-top: 80px;
   padding-bottom: 80px;
 }
@@ -14,7 +14,7 @@
 
 .title {
   font-family: var(--font-title, sans-serif);
-  color: var(--color-dark);
+  color: var(--color-main);
   font-size: var(--font-size-title);
   margin-bottom: 60px;
   text-transform: none;
@@ -22,7 +22,7 @@
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 

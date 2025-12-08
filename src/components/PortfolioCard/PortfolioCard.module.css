@@ -32,7 +32,8 @@
 
 .description {
   font-family: var(--font-body, sans-serif);
-  font-size: 0.95rem;
+  color: var(--color-base);
+  font-size: 0.85rem;
   line-height: 1.5;
   margin: 0;
   text-align: left;

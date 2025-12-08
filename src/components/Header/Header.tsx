@@ -43,7 +43,7 @@ export default function Header({ variant }: HeaderProps) {
             rel="noopener noreferrer"
           >
             <Image
-              src={`${ICON_BASE_PATH}instagram.svg`}
+              src={`${ICON_BASE_PATH}instagram-white.svg`}
               alt="Instagram"
               width={24}
               height={24}
@@ -56,7 +56,7 @@ export default function Header({ variant }: HeaderProps) {
             rel="noopener noreferrer"
           >
             <Image
-              src={`${ICON_BASE_PATH}threads.svg`}
+              src={`${ICON_BASE_PATH}threads-white.svg`}
               alt="Threads"
               width={24}
               height={24}
@@ -69,7 +69,7 @@ export default function Header({ variant }: HeaderProps) {
             rel="noopener noreferrer"
           >
             <Image
-              src={`${ICON_BASE_PATH}whatsapp.svg`}
+              src={`${ICON_BASE_PATH}whatsapp-white.svg`}
               alt="WhatsApp"
               width={24}
               height={24}
@@ -82,7 +82,7 @@ export default function Header({ variant }: HeaderProps) {
             rel="noopener noreferrer"
           >
             <Image
-              src={`${ICON_BASE_PATH}tiktok.svg`}
+              src={`${ICON_BASE_PATH}tiktok-white.svg`}
               alt="TikTok"
               width={24}
               height={24}
@@ -125,9 +125,9 @@ export default function Header({ variant }: HeaderProps) {
             </nav>
             <Button
               href="https://wa.me/4891186726"
-              backgroundColor="white"
+              backgroundColor="transparent"
               textColor="var(--color-main)"
-              borderColor="#07003B17"
+              borderColor="var(--color-main)"
             >
               Fale conosco
             </Button>

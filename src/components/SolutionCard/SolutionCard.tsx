@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './SolutionCard.module.css';
-
+import React from 'react';
 type SolutionCardProps = {
   iconPath: string;
   title: string;
@@ -34,28 +34,27 @@ export default function SolutionCard({
       className={`${styles.card} ${isActive ? styles.active : ''}`}
       onClick={handleLinkClick}
     >
-      <div className={styles.headerContent}>
-        <h3 className={styles.title}>{title}</h3>
-        <div className={styles.iconContainer}>
-          <Image
-            src={iconPath}
-            alt={`Ícone para ${title}`}
-            width={70}
-            height={70}
-            className={styles.iconImage}
-          />
+      <div className={styles.iconContainer}>
+        <Image
+          src={iconPath}
+          alt={`Ícone para ${title}`}
+          width={120}
+          height={120}
+          className={styles.iconImage}
+        />
+      </div>
+
+      <h3 className={styles.title}>{title}</h3>
+
+      {description.length > 0 && (
+        <div className={styles.descriptionContainer}>
+          {description.map((line, index) => (
+            <p key={index} className={styles.descriptionLine}>
+              {line}
+            </p>
+          ))}
         </div>
-      </div>
-
-      <div className={styles.descriptionContainer}>
-        {description.map((line, index) => (
-          <p key={index} className={styles.descriptionLine}>
-            {line}
-          </p>
-        ))}
-      </div>
-
-      <div className={styles.link}>Saiba mais →</div>
+      )}
     </Link>
   );
 }

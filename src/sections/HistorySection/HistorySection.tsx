@@ -5,10 +5,12 @@ export default function HistorySection() {
     <section className={styles.historySection}>
       <div className={styles.innerWrapper}>
         <div className={styles.contentBlock}>
-          <h2 className={styles.paragraph}>Sobre nós</h2>
+          <h2 className={styles.title}>Sobre nós</h2>
           <p className={styles.paragraph}>
-            A Inflow é uma software house especializada em criar soluções
+            A Inflow é uma softwre house especializada em criar soluções
             digitais sob medida do zero e do jeito que o seu projeto exige.
+          </p>
+          <p className={styles.paragraph}>
             Desenvolvemos sistemas e aplicativos personalizados, com uma equipe
             técnica experiente e preparada para transformar sua ideia em
             tecnologia funcional.

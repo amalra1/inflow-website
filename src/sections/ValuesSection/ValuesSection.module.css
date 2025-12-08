@@ -1,5 +1,5 @@
 .valuesSection {
-  background-color: #dff0ff;
+  background-color: var(--color-secondary);
   padding: 80px 0;
 }
 
@@ -29,6 +29,6 @@
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
 }

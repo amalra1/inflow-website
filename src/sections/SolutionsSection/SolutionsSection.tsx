@@ -181,7 +181,7 @@ export default function SolutionsSection() {
                   <SolutionCard
                     iconPath={solution.iconPath}
                     title={solution.title}
-                    description={solution.description}
+                    description={[]}
                     solutionId={solution.id}
                   />
                 </div>
@@ -207,7 +207,7 @@ export default function SolutionsSection() {
             key={index}
             iconPath={solution.iconPath}
             title={solution.title}
-            description={solution.description}
+            description={[]}
             solutionId={solution.id}
           />
         ))}

@@ -1,6 +1,33 @@
 .mainContainer {
-  background-color: white;
+  background-color: var(--color-secondary);
   overflow: hidden;
+}
+
+.gradientWrapper {
+  background: radial-gradient(circle, var(--color-base) 1px, transparent 4px)
+      25px 40px / 340px 340px,
+    radial-gradient(circle, var(--color-base) 1px, transparent 4px) 20px 40px /
+      670px 170px,
+    radial-gradient(circle, var(--color-base) 1px, transparent 4px) 50px 70px /
+      510px 510px,
+    radial-gradient(
+      circle at bottom right,
+      var(--color-main) 55%,
+      var(--color-secondary) 90%
+    );
+
+  position: relative;
+  overflow: hidden;
+}
+
+.highlightLine {
+  border-top: var(--color-base) 1px solid;
+  opacity: 0.4;
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .whatsappFixedButton {

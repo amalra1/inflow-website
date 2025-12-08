@@ -1,5 +1,5 @@
 .stepsSection {
-  background-color: white;
+  background-color: var(--color-base);
   padding: 80px 0;
   position: relative;
 }
@@ -21,7 +21,7 @@
 }
 
 .highlight {
-  color: var(--color-main);
+  color: var(--color-dark);
 }
 
 .contentGrid {
@@ -44,8 +44,8 @@
 
   background-image: repeating-linear-gradient(
     to bottom,
-    var(--color-secondary),
-    var(--color-secondary),
+    var(--color-main),
+    var(--color-main),
     transparent 20px,
     transparent 40px
   );

@@ -20,7 +20,7 @@ export default function IntroSection() {
 
       <div className={styles.innerWrapper}>
         <div className={styles.textColumn}>
-          <div className={styles.blueLine}></div>
+          <div className={styles.whiteLine}></div>
           <h1 className={styles.title}>Software House</h1>
           <p className={styles.subtitle}>
             Especializada em desenvolvimento sob medida, unindo tecnologia e
@@ -29,9 +29,9 @@ export default function IntroSection() {
           <div className={styles.ctaGroup}>
             <Button
               href={whatsappLink}
-              backgroundColor="var(--color-main)"
+              backgroundColor="var(--color-dark)"
               textColor="white"
-              borderColor="var(--color-dark)"
+              borderColor="#000000"
             >
               Contate-nos
             </Button>
@@ -39,7 +39,7 @@ export default function IntroSection() {
               href="/"
               backgroundColor="transparent"
               textColor="var(--color-main)"
-              borderColor="#07003B17"
+              borderColor="var(--color-main)"
             >
               Conheça nossos Cases
             </Button>

@@ -1,6 +1,6 @@
 .historySection {
-  background-color: white;
-  padding: 10px 0;
+  background-color: var(--color-base);
+  padding: 30px 0;
 }
 
 .innerWrapper {
@@ -11,7 +11,7 @@
 }
 
 .contentBlock {
-  margin-bottom: 120px;
+  margin-bottom: 60px;
 }
 
 .highlightTitleContainer {
@@ -25,6 +25,7 @@
   color: var(--color-main);
   font-size: var(--font-size-text);
   text-transform: none;
+  padding-bottom: 20px;
 }
 
 .blueLine {
@@ -38,6 +39,5 @@
   color: #000000;
   font-size: 1.5rem;
   line-height: 1.6;
-  margin-bottom: 20px;
   text-align: justify;
 }

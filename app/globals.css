@@ -12,9 +12,11 @@ body {
 }
 
 :root {
-  --color-main: #0384fa;
-  --color-secondary: #7bc0e3;
-  --color-dark: #292525;
+  --color-main: #21c2fe;
+  --color-base: #ffffff;
+  --color-secondary: #061338;
+  --color-dark: #0e43e5;
+  --color-light: #dff0ff;
   --font-size-title: 50px;
   --font-size-mainText: 45px;
   --font-size-subtitle: 40px;
