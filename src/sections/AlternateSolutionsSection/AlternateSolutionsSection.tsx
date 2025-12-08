@@ -113,7 +113,7 @@ export default function AlternateSolutionSection() {
               key={index}
               iconPath={solution.iconPath}
               title={solution.title}
-              description={''}
+              description={[]}
               solutionId={solution.id}
               isActive={
                 selectedSolutionId?.toLowerCase() === solution.id.toLowerCase()

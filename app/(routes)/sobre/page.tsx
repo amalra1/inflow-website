@@ -92,7 +92,7 @@ export default function AboutPage() {
       </section>
 
       <TeamSection />
-      <ContactSection title="Entre em contato e vamos tirar a sua ideia do papel?" />
+      <ContactSection title="Entre em contato e vamos tirar a sua ideia do papel" />
 
       <Footer />
       <a

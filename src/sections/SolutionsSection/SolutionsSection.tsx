@@ -40,7 +40,7 @@ export default function SolutionsSection() {
       ],
     },
     {
-      id: 'automacoes',
+      id: 'AUTOMATIONS',
       iconPath: '/solutions-section-icons/automations.svg',
       title: 'Automações',
       description: [
@@ -51,7 +51,7 @@ export default function SolutionsSection() {
       ],
     },
     {
-      id: 'crm',
+      id: 'CRM',
       iconPath: '/solutions-section-icons/crms.svg',
       title: 'CRM',
       description: [
@@ -61,7 +61,7 @@ export default function SolutionsSection() {
       ],
     },
     {
-      id: 'sites',
+      id: 'SITES',
       iconPath: '/solutions-section-icons/sites.svg',
       title: 'Sites',
       description: [
@@ -71,7 +71,7 @@ export default function SolutionsSection() {
       ],
     },
     {
-      id: 'mensalidade',
+      id: 'MONTHLY_FEE',
       iconPath: '/solutions-section-icons/mensalidade.svg',
       title: 'Mensalidade',
       description: [
@@ -82,7 +82,7 @@ export default function SolutionsSection() {
       ],
     },
     {
-      id: 'suporte-tecnico',
+      id: 'SUPPORT',
       iconPath: '/solutions-section-icons/technical-support.svg',
       title: 'Suporte Técnico',
       description: [
@@ -91,7 +91,7 @@ export default function SolutionsSection() {
       ],
     },
     {
-      id: 'servico-hospedagem',
+      id: 'HOSTING',
       iconPath: '/solutions-section-icons/hosting-service.svg',
       title: 'Serviço de Hospedagem',
       description: [
@@ -102,7 +102,7 @@ export default function SolutionsSection() {
       ],
     },
     {
-      id: 'ia',
+      id: 'AI',
       iconPath: '/solutions-section-icons/ai.svg',
       title: 'IA',
       description: [
@@ -113,7 +113,7 @@ export default function SolutionsSection() {
       ],
     },
     {
-      id: 'saas',
+      id: 'SAAS',
       iconPath: '/solutions-section-icons/saas.svg',
       title: 'SAAS',
       description: [
@@ -124,7 +124,7 @@ export default function SolutionsSection() {
       ],
     },
     {
-      id: 'sistemas',
+      id: 'SYSTEMS',
       iconPath: '/solutions-section-icons/systems.svg',
       title: 'Sistemas',
       description: [
@@ -136,7 +136,7 @@ export default function SolutionsSection() {
       ],
     },
     {
-      id: 'consultoria',
+      id: 'CONSULTING',
       iconPath: '/solutions-section-icons/consultancy.svg',
       title: 'Consultoria em tecnologia',
       description: [
@@ -149,7 +149,7 @@ export default function SolutionsSection() {
       ],
     },
     {
-      id: 'apps',
+      id: 'APPS',
       iconPath: '/solutions-section-icons/apps.svg',
       title: 'APPs',
       description: [

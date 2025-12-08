@@ -41,7 +41,7 @@ export default function SolutionDetails({ solution }: SolutionDetailsProps) {
             textColor="white"
             borderColor="var(--color-dark)"
           >
-            Peça um orçamento gratuito
+            Solicitar orçamento gratuito
           </Button>
           <Image
             src={solution.imageUrl}
