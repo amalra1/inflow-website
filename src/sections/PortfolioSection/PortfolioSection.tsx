@@ -20,6 +20,7 @@ const FEATURED_PROJECT_IDS = [
   'renovaderme',
   'transformacao-perspectiva',
   'metodo-superar-digital',
+  'sistema-osint',
   'classificador-poses-fisiculturismo',
   'segmentacao-tatuagens',
 ];

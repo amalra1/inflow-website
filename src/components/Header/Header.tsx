@@ -124,7 +124,7 @@ export default function Header({ variant }: HeaderProps) {
               })}
             </nav>
             <Button
-              href="https://wa.me/4891186726"
+              href="/contato"
               backgroundColor="transparent"
               textColor="var(--color-main)"
               borderColor="var(--color-main)"

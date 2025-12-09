@@ -130,7 +130,7 @@ export const projectsData: Project[] = [
     title:
       'Sistema OSINT – Plataforma de Coleta e Análise de Informações Públicas',
     filter: ProjectFilter.OTHER,
-    imageUrl: '/portfolio/placeholder.png',
+    imageUrl: '/portfolio/osint.jpeg',
     projectLink: 'https://hackhunter.com.br/',
 
     summary:
