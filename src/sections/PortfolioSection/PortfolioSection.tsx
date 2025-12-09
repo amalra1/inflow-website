@@ -16,8 +16,18 @@ import {
 
 const CIRCLE_BACKGROUND_PATH = '/circles/intro-large-blue-circle.svg';
 
+const FEATURED_PROJECT_IDS = [
+  'renovaderme',
+  'sistema-osint',
+  'metodo-superar-digital',
+  'classificador-poses-fisiculturismo',
+  'segmentacao-tatuagens',
+];
+
 export default function PortfolioSection() {
-  const portfolioItems: Project[] = projectsData;
+  const portfolioItems: Project[] = FEATURED_PROJECT_IDS.map((id) =>
+    projectsData.find((project) => project.id === id),
+  ).filter((item): item is Project => item !== undefined);
 
   return (
     <section className={styles.portfolioSection}>

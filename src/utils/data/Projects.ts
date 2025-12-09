@@ -24,7 +24,7 @@ export const projectsData: Project[] = [
       'Renovaderme – Página de Vendas Estratégica para Produto de Skincare',
     filter: ProjectFilter.ECOMMERCE,
     imageUrl: '/portfolio/renovaderme.png',
-    projectLink: 'https://www.renovaderme.com.br',
+    projectLink: '#',
 
     summary:
       'Página de vendas do Renovaderme, um produto de cuidados com a pele, com foco total em conversão.',
@@ -97,5 +97,90 @@ export const projectsData: Project[] = [
     ],
 
     usedTechs: ['Python;', 'MediaPipe;', 'TensorFlow;', 'Visão Computacional.'],
+  },
+  {
+    id: 'classificador-poses-fisiculturismo',
+    title:
+      'Classificador de Poses de Fisiculturismo – Análise Automática com MediaPipe',
+    filter: ProjectFilter.OTHER,
+    imageUrl: '/portfolio/bodybuilding-pose-classifier.png',
+    projectLink: 'https://github.com/amalra1/BodybuildingPoseClassifier',
+
+    summary:
+      'Desenvolvimento de um classificador de poses de fisiculturismo usando a biblioteca MediaPipe para detectar, analisar e classificar automaticamente posturas clássicas em imagens e vídeos.',
+
+    descriptionList: [
+      'Desenvolvemos um classificador de poses de fisiculturismo utilizando a biblioteca MediaPipe, do Google, para detectar, analisar e classificar poses de musculação em imagens e vídeos.',
+      'O objetivo do projeto é oferecer uma solução inteligente capaz de reconhecer automaticamente posturas clássicas do fisiculturismo, trazendo precisão, velocidade e padronização para avaliações visuais.',
+      'A tecnologia identifica pontos corporais, analisa ângulos, compara padrões e retorna a classificação da pose, permitindo uso em treinamentos, competições, aplicativos fitness e sistemas de acompanhamento físico.',
+    ],
+
+    features: [
+      'Implementação da biblioteca MediaPipe para detecção corporal;',
+      'Classificação automática de poses de fisiculturismo;',
+      'Análise de imagens e vídeos em tempo real;',
+      'Algoritmo treinado para reconhecer poses específicas da modalidade;',
+      'Sistema moderno, rápido e altamente preciso.',
+    ],
+
+    usedTechs: ['MediaPipe;', 'Visão Computacional;', 'Python;', 'TensorFlow;'],
+  },
+  {
+    id: 'sistema-osint',
+    title:
+      'Sistema OSINT – Plataforma de Coleta e Análise de Informações Públicas',
+    filter: ProjectFilter.OTHER,
+    imageUrl: '/portfolio/placeholder.png',
+    projectLink: 'https://hackhunter.com.br/',
+
+    summary:
+      'Desenvolvimento de um sistema completo baseado em OSINT (Open Source Intelligence) para coleta, monitoramento e análise de informações disponíveis em fontes abertas, fornecendo insights estratégicos em tempo real.',
+
+    descriptionList: [
+      'Estamos desenvolvendo um sistema completo baseado em OSINT (Open Source Intelligence), voltado para coleta, monitoramento e análise de informações disponíveis em fontes abertas.',
+      'A solução foi projetada para fornecer dados organizados, em tempo real, permitindo que o usuário tenha insights estratégicos de forma rápida e confiável.',
+      'O sistema será lançado junto ao site oficial, proporcionando uma experiência completa: apresentação institucional no site e acesso direto à plataforma no ar, com todas as funcionalidades ativas.',
+    ],
+
+    features: [
+      'Desenvolvimento completo de sistema baseado em OSINT;',
+      'Coleta automatizada de informações de fontes públicas;',
+      'Análise e organização inteligente dos dados;',
+      'Painéis intuitivos para visualização e acompanhamento;',
+      'Lançamento integrado ao site institucional;',
+      'Experiência focada em eficiência, clareza e confiabilidade.',
+    ],
+
+    usedTechs: [
+      'Back-end: Python (FastAPI);',
+      'Front-end: React + Tailwind CSS;',
+      'Banco de Dados: PostgreSQL.',
+    ],
+  },
+  {
+    id: 'blocks-candy-crush',
+    title: 'Blocks – Jogo Estilo Candy Crush Desenvolvido em C com Allegro',
+    filter: ProjectFilter.OTHER,
+    imageUrl: '/portfolio/blocks.png',
+    projectLink: 'https://github.com/amalra1/Blocks',
+
+    summary:
+      'Criação de um jogo com mecânica de match-3 similar ao Candy Crush, desenvolvido inteiramente em linguagem C com uso da biblioteca Allegro para gráficos e animações, garantindo uma experiência de baixo nível rápida e fluida.',
+
+    descriptionList: [
+      'Criamos o Blocks, um jogo inspirado na mecânica de Candy Crush, totalmente desenvolvido em linguagem C utilizando a biblioteca Allegro para gráficos, entrada do usuário e gerenciamento de animações.',
+      'O projeto reproduz a lógica clássica de combinar peças, pontuar e avançar fases, oferecendo uma experiência fluida e dinâmica mesmo em um ambiente de baixo nível.',
+      'Toda a lógica do jogo — detecção de combinações, queda de blocos, reposicionamento, pontuação e interface — foi implementada manualmente, demonstrando domínio de estruturas de dados, programação procedural e manipulação gráfica.',
+    ],
+
+    features: [
+      'Desenvolvimento completo do jogo em C;',
+      'Uso da biblioteca Allegro para gráficos, sprites e eventos;',
+      'Mecânica de match-3 inspirada no Candy Crush;',
+      'Sistema de pontuação, detecção de combinações e reposição de blocos, e',
+      'Jogo leve, responsivo e com lógica original escrita do zero.',
+    ],
+
+    usedTechs: ['C;', 'Allegro (Biblioteca Gráfica).'],
   },
 ];
