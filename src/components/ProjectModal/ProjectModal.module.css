@@ -121,6 +121,10 @@
     gap: 20px;
   }
 
+  .usedLanguagesWrapper {
+    margin-top: 0;
+  }
+
   .leftColumn,
   .rightColumn {
     flex: 1;
