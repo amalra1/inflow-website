@@ -76,8 +76,8 @@ export const projectsData: Project[] = [
     title:
       'Segmentação de Texturas em Imagens de Tatuagens – Filtros de Detecção e Análise Visual',
     filter: ProjectFilter.OTHER,
-    imageUrl: '/portfolio/bodybuilding-pose-classifier.png',
-    projectLink: 'https://github.com/amalra1/BodybuildingPoseClassifier',
+    imageUrl: '/portfolio/image-texture-segmentation.png',
+    projectLink: 'https://github.com/amalra1/ImageTextureSegmentation',
 
     summary:
       'Desenvolvimento de um sistema avançado de segmentação de textura para identificar padrões e delimitar áreas específicas dentro de tatuagens, utilizando filtros de detecção e algoritmos de visão computacional.',
