@@ -52,16 +52,14 @@ export default function ProjectModal({
               {paragraph}
             </p>
           ))}
-          <div className={styles.usedLanguagesWrapper}>
-            <h3 className={styles.listTitle}>Linguagem utilizada:</h3>
-            <ul className={styles.list}>
-              {project.usedTechs.map((tech, index) => (
-                <li key={index} className={styles.listItem}>
-                  {tech}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <h3 className={styles.listTitle}>Linguagem utilizada:</h3>
+          <ul className={styles.list}>
+            {project.usedTechs.map((tech, index) => (
+              <li key={index} className={styles.listItem}>
+                {tech}
+              </li>
+            ))}
+          </ul>
           <div className={styles.buttonsContainer}>
             <Button
               onClick={onClose}

@@ -61,10 +61,6 @@
   text-align: justify;
 }
 
-.usedLanguagesWrapper {
-  margin-top: 180px;
-}
-
 .listTitle {
   font-family: var(--font-title, sans-serif);
   font-size: 1.2rem;
@@ -119,10 +115,6 @@
   .columnsWrapper {
     flex-direction: column;
     gap: 20px;
-  }
-
-  .usedLanguagesWrapper {
-    margin-top: 0;
   }
 
   .leftColumn,

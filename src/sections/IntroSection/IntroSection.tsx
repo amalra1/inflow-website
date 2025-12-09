@@ -36,7 +36,7 @@ export default function IntroSection() {
               Contate-nos
             </Button>
             <Button
-              href="/"
+              href="/portfolio"
               backgroundColor="transparent"
               textColor="var(--color-main)"
               borderColor="var(--color-main)"

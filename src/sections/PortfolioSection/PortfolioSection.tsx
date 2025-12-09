@@ -4,6 +4,7 @@ import styles from './PortfolioSection.module.css';
 import PortfolioCard from '@/src/components/PortfolioCard/PortfolioCard';
 import Button from '@/src/components/Button/Button';
 import Image from 'next/image';
+import { projectsData, Project } from '@/src/utils/data/Projects';
 
 import {
   Carousel,
@@ -16,32 +17,7 @@ import {
 const CIRCLE_BACKGROUND_PATH = '/circles/intro-large-blue-circle.svg';
 
 export default function PortfolioSection() {
-  const portfolioItems = [
-    {
-      imageUrl: 'placeholder.png',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum',
-      link: '/',
-    },
-    {
-      imageUrl: 'placeholder.png',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum',
-      link: '/',
-    },
-    {
-      imageUrl: 'placeholder.png',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vitae tortor sapien, lectus scelerisque porttitor. Dolor nulla bibendum',
-      link: '/',
-    },
-    {
-      imageUrl: 'placeholder.png',
-      description:
-        'Quarto item de portfólio para testar a funcionalidade do carrossel.',
-      link: '/',
-    },
-  ];
+  const portfolioItems: Project[] = projectsData;
 
   return (
     <section className={styles.portfolioSection}>
@@ -73,8 +49,8 @@ export default function PortfolioSection() {
                 <div className="p-1">
                   <PortfolioCard
                     imageUrl={item.imageUrl}
-                    description={item.description}
-                    link={item.link}
+                    description={item.summary}
+                    link={item.projectLink}
                   />
                 </div>
               </CarouselItem>
@@ -93,7 +69,7 @@ export default function PortfolioSection() {
 
         <div className={styles.ctaWrapper}>
           <Button
-            href="/"
+            href="/portfolio"
             backgroundColor="var(--color-base)"
             textColor="var(--color-secondary)"
             borderColor="var(--color-secondary)"

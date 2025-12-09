@@ -14,8 +14,8 @@ import ProjectModal from '@/src/components/ProjectModal/ProjectModal';
 const FILTERS_BUTTONS = [
   { id: 'all', label: 'Todos' },
   { id: ProjectFilter.ECOMMERCE, label: 'E-commerce' },
-  { id: ProjectFilter.APP, label: 'Aplicativos' },
   { id: ProjectFilter.SITES, label: 'Sites' },
+  { id: ProjectFilter.OTHER, label: 'Outros' },
 ];
 
 export default function ProjectsSection() {

@@ -6,10 +6,13 @@ type ContactSectionProps = {
   subtitle?: string;
 };
 
+const WHATSAPP_NUMBER = '4891186726';
+
 export default function ContactSection({
   title,
   subtitle,
 }: ContactSectionProps) {
+  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`;
   return (
     <section className={styles.contactSection}>
       <div className={styles.innerWrapper}>
@@ -19,7 +22,7 @@ export default function ContactSection({
           {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
         </div>
         <Button
-          href="/"
+          href={whatsappLink}
           backgroundColor="white"
           textColor="#000000"
           borderColor="white"

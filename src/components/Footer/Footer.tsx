@@ -25,7 +25,7 @@ export default function Footer() {
             <Link href="/sobre" className={styles.columnTitle}>
               Sobre a Inflow
             </Link>
-            <Link href="/" className={styles.columnTitle}>
+            <Link href="/portfolio" className={styles.columnTitle}>
               Portfólio
             </Link>
             <Link href="/" className={styles.columnTitle}>
