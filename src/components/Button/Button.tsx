@@ -3,11 +3,13 @@ import styles from './Button.module.css';
 import { ReactNode } from 'react';
 
 type ButtonProps = {
-  href: string;
+  href?: string;
   children: ReactNode;
   backgroundColor: string;
   textColor: string;
   borderColor: string;
+  onClick?: () => void;
+  className?: string;
 };
 
 export default function Button({
@@ -16,6 +18,8 @@ export default function Button({
   backgroundColor,
   textColor,
   borderColor,
+  onClick,
+  className,
 }: ButtonProps) {
   const buttonStyle: object = {
     backgroundColor: backgroundColor,
@@ -23,9 +27,26 @@ export default function Button({
     borderColor: borderColor,
   };
 
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className={`${styles.button} ${className || ''}`}
+        style={buttonStyle}
+        onClick={onClick}
+      >
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <Link href={href} className={styles.button} style={buttonStyle}>
+    <button
+      className={`${styles.button} ${className || ''}`}
+      style={buttonStyle}
+      onClick={onClick}
+    >
       {children}
-    </Link>
+    </button>
   );
 }

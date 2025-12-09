@@ -22,7 +22,7 @@
   right: 0;
   height: 45%;
   background-color: var(--color-secondary);
-  z-index: 0;
+  z-index: 1;
 }
 
 .innerWrapper {

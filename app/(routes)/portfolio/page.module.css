@@ -1,0 +1,81 @@
+.mainContainer {
+  background-color: var(--color-secondary);
+  overflow: hidden;
+}
+
+.gradientWrapper {
+  background: radial-gradient(circle, var(--color-base) 1px, transparent 4px)
+      25px 40px / 340px 340px,
+    radial-gradient(circle, var(--color-base) 1px, transparent 4px) 20px 40px /
+      670px 170px,
+    radial-gradient(circle, var(--color-base) 1px, transparent 4px) 50px 70px /
+      510px 510px,
+    radial-gradient(
+      circle at bottom right,
+      var(--color-main) 0%,
+      var(--color-secondary) 60%
+    );
+
+  position: relative;
+  overflow: hidden;
+}
+
+.highlightLine {
+  border-top: var(--color-base) 1px solid;
+  opacity: 0.4;
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.highlightSection {
+  background-color: transparent;
+  padding: 80px 0;
+  color: white;
+}
+
+.highlightWrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-title, sans-serif);
+  color: white;
+  font-size: 50px;
+  text-transform: none;
+}
+
+.whatsappFixedButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10000;
+  transition: transform 0.2s ease;
+}
+
+.whatsappFixedButton:hover {
+  transform: scale(1.05);
+}
+
+.whatsappIcon {
+  filter: brightness(0) invert(1);
+  width: 35px;
+  height: 35px;
+}
