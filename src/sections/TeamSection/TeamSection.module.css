@@ -32,3 +32,18 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .titleLine {
+    width: 130px;
+    margin-bottom: 40px;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

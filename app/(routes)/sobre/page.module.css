@@ -172,3 +172,43 @@
   width: 35px;
   height: 35px;
 }
+
+@media (max-width: 600px) {
+  .highlightSection {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .missionTitle {
+    font-size: 24px;
+  }
+
+  .missionTitle::after {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .missionDescriptionWrapper {
+    padding-bottom: 10px;
+  }
+
+  .missionDescription {
+    font-size: 1rem;
+  }
+
+  .visionTitle {
+    font-size: 24px;
+  }
+
+  .visionTitle::before {
+    width: 110px;
+  }
+
+  .visionDescription {
+    font-size: 1rem;
+    padding-bottom: 10px;
+  }
+}
