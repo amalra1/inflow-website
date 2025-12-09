@@ -98,3 +98,56 @@
 .buttonWrapper {
   margin-left: auto;
 }
+
+@media (max-width: 600px) {
+  .detailsSection {
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+
+  .innerWrapper {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .textColumn {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .paragraph,
+  .paragraphBottom {
+    font-size: 1rem;
+  }
+
+  .paragraphBottom {
+    padding: 0 20px;
+  }
+
+  .offeringsTitle {
+    font-size: 20px;
+  }
+
+  .offeringsItem {
+    font-size: 1rem;
+  }
+
+  .imageColumn {
+    padding-top: 0;
+  }
+
+  .image {
+    padding-top: 0;
+    height: auto;
+  }
+
+  .buttonWrapper {
+    margin: 5px 0;
+    width: 70%;
+  }
+}

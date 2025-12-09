@@ -58,3 +58,10 @@
   width: 35px;
   height: 35px;
 }
+
+@media (max-width: 600px) {
+  .highlightLine {
+    margin-top: 10px;
+    max-width: calc(100% - 40px);
+  }
+}
