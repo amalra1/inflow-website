@@ -183,4 +183,31 @@ export const projectsData: Project[] = [
 
     usedTechs: ['C;', 'Allegro (Biblioteca Gráfica).'],
   },
+  {
+    id: 'transformacao-perspectiva',
+    title:
+      'Transformação de Perspectiva em Imagens – Correção de Ângulo e Ajuste para Visualização Frontal',
+    filter: ProjectFilter.OTHER,
+    imageUrl: '/portfolio/perspective-transformation.png',
+    projectLink: 'https://github.com/amalra1/PerspectiveTransformation',
+
+    summary:
+      'Desenvolvimento de um sistema de visão computacional para correção geométrica, capaz de transformar imagens inclinadas em visualizações frontais, alinhadas e retangulares, recuperando informações distorcidas.',
+
+    descriptionList: [
+      'Desenvolvemos um sistema de transformação de perspectiva capaz de corrigir imagens capturadas em planos inclinados ou ângulos desfavoráveis, convertendo a área selecionada em uma visualização frontal, alinhada e retangular.',
+      'O objetivo é oferecer precisão na correção geométrica, permitindo que informações distorcidas pela perspectiva sejam recuperadas de forma clara e fiel.',
+      'A solução utiliza técnicas avançadas de visão computacional para identificar pontos de referência, calcular a projeção e aplicar a transformação necessária para gerar uma imagem corrigida e mais adequada para análise, leitura ou processamento.',
+    ],
+
+    features: [
+      'Correção automática de perspectiva em imagens inclinadas;',
+      'Transformação geométrica para visualização frontal retangular;',
+      'Ajuste preciso de planos distorcidos;',
+      'Identificação de pontos e projeção por algoritmos de visão computacional, e',
+      'Resultados consistentes e prontos para análises ou uso técnico.',
+    ],
+
+    usedTechs: ['Visão Computacional;', 'Python.'],
+  },
 ];

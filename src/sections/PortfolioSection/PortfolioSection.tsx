@@ -18,7 +18,7 @@ const CIRCLE_BACKGROUND_PATH = '/circles/intro-large-blue-circle.svg';
 
 const FEATURED_PROJECT_IDS = [
   'renovaderme',
-  'sistema-osint',
+  'transformacao-perspectiva',
   'metodo-superar-digital',
   'classificador-poses-fisiculturismo',
   'segmentacao-tatuagens',
