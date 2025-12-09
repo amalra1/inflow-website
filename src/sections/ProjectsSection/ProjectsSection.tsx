@@ -4,23 +4,49 @@ import styles from './ProjectsSection.module.css';
 import { useState } from 'react';
 import Button from '@/src/components/Button/Button';
 import ProjectCard from '@/src/components/ProjectCard/ProjectCard';
-import { projectsData, ProjectFilter } from '@/src/utils/data/Projects';
+import {
+  projectsData,
+  ProjectFilter,
+  Project,
+} from '@/src/utils/data/Projects';
+import ProjectModal from '@/src/components/ProjectModal/ProjectModal';
 
 const FILTERS_BUTTONS = [
   { id: 'all', label: 'Todos' },
   { id: ProjectFilter.ECOMMERCE, label: 'E-commerce' },
-  { id: ProjectFilter.APP, label: 'Apps' },
+  { id: ProjectFilter.APP, label: 'Aplicativos' },
   { id: ProjectFilter.SITES, label: 'Sites' },
 ];
 
 export default function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(
+    null,
+  );
 
   const filteredProjects = projectsData.filter(
     (project) => activeFilter === 'all' || project.filter === activeFilter,
   );
 
-  const handleDetailsClick = (projectId: string) => {};
+  const selectedProject: Project | undefined = projectsData.find(
+    (p) => p.id === selectedProjectId,
+  );
+
+  const handleDetailsClick = (projectId: string) => {
+    setSelectedProjectId(projectId);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProjectId(null);
+  };
+
+  const handleBudgetClick = () => {
+    handleCloseModal();
+    console.log('Pedir orçamento clicado!');
+  };
 
   return (
     <section className={styles.projectsSection}>
@@ -61,6 +87,13 @@ export default function ProjectsSection() {
           ))}
         </div>
       </div>
+
+      <ProjectModal
+        isOpen={isModalOpen}
+        project={selectedProject}
+        onClose={handleCloseModal}
+        onBudgetClick={handleBudgetClick}
+      />
     </section>
   );
 }

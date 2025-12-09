@@ -26,25 +26,19 @@ export const projectsData: Project[] = [
     projectLink: 'https://www.renovaderme.com.br',
 
     descriptionList: [
-      'Desenvolvimento de uma Landing Page focada em alta conversão e performance, especificamente desenhada para o lançamento de um novo produto de Skincare.',
-      'O projeto envolveu a otimização de SEO On-page e a implementação de scripts de rastreamento para campanhas de mídia paga (Facebook Ads e Google Ads).',
-      'Foco total na experiência do usuário (UX) e design persuasivo, utilizando princípios de copywritting e escassez para maximizar as vendas diretas.',
+      'Desenvolvemos a página de vendas do Renovaderme, um produto de cuidados com a pele, com foco total em conversão.',
+      'Nosso trabalho envolveu desde a criação do design completo até a estruturação estratégica dos blocos, seguindo princípios de copy e UX para conduzir o visitante até a compra final.',
+      'Criamos uma jornada visual clara, destacando benefícios, diferenciais, provas sociais e chamadas para ação, resultando em uma página moderna, persuasiva e otimizada para vendas.',
     ],
 
     features: [
-      'Design responsivo e mobile-first.',
-      'Integração com gateway de pagamento (Checkout transparente).',
-      'Configuração de pixel de conversão e eventos de compra.',
-      'Estrutura pronta para testes A/B de copy e layout.',
-      'Carregamento ultra-rápido (Otimização de performance).',
+      'Design exclusivo focado em conversão;',
+      'Construção completa da landing page;',
+      'Estrutura estratégica dos blocos para guiar o usuário;',
+      'Seções de prova social, benefícios e urgência;',
+      'Experiência visual alinhada ao posicionamento da marca.',
     ],
 
-    usedTechs: [
-      'Next.js (React)',
-      'TypeScript',
-      'Tailwind CSS / CSS Modules',
-      'Vercel (Deployment)',
-      'Google Analytics / Meta Pixel',
-    ],
+    usedTechs: ['HTML;', 'CSS;', 'Javascript.'],
   },
 ];
