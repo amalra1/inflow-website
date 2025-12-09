@@ -96,7 +96,7 @@ export default function PortfolioSection() {
             href="/"
             backgroundColor="var(--color-base)"
             textColor="var(--color-secondary)"
-            borderColor="transparent"
+            borderColor="var(--color-secondary)"
           >
             Ver mais
           </Button>

@@ -17,10 +17,10 @@
 
 .blueBackground {
   position: absolute;
-  top: 370px;
+  top: 45%;
   left: 0;
   right: 0;
-  height: 325px;
+  height: 45%;
   background-color: var(--color-secondary);
   z-index: 0;
 }
@@ -45,8 +45,8 @@
 
 .ctaWrapper {
   position: absolute;
-  bottom: 30px;
   left: 50%;
+  bottom: 45px;
   transform: translateX(-50%);
   z-index: 10;
 }
@@ -57,6 +57,6 @@
   }
 
   .blueBackground {
-    height: 277px;
+    height: 50%;
   }
 }
