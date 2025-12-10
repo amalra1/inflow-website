@@ -1,46 +1,119 @@
 'use client';
 
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useCallback, useState } from 'react';
 import styles from './FormSection.module.css';
 import Image from 'next/image';
-
+import { useForm, Controller, useWatch } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert, { AlertProps } from '@mui/material/Alert';
 import { detailedSolutions } from '@/src/utils/data/SolutionsData';
 
 const SERVICE_OPTIONS = detailedSolutions.map((solution) => solution.title);
+const CARACTERES_CELULAR_PERMITIDOS = /^[0-9\(\)\-\+]{10,15}$/;
+const REGEX_FILTRO_INPUT = /[0-9\(\)\-\+]/g;
+
+const schema = z.object({
+  nome: z
+    .string()
+    .min(3, 'O nome deve ter pelo menos 3 caracteres.')
+    .max(50, 'O nome pode ter no máximo 50 caracteres.'),
+  email: z.string().email('Formato de e-mail inválido.'),
+  celular: z
+    .string()
+    .regex(
+      CARACTERES_CELULAR_PERMITIDOS,
+      'O formato de celular é inválido. Permite apenas números, -, ( ), e +.',
+    ),
+  projeto: z
+    .string()
+    .min(10, 'A descrição do projeto é muito curta.')
+    .max(1000, 'A descrição do projeto pode ter no máximo 1000 caracteres.'),
+  servicos: z
+    .array(z.string())
+    .min(1, 'Selecione pelo menos um serviço de interesse.'),
+});
+
+type FormData = z.infer<typeof schema>;
+
+const Alert = (props: AlertProps) => {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+};
+
+const ErrorMessage = ({ message }: { message: string | undefined }) => {
+  if (!message) return null;
+  return <p className={styles.errorMessage}>{message}</p>;
+};
 
 export default function FormSection() {
-  const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    celular: '',
-    projeto: '',
-    servicos: [] as string[],
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
+  const [snackbarSeverity, setSnackbarSeverity] = useState<'success' | 'error'>(
+    'success',
+  );
+
+  const {
+    control,
+    handleSubmit,
+    setValue,
+    formState: { errors, isValid, isSubmitting },
+    reset,
+  } = useForm<FormData>({
+    resolver: zodResolver(schema),
+    mode: 'onBlur',
+    defaultValues: {
+      nome: '',
+      email: '',
+      celular: '',
+      projeto: '',
+      servicos: [],
+    },
   });
 
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  const watchedServices = useWatch({ control, name: 'servicos' });
+
+  const handleServiceToggle = useCallback(
+    (service: string) => {
+      const currentServices = watchedServices || [];
+
+      const newServices = currentServices.includes(service)
+        ? currentServices.filter((s) => s !== service)
+        : [...currentServices, service];
+
+      setValue('servicos', newServices, {
+        shouldValidate: true,
+        shouldDirty: true,
+      });
+    },
+    [watchedServices, setValue],
+  );
+
+  const handleCloseSnackbar = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string,
   ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (reason === 'clickaway') {
+      return;
+    }
+    setSnackbarOpen(false);
   };
 
-  const handleServiceToggle = (service: string) => {
-    setFormData((prev) => {
-      const { servicos } = prev;
-      if (servicos.includes(service)) {
-        return { ...prev, servicos: servicos.filter((s) => s !== service) };
-      } else {
-        return { ...prev, servicos: [...servicos, service] };
-      }
+  const onSubmit = (data: FormData) => {
+    console.log(data);
+
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        setSnackbarMessage(
+          'Orçamento solicitado com sucesso! Entraremos em contato.',
+        );
+        setSnackbarSeverity('success');
+        setSnackbarOpen(true);
+
+        reset();
+        resolve(null);
+      }, 1500);
     });
-  };
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-
-    console.log('--- Dados do Orçamento Enviados ---');
-    console.log(formData);
-    console.log('---------------------------------');
   };
 
   return (
@@ -50,73 +123,102 @@ export default function FormSection() {
           Tem uma ideia em mente? Vamos trabalhar juntos!
         </h2>
 
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <div className={styles.inputGroup}>
-            <label htmlFor="nome" className={styles.label}>
-              Nome
-            </label>
-
-            <input
-              type="text"
-              id="nome"
-              name="nome"
-              placeholder="Digite seu nome"
-              className={`${styles.input} ${styles.inputFull}`}
-              value={formData.nome}
-              onChange={handleChange}
-              required
-            />
-          </div>
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+          <Controller
+            name="nome"
+            control={control}
+            render={({ field }) => (
+              <div className={styles.inputGroup}>
+                <label htmlFor="nome" className={styles.label}>
+                  Nome
+                </label>
+                <input
+                  {...field}
+                  type="text"
+                  id="nome"
+                  placeholder="Digite seu nome"
+                  className={`${styles.input} ${styles.inputFull}`}
+                  maxLength={50}
+                  required
+                />
+                <ErrorMessage message={errors.nome?.message} />
+              </div>
+            )}
+          />
 
           <div className={styles.inputRow}>
-            <div className={styles.inputGroup}>
-              <label htmlFor="email" className={styles.label}>
-                E-mail
-              </label>
+            <Controller
+              name="email"
+              control={control}
+              render={({ field }) => (
+                <div className={styles.inputGroup}>
+                  <label htmlFor="email" className={styles.label}>
+                    E-mail
+                  </label>
+                  <input
+                    {...field}
+                    type="email"
+                    id="email"
+                    placeholder="Digite seu melhor email"
+                    className={styles.input}
+                    maxLength={100}
+                    required
+                  />
+                  <ErrorMessage message={errors.email?.message} />
+                </div>
+              )}
+            />
 
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Digite seu melhor email"
-                className={styles.input}
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className={styles.inputGroup}>
-              <label htmlFor="celular" className={styles.label}>
-                Celular
-              </label>
-
-              <input
-                type="tel"
-                id="celular"
-                name="celular"
-                placeholder="(00) 00000-0000"
-                className={styles.input}
-                value={formData.celular}
-                onChange={handleChange}
-                required
-              />
-            </div>
-          </div>
-          <div className={styles.inputGroup}>
-            <label htmlFor="projeto" className={styles.label}>
-              Conte-nos sobre seu projeto
-            </label>
-            <textarea
-              id="projeto"
-              name="projeto"
-              placeholder="Conte-nos sobre seu projeto"
-              className={`${styles.textarea} ${styles.inputFull}`}
-              rows={5}
-              value={formData.projeto}
-              onChange={handleChange}
-              required
+            <Controller
+              name="celular"
+              control={control}
+              render={({ field }) => (
+                <div className={styles.inputGroup}>
+                  <label htmlFor="celular" className={styles.label}>
+                    Celular
+                  </label>
+                  <input
+                    {...field}
+                    onChange={(e) => {
+                      const filteredValue =
+                        e.target.value.match(REGEX_FILTRO_INPUT)?.join('') ||
+                        '';
+                      field.onChange(filteredValue);
+                    }}
+                    type="tel"
+                    id="celular"
+                    placeholder="Seu número de telefone"
+                    className={styles.input}
+                    maxLength={15}
+                    required
+                  />
+                  <ErrorMessage message={errors.celular?.message} />
+                </div>
+              )}
             />
           </div>
+
+          <Controller
+            name="projeto"
+            control={control}
+            render={({ field }) => (
+              <div className={styles.inputGroup}>
+                <label htmlFor="projeto" className={styles.label}>
+                  Conte-nos sobre seu projeto
+                </label>
+                <textarea
+                  {...field}
+                  id="projeto"
+                  placeholder="Conte-nos sobre seu projeto"
+                  className={`${styles.textarea} ${styles.inputFull}`}
+                  rows={5}
+                  maxLength={1000}
+                  required
+                />
+                <ErrorMessage message={errors.projeto?.message} />
+              </div>
+            )}
+          />
 
           <div className={styles.servicesGroup}>
             <p className={styles.servicesTitle}>Serviços de seu interesse</p>
@@ -126,7 +228,7 @@ export default function FormSection() {
                 <div
                   key={service}
                   className={`${styles.serviceCard} ${
-                    formData.servicos.includes(service)
+                    (watchedServices || []).includes(service)
                       ? styles.serviceCardActive
                       : ''
                   }`}
@@ -135,18 +237,23 @@ export default function FormSection() {
                   <span className={styles.serviceName}>{service}</span>
 
                   <div className={styles.checkbox}>
-                    {formData.servicos.includes(service) && (
+                    {(watchedServices || []).includes(service) && (
                       <span className={styles.checkMark}>&#10003;</span>
                     )}
                   </div>
                 </div>
               ))}
             </div>
+            <ErrorMessage message={errors.servicos?.message} />
           </div>
 
           <div className={styles.submitWrapper}>
-            <button type="submit" className={styles.submitButtonOverride}>
-              Solicitar orçamento
+            <button
+              type="submit"
+              className={styles.submitButtonOverride}
+              disabled={!isValid || isSubmitting}
+            >
+              {isSubmitting ? 'Enviando...' : 'Solicitar orçamento'}
             </button>
           </div>
         </form>
@@ -160,6 +267,21 @@ export default function FormSection() {
         className={styles.circlesDesignImageRight}
         unoptimized
       />
+
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={8000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbarSeverity}
+          sx={{ width: '100%' }}
+        >
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
     </section>
   );
 }

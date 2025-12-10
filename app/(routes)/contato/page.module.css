@@ -51,6 +51,11 @@
   text-transform: none;
 }
 
+.separatorLine {
+  height: 50px;
+  background-color: var(--color-secondary);
+}
+
 .whatsappFixedButton {
   position: fixed;
   bottom: 30px;
@@ -87,5 +92,10 @@
 
   .title {
     font-size: 30px;
+  }
+
+  .separatorLine {
+    height: 35px;
+    background-color: var(--color-secondary);
   }
 }

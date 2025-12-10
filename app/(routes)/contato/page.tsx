@@ -7,7 +7,7 @@ import FormSection from '@/src/sections/FormSection/FormSection';
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
 const WHATSAPP_NUMBER = '4891186726';
 
-export default function AboutPage() {
+export default function ContactPage() {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`;
   return (
     <main className={styles.mainContainer}>
@@ -24,6 +24,8 @@ export default function AboutPage() {
       </div>
 
       <FormSection />
+
+      <div className={styles.separatorLine}></div>
 
       <Footer />
       <a
