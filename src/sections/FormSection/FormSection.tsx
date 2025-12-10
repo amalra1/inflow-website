@@ -3,16 +3,20 @@
 import { useCallback, useState } from 'react';
 import styles from './FormSection.module.css';
 import Image from 'next/image';
+
 import { useForm, Controller, useWatch } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
+
 import { detailedSolutions } from '@/src/utils/data/SolutionsData';
 
 const SERVICE_OPTIONS = detailedSolutions.map((solution) => solution.title);
 const CARACTERES_CELULAR_PERMITIDOS = /^[0-9\(\)\-\+]{10,15}$/;
 const REGEX_FILTRO_INPUT = /[0-9\(\)\-\+]/g;
+const GOOGLE_SHEET_ENDPOINT = process.env.NEXT_PUBLIC_GOOGLE_SHEET_ENDPOINT;
 
 const schema = z.object({
   nome: z
@@ -99,21 +103,40 @@ export default function FormSection() {
     setSnackbarOpen(false);
   };
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+  const onSubmit = async (data: FormData) => {
+    if (!GOOGLE_SHEET_ENDPOINT) {
+      setSnackbarMessage('Erro: Endpoint do formulário não configurado.');
+      setSnackbarSeverity('error');
+      setSnackbarOpen(true);
+      return;
+    }
 
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        setSnackbarMessage(
-          'Orçamento solicitado com sucesso! Entraremos em contato.',
-        );
-        setSnackbarSeverity('success');
-        setSnackbarOpen(true);
+    console.log('Enviando dados:', data);
 
-        reset();
-        resolve(null);
-      }, 1500);
-    });
+    try {
+      await fetch(GOOGLE_SHEET_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        cache: 'no-cache',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      setSnackbarMessage(
+        'Orçamento enviado com sucesso! Entraremos em contato.',
+      );
+      setSnackbarSeverity('success');
+
+      reset();
+    } catch (error) {
+      console.error('Erro ao enviar dados para o Google Sheets:', error);
+      setSnackbarMessage('Erro ao enviar. Tente novamente mais tarde.');
+      setSnackbarSeverity('error');
+    } finally {
+      setSnackbarOpen(true);
+    }
   };
 
   return (
@@ -270,9 +293,9 @@ export default function FormSection() {
 
       <Snackbar
         open={snackbarOpen}
-        autoHideDuration={8000}
+        autoHideDuration={5000}
         onClose={handleCloseSnackbar}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       >
         <Alert
           onClose={handleCloseSnackbar}
