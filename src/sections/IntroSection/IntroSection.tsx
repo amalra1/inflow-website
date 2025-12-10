@@ -28,7 +28,7 @@ export default function IntroSection() {
           </p>
           <div className={styles.ctaGroup}>
             <Button
-              href={whatsappLink}
+              href="/contato"
               backgroundColor="var(--color-dark)"
               textColor="white"
               borderColor="#000000"

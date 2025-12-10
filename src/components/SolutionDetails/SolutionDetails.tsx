@@ -44,7 +44,7 @@ export default function SolutionDetails({ solution }: SolutionDetailsProps) {
           />
           <div className={styles.buttonWrapper}>
             <Button
-              href="/"
+              href="/contato"
               backgroundColor="var(--color-dark)"
               textColor="white"
               borderColor="var(--color-dark)"
