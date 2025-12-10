@@ -72,7 +72,7 @@ export default function ProjectModal({
             </Button>
 
             <Button
-              onClick={onBudgetClick}
+              href="/contato"
               backgroundColor="#000000"
               textColor="white"
               borderColor="#000000"
