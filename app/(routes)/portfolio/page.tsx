@@ -4,12 +4,13 @@ import Header from '@/src/components/Header/Header';
 import Image from 'next/image';
 import ProjectsSection from '@/src/sections/ProjectsSection/ProjectsSection';
 import ContactSection from '@/src/sections/ContactSection/ContactSection';
-import websiteText from '@/src/utils/website-text/pt-br.json';
+import { getWebsiteText } from '@/src/utils/website-text';
 
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
 const WHATSAPP_NUMBER = '4891186726';
 
 export default function PortfolioPage() {
+  const websiteText = getWebsiteText();
   const PORTFOLIO_DATA = websiteText.portfolioPage;
   const WHATSAPP_ALT_TEXT = websiteText.homePage.whatsappButton.altText;
 

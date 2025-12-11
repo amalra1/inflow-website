@@ -6,12 +6,13 @@ import HistorySection from '@/src/sections/HistorySection/HistorySection';
 import ValuesSection from '@/src/sections/ValuesSection/ValuesSection';
 import TeamSection from '@/src/sections/TeamSection/TeamSection';
 import ContactSection from '@/src/sections/ContactSection/ContactSection';
-import websiteText from '@/src/utils/website-text/pt-br.json';
+import { getWebsiteText } from '@/src/utils/website-text';
 
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
 const WHATSAPP_NUMBER = '4891186726';
 
 export default function AboutPage() {
+  const websiteText = getWebsiteText();
   const ABOUT_DATA = websiteText.aboutPage;
   const WHATSAPP_ALT_TEXT = websiteText.homePage.whatsappButton.altText;
 
