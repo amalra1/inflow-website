@@ -1,5 +1,6 @@
 import styles from './ContactSection.module.css';
 import Button from '@/src/components/Button/Button';
+import { getWebsiteText } from '@/src/utils/website-text';
 
 type ContactSectionProps = {
   title: string;
@@ -10,6 +11,9 @@ export default function ContactSection({
   title,
   subtitle,
 }: ContactSectionProps) {
+  const websiteText = getWebsiteText();
+  const ctaButtonText = websiteText.homePage.contactSection.ctaButtonText;
+
   return (
     <section className={styles.contactSection}>
       <div className={styles.innerWrapper}>
@@ -24,7 +28,7 @@ export default function ContactSection({
           textColor="#000000"
           borderColor="white"
         >
-          Entre em contato
+          {ctaButtonText}
         </Button>
       </div>
     </section>

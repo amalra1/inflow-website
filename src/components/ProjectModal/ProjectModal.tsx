@@ -3,21 +3,24 @@ import Image from 'next/image';
 import Button from '@/src/components/Button/Button';
 import { Project } from '@/src/utils/data/Projects';
 import CustomModal from '@/src/components/CustomModal/CustomModal';
+import { getWebsiteText } from '@/src/utils/website-text';
 
 type ProjectModalProps = {
   project: Project | undefined;
   onClose: () => void;
-  onBudgetClick: () => void;
   isOpen: boolean;
 };
 
 export default function ProjectModal({
   project,
   onClose,
-  onBudgetClick,
   isOpen,
 }: ProjectModalProps) {
+  const websiteText = getWebsiteText();
+
   if (!isOpen || !project) return null;
+
+  const MODAL_TEXT = websiteText.components.projectModal;
 
   return (
     <CustomModal isOpen={isOpen} onClose={onClose}>
@@ -37,7 +40,7 @@ export default function ProjectModal({
               sizes="(max-width: 600px) 90vw, 30vw"
             />
           </div>
-          <h3 className={styles.listTitle}>Principais entregas:</h3>
+          <h3 className={styles.listTitle}>{MODAL_TEXT.featuresTitle}</h3>
           <ul className={styles.list}>
             {project.features.map((feature, index) => (
               <li key={index} className={styles.listItem}>
@@ -52,7 +55,7 @@ export default function ProjectModal({
               {paragraph}
             </p>
           ))}
-          <h3 className={styles.listTitle}>Linguagem utilizada:</h3>
+          <h3 className={styles.listTitle}>{MODAL_TEXT.techsTitle}</h3>
           <ul className={styles.list}>
             {project.usedTechs.map((tech, index) => (
               <li key={index} className={styles.listItem}>
@@ -68,7 +71,7 @@ export default function ProjectModal({
               borderColor="#000000"
               className={styles.actionButton}
             >
-              Fechar
+              {MODAL_TEXT.closeButtonText}
             </Button>
 
             <Button
@@ -78,7 +81,7 @@ export default function ProjectModal({
               borderColor="#000000"
               className={styles.actionButton}
             >
-              Pedir orçamento
+              {MODAL_TEXT.budgetButtonText}
             </Button>
           </div>
         </div>

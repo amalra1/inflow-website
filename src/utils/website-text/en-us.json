@@ -1,0 +1,667 @@
+{
+  "constants": {
+    "SOCIAL_MEDIA_URLS": {
+      "instagram": "https://www.instagram.com/inflow.softwarehouse/",
+      "threads": "https://www.threads.com/@inflow.softwarehouse",
+      "tiktok": "https://www.tiktok.com/@inflow.softwarehouse",
+      "email": "inflow.agencia@gmail.com"
+    }
+  },
+  "homePage": {
+    "contactSection": {
+      "title": "Interested in working with us?",
+      "ctaButtonText": "Get in touch"
+    },
+    "whatsappButton": {
+      "altText": "WhatsApp"
+    }
+  },
+  "components": {
+    "header": {
+      "navItems": [
+        { "name": "Home", "href": "/" },
+        { "name": "About Inflow", "href": "/sobre" },
+        { "name": "Solutions", "href": "/solucoes" },
+        { "name": "Portfolio", "href": "/portfolio" }
+      ],
+      "socialMedia": [
+        {
+          "name": "Instagram",
+          "alt": "Instagram",
+          "icon": "instagram-white.svg"
+        },
+        { "name": "Threads", "alt": "Threads", "icon": "threads-white.svg" },
+        { "name": "WhatsApp", "alt": "WhatsApp", "icon": "whatsapp-white.svg" },
+        { "name": "TikTok", "alt": "TikTok", "icon": "tiktok-white.svg" }
+      ],
+      "contactButtonText": "Contact us"
+    },
+    "solutionCard": {
+      "iconAltPrefix": "Icon for"
+    },
+    "valueCard": {
+      "iconAltPrefix": "Icon for"
+    },
+    "teamMemberCard": {
+      "photoAltPrefix": "Photo of"
+    },
+    "solutionDetails": {
+      "offeringsTitle": "What we deliver:",
+      "ctaButtonText": "Request a quote",
+      "imageAltPrefix": "Illustration of"
+    },
+    "projectCard": {
+      "detailsButtonText": "Learn more about the project",
+      "visitButtonText": "Visit project",
+      "imageAltPrefix": "Project thumbnail for"
+    },
+    "projectModal": {
+      "featuresTitle": "Main Deliverables:",
+      "techsTitle": "Technologies Used:",
+      "closeButtonText": "Close",
+      "budgetButtonText": "Request a quote"
+    },
+    "footer": {
+      "logoAltText": "Inflow Software House Logo",
+      "navLinks": [
+        { "name": "About Inflow", "href": "/sobre" },
+        { "name": "Portfolio", "href": "/portfolio" },
+        { "name": "Contact Us", "href": "/contato" }
+      ],
+      "contactInfo": {
+        "emailTitle": "Email",
+        "serviceTitle": "Support Hours",
+        "serviceDays": "Monday to Friday",
+        "serviceHours": "09:00 to 18:00"
+      },
+      "socialHandle": "@inflow.softwarehouse",
+      "copyrightText": "© Inflow, 2025"
+    }
+  },
+  "sections": {
+    "introSection": {
+      "altTexts": {
+        "designCircles": "Background design circles",
+        "mainIllustration": "Illustration of Inflow Software House"
+      },
+      "title": "Software House",
+      "subtitle": "Specialized in custom development, merging technology with tangible results",
+      "ctaContact": "Contact us",
+      "ctaPortfolio": "See our Case Studies"
+    },
+    "solutionsSection": {
+      "title": "Solutions",
+      "solutions": [
+        {
+          "id": "APIS",
+          "title": "API's",
+          "description": [
+            "Creation and integration of APIs and payment gateways;",
+            "Development of APIs and microservices;",
+            "Integration of third-party APIs (payments, ERPs, CRMs);"
+          ]
+        },
+        {
+          "id": "AUTOMATIONS",
+          "title": "Automation",
+          "description": [
+            "Automation of business processes;",
+            "Development of software for task optimization;",
+            "Implementation of fintech solutions;",
+            "Integration of legacy and new systems;"
+          ]
+        },
+        {
+          "id": "CRM",
+          "title": "CRM",
+          "description": [
+            "Marketing automation and CRM;",
+            "Development of ERP, CRM, and SCM systems;",
+            "Creation of a system for lead capture and qualification;"
+          ]
+        },
+        {
+          "id": "SITES",
+          "title": "Websites",
+          "description": [
+            "Creation and design of institutional websites and e-commerce;",
+            "SEO optimization for websites and platforms;",
+            "Web design (UI/UX);"
+          ]
+        },
+        {
+          "id": "MONTHLY_FEE",
+          "title": "Monthly Fee",
+          "description": [
+            "Backup, disaster recovery, and data security;",
+            "Website hosting and maintenance;",
+            "System monitoring and management;",
+            "Continuous technical support and preventive maintenance;"
+          ]
+        },
+        {
+          "id": "SUPPORT",
+          "title": "Technical Support",
+          "description": [
+            "Software updates and evolutionary improvements;",
+            "Incident management and bug resolution;"
+          ]
+        },
+        {
+          "id": "HOSTING",
+          "title": "Hosting Service",
+          "description": [
+            "Server configuration and maintenance (dedicated, VPS, cloud);",
+            "Cloud migration;",
+            "Performance optimization and system scalability;",
+            "Cloud computing management (AWS, Azure, Google Cloud);"
+          ]
+        },
+        {
+          "id": "AI",
+          "title": "AI",
+          "description": [
+            "Data science and prediction;",
+            "Development of chatbots and virtual assistants;",
+            "Development of artificial intelligence and machine learning solutions;",
+            "Creation of bots and chatbots for service and sales;"
+          ]
+        },
+        {
+          "id": "SAAS",
+          "title": "SAAS",
+          "description": [
+            "Development of SaaS platforms (Software as a Service);",
+            "Development of systems for specific sectors (real estate, health, education, retail);",
+            "Marketplace platforms and service portals;",
+            "Software license prospecting and sales;"
+          ]
+        },
+        {
+          "id": "SYSTEMS",
+          "title": "Systems",
+          "description": [
+            "Data analysis and visualization.",
+            "Development of dashboards and BI (Business Intelligence);",
+            "Development of ERP, CRM, SCM, API and ONIT systems;",
+            "Implementation of relational and non-relational databases;",
+            "Systems for financial control and management;"
+          ]
+        },
+        {
+          "id": "CONSULTING",
+          "title": "Technology Consulting",
+          "description": [
+            "Software solutions architecture;",
+            "Security and compliance audit;",
+            "Consulting in analysis and requirement gathering;",
+            "Consulting in digital transformation;",
+            "Agile project planning and management;",
+            "Technical training for teams and clients;"
+          ]
+        },
+        {
+          "id": "APPS",
+          "title": "APPS",
+          "description": [
+            "Development of mobile applications (iOS, Android);",
+            "Development of web applications;",
+            "Development of digital games;",
+            "Development of e-learning solutions (LMS);",
+            "Development of embedded systems;",
+            "Development of software for wearable devices;",
+            "Implementation and maintenance of blogs and content portals;"
+          ]
+        }
+      ]
+    },
+    "portfolioSection": {
+      "title": "Portfolio",
+      "altTexts": {
+        "designCircles": "Background design circles"
+      },
+      "ctaButtonText": "See more"
+    },
+    "stepsSection": {
+      "titlePart1": "Turn your idea into",
+      "titlePart2Highlight": " reality",
+      "altTexts": {
+        "designCircles": "Background design circles",
+        "mainIllustration": "Image illustrating the development steps"
+      },
+      "steps": [
+        {
+          "title": "Your Idea",
+          "description": "For us at Inflow to know if we are a good fit for your project, we always start with screening questions to ensure we are the right choice for your company."
+        },
+        {
+          "title": "Initial Meeting",
+          "description": "In this meeting, we will discuss the strategy we propose to achieve your website or system goals. We will establish a communication channel to keep the project updated, where you can follow the entire process from start to finish."
+        },
+        {
+          "title": "Agile Methodology and Scrum",
+          "description": "In this stage, we will have a team meeting with the project manager, lead developer, and designer. We will then work using the Agile Scrum methodology to ensure your project is delivered on time and within budget."
+        },
+        {
+          "title": "Your Site or System Goes Live",
+          "description": "Final checks of the site or system will be performed, ensuring all tracking pixels, links, and the user interface are compatible with all devices. We will also perform tests to ensure the site is optimized for user experience."
+        }
+      ]
+    }
+  },
+  "projects": {
+    "filters": {
+      "ALL": "All",
+      "ECOMMERCE": "E-commerce",
+      "SITES": "Websites",
+      "OTHER": "Others"
+    },
+    "data": [
+      {
+        "id": "renovaderme",
+        "title": "Renovaderme – Strategic Sales Page for Skincare Product",
+        "summary": "Renovaderme sales page, a skincare product, with total focus on conversion.",
+        "descriptionList": [
+          "We developed the sales page for Renovaderme, a skincare product, with a total focus on conversion.",
+          "Our work involved everything from creating the complete design to strategically structuring the blocks, following copy and UX principles to guide the visitor to the final purchase.",
+          "We created a clear visual journey, highlighting benefits, differentiators, social proof, and calls to action, resulting in a modern, persuasive, and sales-optimized page."
+        ],
+        "features": [
+          "Exclusive design focused on conversion;",
+          "Complete landing page construction;",
+          "Strategic block structure to guide the user;",
+          "Social proof, benefits, and urgency sections;",
+          "Visual experience aligned with brand positioning."
+        ]
+      },
+      {
+        "id": "metodo-superar-digital",
+        "title": "Método Superar – Sales Page for Digital Product",
+        "summary": "Sales page for Método Superar, a digital product focused on personal transformation.",
+        "descriptionList": [
+          "We developed the sales page for Método Superar, a digital product focused on personal transformation.",
+          "Our team created the entire landing page design and strategically structured each block to lead the user through a clear, engaging, and conversion-oriented journey.",
+          "We organized the page to convey authority, explain the method, present real results, and encourage the visitor to make the final purchase decision."
+        ],
+        "features": [
+          "Exclusive design for digital product;",
+          "Complete landing page structure;",
+          "Strategic block sequence based on the decision journey;",
+          "Benefits, social proof, and authority sections;",
+          "Construction oriented towards conversion and clarity of the offer."
+        ]
+      },
+      {
+        "id": "segmentacao-tatuagens",
+        "title": "Texture Segmentation in Tattoo Images – Detection and Visual Analysis Filters",
+        "summary": "Development of an advanced texture segmentation system to identify patterns and delimit specific areas within tattoos, using detection filters and computer vision algorithms.",
+        "descriptionList": [
+          "We developed a texture segmentation system in tattoo images, using advanced filters for edge detection and precise separation of regions of interest.",
+          "The project's goal is to identify patterns, details, and delimit specific areas within tattoos, allowing for deeper analysis for applications such as aesthetics, cataloging, identification, and visual processing.",
+          "The solution combines custom filters, computer vision techniques, and segmentation algorithms to ensure consistent results, even in complex images."
+        ],
+        "features": [
+          "Implementation of advanced edge detection filters;",
+          "Accurate texture segmentation in tattooed areas;",
+          "High-fidelity image analysis and processing;",
+          "Automatic separation of regions of interest, and",
+          "Robust system for use in visual studies and practical applications."
+        ]
+      },
+      {
+        "id": "classificador-poses-fisiculturismo",
+        "title": "Bodybuilding Pose Classifier – Automatic Analysis with MediaPipe",
+        "summary": "Development of a bodybuilding pose classifier using the MediaPipe library to detect, analyze, and classify classic postures in images and videos.",
+        "descriptionList": [
+          "We developed a bodybuilding pose classifier using Google's MediaPipe library to detect, analyze, and classify bodybuilding poses in images and videos.",
+          "The project's objective is to offer an intelligent solution capable of automatically recognizing classic bodybuilding postures, bringing precision, speed, and standardization to visual assessments.",
+          "The technology identifies body points, analyzes angles, compares patterns, and returns the pose classification, allowing use in training, competitions, fitness apps, and physical monitoring systems."
+        ],
+        "features": [
+          "Implementation of the MediaPipe library for body detection;",
+          "Automatic classification of bodybuilding poses;",
+          "Real-time image and video analysis;",
+          "Algorithm trained to recognize specific poses of the modality;",
+          "Modern, fast, and highly accurate system."
+        ]
+      },
+      {
+        "id": "sistema-osint",
+        "title": "OSINT System – Public Information Collection and Analysis Platform",
+        "summary": "Development of a complete system based on OSINT (Open Source Intelligence) for collecting, monitoring, and analyzing information available in open sources, providing strategic insights in real time.",
+        "descriptionList": [
+          "We are developing a complete system based on OSINT (Open Source Intelligence), focused on collecting, monitoring, and analyzing information available in open sources.",
+          "The solution was designed to provide organized data in real time, allowing the user to gain strategic insights quickly and reliably.",
+          "The system will be launched alongside the official website, providing a complete experience: institutional presentation on the website and direct access to the active platform, with all functionalities active."
+        ],
+        "features": [
+          "Complete development of an OSINT-based system;",
+          "Automated collection of information from public sources;",
+          "Intelligent data analysis and organization;",
+          "Intuitive dashboards for visualization and monitoring;",
+          "Launch integrated with the institutional website;",
+          "Experience focused on efficiency, clarity, and reliability."
+        ]
+      },
+      {
+        "id": "blocks-candy-crush",
+        "title": "Blocks – Candy Crush Style Game Developed in C with Allegro",
+        "summary": "Creation of a match-3 mechanic game similar to Candy Crush, developed entirely in C language using the Allegro library for graphics and animations, ensuring a fast and fluid low-level experience.",
+        "descriptionList": [
+          "We created Blocks, a game inspired by the Candy Crush mechanic, fully developed in C language using the Allegro library for graphics, user input, and animation management.",
+          "The project reproduces the classic logic of matching pieces, scoring, and advancing phases, offering a fluid and dynamic experience even in a low-level environment.",
+          "All game logic — combination detection, block falling, repositioning, scoring, and interface — was implemented manually, demonstrating mastery of data structures, procedural programming, and graphic manipulation."
+        ],
+        "features": [
+          "Complete game development in C;",
+          "Use of the Allegro library for graphics, sprites, and events;",
+          "Match-3 mechanic inspired by Candy Crush;",
+          "Scoring system, combination detection, and block repositioning, and",
+          "Lightweight, responsive game with original logic written from scratch."
+        ]
+      },
+      {
+        "id": "transformacao-perspectiva",
+        "title": "Perspective Transformation in Images – Angle Correction and Adjustment for Frontal View",
+        "summary": "Development of a computer vision system for geometric correction, capable of transforming images inclined into frontal, aligned, and rectangular views, recovering distorted information.",
+        "descriptionList": [
+          "We developed a perspective transformation system capable of correcting images captured on inclined planes or unfavorable angles, converting the selected area into a frontal, aligned, and rectangular view.",
+          "The objective is to offer precision in geometric correction, allowing information distorted by perspective to be recovered clearly and faithfully.",
+          "The solution uses advanced computer vision techniques to identify reference points, calculate the projection, and apply the necessary transformation to generate a corrected image, more suitable for analysis, reading, or processing."
+        ],
+        "features": [
+          "Automatic perspective correction in inclined images;",
+          "Geometric transformation for rectangular frontal view;",
+          "Precise adjustment of distorted planes;",
+          "Identification of points and projection by computer vision algorithms, and",
+          "Consistent results ready for analysis or technical use."
+        ]
+      }
+    ]
+  },
+  "aboutPage": {
+    "highlightSectionTitle": "Learn more about Inflow",
+    "missionSection": {
+      "title": "Our Mission",
+      "description": "Our mission is to develop custom digital solutions that transform ideas into functional, intuitive, and high-performance experiences. We seek to ensure 100% client satisfaction through transparency, superior quality, and obsession with usability. We operate with continuous innovation, creating scalable and secure systems that add real value to businesses, always with specialized support and commitment to consistent results."
+    },
+    "visionSection": {
+      "title": "Our Vision",
+      "description": "Our vision is to be recognized as a national benchmark in software and customized application development, standing out for technical excellence, intelligent simplicity, and absolute focus on user experience. We aim to lead digital transformation, anticipating trends and offering innovative solutions that exceed expectations, consolidating a culture of continuous evolution and positive market impact."
+    },
+    "contactSectionTitle": "Get in touch and let's bring your idea to life!",
+    "historySection": {
+      "aboutUs": {
+        "title": "About Us",
+        "paragraphs": [
+          "Inflow is a software house specialized in creating tailor-made digital solutions from scratch and exactly the way your project requires.",
+          "We develop customized systems and applications, with an experienced technical team prepared to transform your idea into functional technology."
+        ]
+      },
+      "ourHistory": {
+        "title": "Our History",
+        "paragraphs": [
+          "We started through a group of friends passionate about developing ideas.",
+          "We want you to have total clarity before starting any project. Therefore, we provide a free, no-obligation quote, so you know exactly the necessary investment.",
+          "With Inflow, your software or application is developed from scratch, fully customized and aligned with your needs, always with high quality and within your budget."
+        ]
+      }
+    },
+    "valuesSection": {
+      "title": "Our Values",
+      "values": [
+        { "id": "TRANSPARENCY", "title": "Transparency" },
+        { "id": "SIMPLICITY", "title": "Intelligent Simplicity" },
+        { "id": "USABILITY", "title": "Obsession with Usability" },
+        { "id": "PURPOSE", "title": "Code with Purpose" },
+        { "id": "EVOLUTION", "title": "Continuous Evolution" },
+        { "id": "PERFORMANCE", "title": "Performance Above All" }
+      ]
+    },
+    "teamSection": {
+      "title": "Our Team",
+      "roles": {
+        "DESIGNER": "Designer",
+        "COMMERCIAL": "Sales",
+        "DEVELOPER": "Developer"
+      }
+    }
+  },
+  "solutionsPage": {
+    "sectionTitle": "Explore our solutions",
+    "contactSection": {
+      "title": "Shall we schedule a conversation?",
+      "subtitle": "Request a no-obligation quote"
+    },
+    "detailedSolutions": [
+      {
+        "id": "APIS",
+        "title": "API's",
+        "description": [
+          "Transform communication between systems and empower your business with our API solutions. We develop and integrate customized APIs and microservices that connect your internal systems and external platforms securely, quickly, and scalably."
+        ],
+        "detailsList": [
+          "Creation and integration of payment links and gateways: facilitate online transactions reliably and efficiently.",
+          "Development of custom APIs and microservices: automate processes, improve performance, and ensure total integration between your systems.",
+          "Integration with third-party APIs (payments, ERPs, CRMs): connect your favorite tools and optimize your workflow without complications.",
+          "Connect your favorite tools and optimize your workflow without complications."
+        ],
+        "conclusion": "With our solutions, your business gains agility, security, and innovation, delivering more complete experiences for your clients and smarter operations for your team."
+      },
+      {
+        "id": "AUTOMATIONS",
+        "title": "Automation",
+        "description": [
+          "Take your business efficiency to a new level with our intelligent automation solutions. We develop systems that reduce manual tasks, speed up processes, and connect different platforms, allowing your team to focus on what truly matters: generating results."
+        ],
+        "detailsList": [
+          "Automation of business processes: eliminate rework and gain productivity with optimized workflows.",
+          "Development of software for industrial automation: increase operational performance and reduce errors in complex processes.",
+          "Implementation of fintech solutions: automate financial transactions, payments, and integrations with financial platforms.",
+          "Integration of legacy and new systems: connect old and new tools without data loss or productivity."
+        ],
+        "conclusion": "With our automations, your company achieves agility, precision, and innovation, ensuring smarter processes and measurable results."
+      },
+      {
+        "id": "CRM",
+        "title": "CRM",
+        "description": [
+          "Maximize customer relationships and boost your sales with our CRM and marketing automation solutions. We create intelligent systems that connect commercial processes, marketing, and service, ensuring your company is always ahead in customer and opportunity management."
+        ],
+        "detailsList": [
+          "Marketing automation and CRM: manage campaigns, leads, and interactions integrally and efficiently.",
+          "Development of ERP, CRM, and SCM systems: complete solutions that centralize data, processes, and strategic information for your business.",
+          "Creation of systems for lead capture and qualification: transform opportunities into real customers with intelligent nurturing and follow-up processes."
+        ],
+        "conclusion": "With our CRM solutions, your company gains operational efficiency, strategic intelligence, and concrete results, delivering more personalized experiences for each customer."
+      },
+      {
+        "id": "SITES",
+        "title": "Websites",
+        "description": [
+          "Strengthen your digital presence with modern, functional, and attractive websites and e-commerce. We develop solutions that combine design, performance, and user experience, ensuring your brand stands out and converts visitors into clients."
+        ],
+        "detailsList": [
+          "Creation and design of institutional websites and e-commerce: customized sites that reflect your brand identity and generate results.",
+          "SEO optimization for websites and platforms: improve your ranking in search engines and increase qualified traffic.",
+          "Web design (UI/UX): user experience planned to engage visitors and facilitate navigation."
+        ],
+        "conclusion": "With our website services, your company gains visibility, credibility, and performance, delivering digital experiences that delight and convert."
+      },
+      {
+        "id": "MONTHLY_FEE",
+        "title": "Monthly Fee",
+        "description": [
+          "Ensure the continuity, security, and performance of your systems with our monthly subscription services. We take care of the maintenance and protection of your digital infrastructure so your business runs without interruptions, reliably and securely."
+        ],
+        "detailsList": [
+          "Backup, disaster recovery, and data security: complete protection of your critical information against losses and digital threats.",
+          "Website hosting and maintenance: sites always available and updated, without technical worries.",
+          "System monitoring and management: constant supervision to identify and correct problems before they impact your business.",
+          "Continuous technical support and preventive maintenance: specialized assistance to ensure your systems operate at maximum efficiency."
+        ],
+        "conclusion": "With our monthly services, your company achieves operational peace of mind, digital security, and continuous support, allowing you to focus on the growth and results of your business."
+      },
+      {
+        "id": "SUPPORT",
+        "title": "Technical Support",
+        "description": [
+          "Keep your systems always updated, secure, and running efficiently with our specialized technical support service. We ensure your software operates without interruptions, with continuous improvements and fast problem resolution."
+        ],
+        "detailsList": [
+          "Software updates and evolutionary improvements: keep up with technological evolution without losing performance or functionality.",
+          "Incident management and bug resolution: quick identification and correction of failures, ensuring your operation proceeds without impacts."
+        ],
+        "conclusion": "With our technical support, your company gains operational continuity, reliability, and peace of mind, allowing your team to focus on what truly matters: delivering results."
+      },
+      {
+        "id": "HOSTING",
+        "title": "Hosting Service",
+        "description": [
+          "Ensure your systems and applications run with maximum performance, security, and scalability with our professional hosting solutions. We take care of all infrastructure so your company operates reliably, without interruptions."
+        ],
+        "detailsList": [
+          "Server configuration and maintenance (dedicated, VPS, cloud): environments prepared for high performance and stability.",
+          "Cloud migration: move your systems securely and without data loss, taking advantage of all the benefits of cloud computing.",
+          "Performance optimization and system scalability: prepare your infrastructure to grow with your demand.",
+          "Cloud computing services (AWS, Azure, Google Cloud): utilize cutting-edge technology to host, manage, and expand your systems efficiently."
+        ],
+        "conclusion": "With our hosting service, your company gains reliability, security, and flexibility, ensuring your digital operations are always ready for the future."
+      },
+      {
+        "id": "AI",
+        "title": "Artificial Intelligence (AI)",
+        "description": [
+          "Transform data into strategic decisions and intelligent solutions with our artificial intelligence technologies. We develop systems that automate processes, optimize results, and improve customer experience innovatively."
+        ],
+        "detailsList": [
+          "Data science and prediction: advanced data analysis to guide decisions and identify growth opportunities.",
+          "Development of chatbots and virtual assistants: intelligent automation of service and support, providing quick and personalized responses.",
+          "Development of artificial intelligence and machine learning solutions: systems that learn and evolve over time, increasing your business efficiency.",
+          "Implementation of chatbots for service and sales: boost conversions and improve customer experience with automated and intelligent interactions."
+        ],
+        "conclusion": "With our AI solutions, your company gains innovation, operational efficiency, and competitive advantage, delivering faster, smarter, and more personalized experiences to your customers."
+      },
+      {
+        "id": "SAAS",
+        "title": "SaaS (Software as a Service)",
+        "description": [
+          "Boost your business with modern, scalable, and custom SaaS platforms. We create solutions that make software accessible via the cloud, allowing businesses in different sectors to optimize processes, expand digital presence, and increase revenue."
+        ],
+        "detailsList": [
+          "Development of SaaS platforms: complete and customized solutions, accessible from anywhere, anytime.",
+          "Systems for specific sectors (real estate, health, education, retail): software adapted to your market needs, ensuring maximum efficiency.",
+          "Marketplace platforms and service portals: connect users and suppliers in an intelligent and functional digital ecosystem.",
+          "Software license prospecting and sales: complete support for commercialization and license management, boosting your revenue."
+        ],
+        "conclusion": "With our SaaS solutions, your company gains flexibility, scalability, and innovation, delivering high-value digital experiences for clients and users."
+      },
+      {
+        "id": "SYSTEMS",
+        "title": "Systems",
+        "description": [
+          "Optimize your business management with our complete system development and analysis solutions. We create platforms that connect data, processes, and teams, enabling faster and more strategic decisions."
+        ],
+        "detailsList": [
+          "Data analysis and visualization: transform information into clear insights for precise and strategic decisions.",
+          "Development of dashboards and BI (Business Intelligence): monitor key performance indicators practically and interactively.",
+          "Development of ERP, CRM, SCM, API and ONIT systems: integrated solutions that connect all sectors of your company.",
+          "Implementation of relational and non-relational databases: organize and manage data efficiently and securely.",
+          "Systems for financial control and management: monitor revenues, expenses, and cash flow with intelligent and reliable systems."
+        ],
+        "conclusion": "With our system solutions, your company gains operational efficiency, strategic control, and cutting-edge technology, delivering more productivity and better results."
+      },
+      {
+        "id": "CONSULTING",
+        "title": "Technology Consulting",
+        "description": [
+          "Drive innovation and efficiency in your business with our specialized technology consulting. We help companies plan, implement, and manage digital solutions strategically, securely, and aligned with business goals."
+        ],
+        "detailsList": [
+          "Software solutions architecture: planning and structuring of scalable, secure, and high-performance systems.",
+          "Security and compliance audit: complete analysis to ensure your systems meet security standards and regulations.",
+          "Consulting in analysis and requirement gathering: we identify needs and transform them into efficient technological solutions.",
+          "Consulting in digital transformation: we guide your company in modernizing processes and adopting new technologies.",
+          "Agile project planning and management: project monitoring agilely, ensuring delivery within deadlines and budget.",
+          "Technical training for teams and clients: practical capacity building to maximize the use of implemented solutions."
+        ],
+        "conclusion": "With our system solutions, your company gains operational efficiency, strategic control, and cutting-edge technology, delivering more productivity and better results."
+      },
+      {
+        "id": "APPS",
+        "title": "APPS",
+        "description": [
+          "Connect your company to the digital world with personalized mobile and web applications and solutions, offering intuitive experiences and effectively engaging your users. We develop everything from corporate applications to interactive and innovative solutions for different platforms."
+        ],
+        "detailsList": [
+          "Development of mobile applications (iOS, Android): native and hybrid solutions for reach across all platforms.",
+          "Development of web applications: fast, secure, and accessible online applications from any device.",
+          "Development of digital games: interactive experiences for entertainment or user engagement.",
+          "Development of landing pages and sales funnels: optimized conversion of visitors into clients.",
+          "Development of e-learning solutions (LMS): efficient and scalable educational platforms.",
+          "Development of embedded systems: software integrated into physical devices for control and automation.",
+          "Development of software for wearable devices: innovation and connectivity in wearable technology.",
+          "Implementation and maintenance of blogs and content portals: complete management of digital presence and publications."
+        ],
+        "conclusion": "With our application solutions, your company gains innovation, interactivity, and digital presence, offering complete and impactful experiences for clients, collaborators, and users."
+      }
+    ]
+  },
+  "portfolioPage": {
+    "highlightSectionTitle": "Portfolio",
+    "contactSectionTitle": "Get in touch and let's bring your idea to life!"
+  },
+  "contactPage": {
+    "highlightSectionTitle": "Get in Touch",
+    "formSection": {
+      "sectionTitle": "Have an idea in mind? Let's work together!",
+      "fields": {
+        "nome": {
+          "label": "Name",
+          "placeholder": "Enter your name",
+          "validation": {
+            "min": "The name must have at least 3 characters.",
+            "max": "The name can have a maximum of 50 characters."
+          }
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Enter your best email",
+          "validation": {
+            "invalid": "Invalid email format."
+          }
+        },
+        "celular": {
+          "label": "Phone (Mobile)",
+          "placeholder": "Your phone number",
+          "validation": {
+            "invalid": "Invalid phone format. Only allows numbers, -, ( ), and +."
+          }
+        },
+        "projeto": {
+          "label": "Tell us about your project",
+          "placeholder": "Tell us about your project",
+          "validation": {
+            "min": "The project description is too short.",
+            "max": "The project description can have a maximum of 1000 characters."
+          }
+        },
+        "servicos": {
+          "title": "Services you are interested in",
+          "validation": {
+            "min": "Select at least one service of interest."
+          }
+        }
+      },
+      "submitButton": {
+        "default": "Request a quote",
+        "submitting": "Sending..."
+      },
+      "feedback": {
+        "errorEndpoint": "Error: Form endpoint not configured.",
+        "success": "Quote successfully sent! We will contact you shortly.",
+        "errorFetch": "Error sending. Please try again later."
+      }
+    }
+  }
+}

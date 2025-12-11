@@ -8,14 +8,15 @@ import {
   projectsData,
   ProjectFilter,
   Project,
+  projectFilterTexts,
 } from '@/src/utils/data/Projects';
 import ProjectModal from '@/src/components/ProjectModal/ProjectModal';
 
 const FILTERS_BUTTONS = [
-  { id: 'all', label: 'Todos' },
-  { id: ProjectFilter.ECOMMERCE, label: 'E-commerce' },
-  { id: ProjectFilter.SITES, label: 'Sites' },
-  { id: ProjectFilter.OTHER, label: 'Outros' },
+  { id: 'all', label: projectFilterTexts.ALL }, // Usamos ALL do JSON
+  { id: ProjectFilter.ECOMMERCE, label: projectFilterTexts.ECOMMERCE },
+  { id: ProjectFilter.SITES, label: projectFilterTexts.SITES },
+  { id: ProjectFilter.OTHER, label: projectFilterTexts.OTHER },
 ];
 
 export default function ProjectsSection() {
@@ -41,11 +42,6 @@ export default function ProjectsSection() {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedProjectId(null);
-  };
-
-  const handleBudgetClick = () => {
-    handleCloseModal();
-    console.log('Pedir orçamento clicado!');
   };
 
   return (
@@ -92,7 +88,6 @@ export default function ProjectsSection() {
         isOpen={isModalOpen}
         project={selectedProject}
         onClose={handleCloseModal}
-        onBudgetClick={handleBudgetClick}
       />
     </section>
   );

@@ -5,6 +5,7 @@ import PortfolioCard from '@/src/components/PortfolioCard/PortfolioCard';
 import Button from '@/src/components/Button/Button';
 import Image from 'next/image';
 import { projectsData, Project } from '@/src/utils/data/Projects';
+import { getWebsiteText } from '@/src/utils/website-text';
 
 import {
   Carousel,
@@ -26,6 +27,9 @@ const FEATURED_PROJECT_IDS = [
 ];
 
 export default function PortfolioSection() {
+  const websiteText = getWebsiteText();
+  const PORTFOLIO_TEXT = websiteText.sections.portfolioSection;
+
   const portfolioItems: Project[] = FEATURED_PROJECT_IDS.map((id) =>
     projectsData.find((project) => project.id === id),
   ).filter((item): item is Project => item !== undefined);
@@ -34,7 +38,7 @@ export default function PortfolioSection() {
     <section className={styles.portfolioSection}>
       <Image
         src={CIRCLE_BACKGROUND_PATH}
-        alt="Círculos de design de fundo"
+        alt={PORTFOLIO_TEXT.altTexts.designCircles}
         width={350}
         height={350}
         className={styles.circlesDesignImageLeft}
@@ -43,7 +47,7 @@ export default function PortfolioSection() {
       <div className={styles.blueBackground} />
 
       <div className={styles.innerWrapper}>
-        <h2 className={styles.title}>Portfólio</h2>
+        <h2 className={styles.title}>{PORTFOLIO_TEXT.title}</h2>
         <Carousel
           className="w-full relative"
           opts={{
@@ -85,7 +89,7 @@ export default function PortfolioSection() {
             textColor="var(--color-secondary)"
             borderColor="var(--color-secondary)"
           >
-            Ver mais
+            {PORTFOLIO_TEXT.ctaButtonText}
           </Button>
         </div>
       </div>

@@ -7,22 +7,25 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import Logo from '../Logo/Logo';
+import { getWebsiteText } from '@/src/utils/website-text';
 
 type HeaderProps = {
   variant: 'default' | 'alternate';
 };
 
+const ICON_BASE_PATH = '/social-networks-logos/';
+const WHATSAPP_NUMBER = '4891186726';
+
 export default function Header({ variant }: HeaderProps) {
-  const ICON_BASE_PATH = '/social-networks-logos/';
+  const websiteText = getWebsiteText();
+  const { constants, components } = websiteText;
+  const HEADER_DATA = components.header;
+  const SOCIAL_URLS = constants.SOCIAL_MEDIA_URLS;
+
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = [
-    { name: 'Início', href: '/' },
-    { name: 'Sobre a Inflow', href: '/sobre' },
-    { name: 'Soluções', href: '/solucoes' },
-    { name: 'Portfólio', href: '/portfolio' },
-  ];
+  const navItems = HEADER_DATA.navItems;
 
   const isAlternate = variant === 'alternate';
 
@@ -33,62 +36,41 @@ export default function Header({ variant }: HeaderProps) {
     isAlternate ? styles.alternateContentWrapper : ''
   }`;
 
+  const getSocialHref = (name: string) => {
+    switch (name.toLowerCase()) {
+      case 'instagram':
+        return SOCIAL_URLS.instagram;
+      case 'threads':
+        return SOCIAL_URLS.threads;
+      case 'tiktok':
+        return SOCIAL_URLS.tiktok;
+      case 'whatsapp':
+        return `https://wa.me/${WHATSAPP_NUMBER}`;
+      default:
+        return '#';
+    }
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.socialBarWrapper}>
         <div className={styles.socialIconsWrapper}>
-          <a
-            href="https://www.instagram.com/inflow.softwarehouse/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={`${ICON_BASE_PATH}instagram-white.svg`}
-              alt="Instagram"
-              width={24}
-              height={24}
-              className={styles.socialIcon}
-            />
-          </a>
-          <a
-            href="https://www.threads.com/@inflow.softwarehouse"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={`${ICON_BASE_PATH}threads-white.svg`}
-              alt="Threads"
-              width={24}
-              height={24}
-              className={styles.socialIcon}
-            />
-          </a>
-          <a
-            href="https://wa.me/4891186726"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={`${ICON_BASE_PATH}whatsapp-white.svg`}
-              alt="WhatsApp"
-              width={24}
-              height={24}
-              className={styles.socialIcon}
-            />
-          </a>
-          <a
-            href="https://www.tiktok.com/@inflow.softwarehouse"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={`${ICON_BASE_PATH}tiktok-white.svg`}
-              alt="TikTok"
-              width={24}
-              height={24}
-              className={styles.socialIcon}
-            />
-          </a>
+          {HEADER_DATA.socialMedia.map((social) => (
+            <a
+              key={social.name}
+              href={getSocialHref(social.name)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={`${ICON_BASE_PATH}${social.icon}`}
+                alt={social.alt}
+                width={24}
+                height={24}
+                className={styles.socialIcon}
+              />
+            </a>
+          ))}
         </div>
       </div>
       <div className={styles.headerInnerWrapper}>
@@ -129,7 +111,7 @@ export default function Header({ variant }: HeaderProps) {
               textColor="var(--color-main)"
               borderColor="var(--color-main)"
             >
-              Fale conosco
+              {HEADER_DATA.contactButtonText}
             </Button>
             <button
               className={styles.hamburgerMenu}

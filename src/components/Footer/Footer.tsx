@@ -1,12 +1,29 @@
 import styles from './Footer.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getWebsiteText } from '@/src/utils/website-text';
+
 const INFLOW_LOGO_PATH = '/inflow-logo-2.png';
 const INSTAGRAM_ICON_PATH = '/social-networks-logos/instagram.svg';
 const THREADS_ICON_PATH = '/social-networks-logos/threads.svg';
 const TIKTOK_ICON_PATH = '/social-networks-logos/tiktok.svg';
 
 export default function Footer() {
+  const websiteText = getWebsiteText();
+
+  const FOOTER_DATA = websiteText.components.footer;
+  const SOCIAL_URLS = websiteText.constants.SOCIAL_MEDIA_URLS;
+
+  const socialItems = [
+    {
+      url: SOCIAL_URLS.instagram,
+      iconPath: INSTAGRAM_ICON_PATH,
+      alt: 'Instagram',
+    },
+    { url: SOCIAL_URLS.threads, iconPath: THREADS_ICON_PATH, alt: 'Threads' },
+    { url: SOCIAL_URLS.tiktok, iconPath: TIKTOK_ICON_PATH, alt: 'TikTok' },
+  ];
+
   return (
     <footer className={styles.footerSection}>
       <div className={styles.topFooter}>
@@ -14,7 +31,7 @@ export default function Footer() {
           <div className={styles.logoColumn}>
             <Image
               src={INFLOW_LOGO_PATH}
-              alt="Inflow Software House Logo"
+              alt={FOOTER_DATA.logoAltText}
               width={500}
               height={180}
               className={styles.logo}
@@ -22,83 +39,68 @@ export default function Footer() {
           </div>
 
           <div className={styles.column}>
-            <Link href="/sobre" className={styles.columnTitle}>
-              Sobre a Inflow
-            </Link>
-            <Link href="/portfolio" className={styles.columnTitle}>
-              Portfólio
-            </Link>
-            <Link href="/contato" className={styles.columnTitle}>
-              Fale Conosco
-            </Link>
+            {FOOTER_DATA.navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={styles.columnTitle}
+              >
+                {link.name}
+              </Link>
+            ))}
 
-            <p className={styles.contactInfo}>Email</p>
-            <p className={styles.contactInfo}>inflow.agencia@gmail.com</p>
+            <p className={styles.contactInfo}>
+              {FOOTER_DATA.contactInfo.emailTitle}
+            </p>
+            <p className={styles.contactInfo}>{SOCIAL_URLS.email}</p>
           </div>
 
           <div className={styles.column}>
-            <p className={styles.contactInfo}>Atendimento</p>
-            <p className={styles.contactInfo}>De segunda a sexta</p>
-            <p className={styles.contactInfo}>09:00 às 18:00</p>
+            <p className={styles.contactInfo}>
+              {FOOTER_DATA.contactInfo.serviceTitle}
+            </p>
+            <p className={styles.contactInfo}>
+              {FOOTER_DATA.contactInfo.serviceDays}
+            </p>
+            <p className={styles.contactInfo}>
+              {FOOTER_DATA.contactInfo.serviceHours}
+            </p>
           </div>
         </div>
       </div>
 
       <div className={styles.socialBarBottom}>
         <div className={styles.socialIconsBottom}>
-          <a
-            href="https://www.instagram.com/inflow.softwarehouse/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={INSTAGRAM_ICON_PATH}
-              alt="Instagram"
-              width={24}
-              height={24}
-              className={styles.socialIcon}
-            />
-          </a>
-          <a
-            href="https://www.threads.com/@inflow.softwarehouse?xmt=AQF0tv1FSWvdOB3V-KuYkLPtkxfHljEyn9qOaHVBSEEBgoA"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={THREADS_ICON_PATH}
-              alt="Threads"
-              width={24}
-              height={24}
-              className={styles.socialIcon}
-            />
-          </a>
-          <a
-            href="https://www.tiktok.com/@inflow.softwarehouse"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={TIKTOK_ICON_PATH}
-              alt="TikTok"
-              width={24}
-              height={24}
-              className={styles.socialIcon}
-            />
-          </a>
+          {socialItems.map((social) => (
+            <a
+              key={social.alt}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={social.iconPath}
+                alt={social.alt}
+                width={24}
+                height={24}
+                className={styles.socialIcon}
+              />
+            </a>
+          ))}
 
           <Link
-            href="https://www.tiktok.com/@inflow.softwarehouse"
+            href={SOCIAL_URLS.tiktok}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialHandleText}
           >
-            @inflow.softwarehouse
+            {FOOTER_DATA.socialHandle}
           </Link>
         </div>
       </div>
 
       <div className={styles.bottomFooter}>
-        <p className={styles.copyright}>© Inflow, 2025</p>
+        <p className={styles.copyright}>{FOOTER_DATA.copyrightText}</p>
       </div>
     </footer>
   );

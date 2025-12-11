@@ -7,12 +7,19 @@ import ContactSection from '@/src/sections/ContactSection/ContactSection';
 import Footer from '@/src/components/Footer/Footer';
 import styles from './page.module.css';
 import Image from 'next/image';
+import { getWebsiteText } from '@/src/utils/website-text';
 
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
-const WHATSAPP_NUMBER = '4891186726';
 
 export default function HomePage() {
+  const websiteText = getWebsiteText();
+  const { homePage } = websiteText;
+  const WHATSAPP_NUMBER = '4891186726';
+  const contactTitle = homePage.contactSection.title;
+  const whatsappAltText = homePage.whatsappButton.altText;
+
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`;
+
   return (
     <main className={styles.mainContainer}>
       <div className={styles.IntroSectionWrapper}>
@@ -22,7 +29,8 @@ export default function HomePage() {
       <SolutionsSection />
       <PortfolioSection />
       <StepsSection />
-      <ContactSection title="Tem interesse em trabalhar conosco?" />
+
+      <ContactSection title={contactTitle} />
       <Footer />
       <a
         href={whatsappLink}
@@ -32,7 +40,7 @@ export default function HomePage() {
       >
         <Image
           src={WHATSAPP_ICON_PATH}
-          alt="WhatsApp"
+          alt={whatsappAltText}
           width={35}
           height={35}
           className={styles.whatsappIcon}

@@ -2,13 +2,19 @@ import styles from './SolutionDetails.module.css';
 import Image from 'next/image';
 import Button from '@/src/components/Button/Button';
 import { SolutionDetail } from '@/src/utils/data/SolutionsData';
+import { getWebsiteText } from '@/src/utils/website-text';
 
 type SolutionDetailsProps = {
   solution: SolutionDetail;
 };
 
 export default function SolutionDetails({ solution }: SolutionDetailsProps) {
+  const websiteText = getWebsiteText();
+
   if (!solution) return null;
+
+  const DETAILS_TEXT = websiteText.components.solutionDetails;
+  const imageAltText = `${DETAILS_TEXT.imageAltPrefix} ${solution.title}`;
 
   return (
     <section className={styles.detailsSection}>
@@ -23,7 +29,9 @@ export default function SolutionDetails({ solution }: SolutionDetailsProps) {
           ))}
 
           <div className={styles.offerings}>
-            <h3 className={styles.offeringsTitle}>O que entregamos:</h3>
+            <h3 className={styles.offeringsTitle}>
+              {DETAILS_TEXT.offeringsTitle}
+            </h3>
             <ul className={styles.offeringsList}>
               {solution.detailsList.map((item, index) => (
                 <li key={index} className={styles.offeringsItem}>
@@ -37,7 +45,7 @@ export default function SolutionDetails({ solution }: SolutionDetailsProps) {
         <div className={styles.imageColumn}>
           <Image
             src={solution.imageUrl}
-            alt={`Ilustração de ${solution.title}`}
+            alt={imageAltText}
             width={700}
             height={700}
             className={styles.image}
@@ -49,7 +57,7 @@ export default function SolutionDetails({ solution }: SolutionDetailsProps) {
               textColor="white"
               borderColor="var(--color-dark)"
             >
-              Solicitar orçamento
+              {DETAILS_TEXT.ctaButtonText}
             </Button>
           </div>
         </div>

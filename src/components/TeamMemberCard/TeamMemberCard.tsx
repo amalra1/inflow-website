@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './TeamMemberCard.module.css';
+import { getWebsiteText } from '@/src/utils/website-text';
 
 type TeamMemberCardProps = {
   photoUrl: string;
@@ -12,12 +13,17 @@ export default function TeamMemberCard({
   name,
   role,
 }: TeamMemberCardProps) {
+  const websiteText = getWebsiteText();
+  const altPrefix = websiteText.components.teamMemberCard.photoAltPrefix;
+
+  const altText = `${altPrefix} ${name}`;
+
   return (
     <div className={styles.card}>
       <div className={styles.photoWrapper}>
         <Image
           src={photoUrl}
-          alt={`Foto de ${name}`}
+          alt={altText}
           width={150}
           height={150}
           className={styles.photo}

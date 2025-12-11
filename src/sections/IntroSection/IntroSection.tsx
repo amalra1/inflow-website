@@ -1,18 +1,20 @@
 import Button from '@/src/components/Button/Button';
 import styles from './IntroSection.module.css';
 import Image from 'next/image';
+import { getWebsiteText } from '@/src/utils/website-text';
 
 const CIRCLE_IMAGE_PATH = '/circles/intro-large-blue-circle.svg';
 const INTRO_IMAGE_PATH = '/intro-image.svg';
-const WHATSAPP_NUMBER = '4891186726';
 
 export default function IntroSection() {
-  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`;
+  const websiteText = getWebsiteText();
+  const INTRO_TEXT = websiteText.sections.introSection;
+
   return (
     <section className={styles.introSection}>
       <Image
         src={CIRCLE_IMAGE_PATH}
-        alt="Círculos de design de fundo"
+        alt={INTRO_TEXT.altTexts.designCircles}
         width={500}
         height={500}
         className={styles.circlesDesignImage}
@@ -21,11 +23,8 @@ export default function IntroSection() {
       <div className={styles.innerWrapper}>
         <div className={styles.textColumn}>
           <div className={styles.whiteLine}></div>
-          <h1 className={styles.title}>Software House</h1>
-          <p className={styles.subtitle}>
-            Especializada em desenvolvimento sob medida, unindo tecnologia e
-            resultado real
-          </p>
+          <h1 className={styles.title}>{INTRO_TEXT.title}</h1>
+          <p className={styles.subtitle}>{INTRO_TEXT.subtitle}</p>
           <div className={styles.ctaGroup}>
             <Button
               href="/contato"
@@ -33,7 +32,7 @@ export default function IntroSection() {
               textColor="white"
               borderColor="#000000"
             >
-              Contate-nos
+              {INTRO_TEXT.ctaContact}
             </Button>
             <Button
               href="/portfolio"
@@ -41,7 +40,7 @@ export default function IntroSection() {
               textColor="var(--color-main)"
               borderColor="var(--color-main)"
             >
-              Conheça nossos Cases
+              {INTRO_TEXT.ctaPortfolio}
             </Button>
           </div>
         </div>
@@ -49,7 +48,7 @@ export default function IntroSection() {
         <div className={styles.imageColumn}>
           <Image
             src={INTRO_IMAGE_PATH}
-            alt="Ilustração da Inflow Software House"
+            alt={INTRO_TEXT.altTexts.mainIllustration}
             width={700}
             height={700}
             className={styles.introImage}

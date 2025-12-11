@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './SolutionCard.module.css';
 import React from 'react';
+import { getWebsiteText } from '@/src/utils/website-text';
+
 type SolutionCardProps = {
   iconPath: string;
   title: string;
@@ -19,6 +21,9 @@ export default function SolutionCard({
   onClick,
   isActive = false,
 }: SolutionCardProps) {
+  const websiteText = getWebsiteText();
+  const altPrefix = websiteText.components.solutionCard.iconAltPrefix;
+  const altText = `${altPrefix} ${title}`;
   const destinationHref = `/solucoes?service=${solutionId}`;
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -37,7 +42,7 @@ export default function SolutionCard({
       <div className={styles.iconContainer}>
         <Image
           src={iconPath}
-          alt={`Ícone para ${title}`}
+          alt={altText}
           width={120}
           height={120}
           className={styles.iconImage}

@@ -1,36 +1,30 @@
 import styles from './ValuesSection.module.css';
 import ValueCard from '@/src/components/ValueCard/ValueCard';
+import { getWebsiteText } from '@/src/utils/website-text';
+
+const STATIC_ICON_PATHS = {
+  TRANSPARENCY: 'values-icons/transparency-icon.svg',
+  SIMPLICITY: 'values-icons/simplicity-icon.svg',
+  USABILITY: 'values-icons/usability-icon.svg',
+  PURPOSE: 'values-icons/purpouse-icon.svg',
+  EVOLUTION: 'values-icons/evolution-icon.svg',
+  PERFORMANCE: 'values-icons/performance-icon.svg',
+};
 
 export default function ValuesSection() {
-  const values = [
-    { title: 'Transparência', icon: 'values-icons/transparency-icon.svg' },
-    {
-      title: 'Simplicidade Inteligente',
-      icon: 'values-icons/simplicity-icon.svg',
-    },
-    {
-      title: 'Obsessão por usabilidade',
-      icon: 'values-icons/usability-icon.svg',
-    },
-    {
-      title: 'Código com propósito',
-      icon: 'values-icons/purpouse-icon.svg',
-    },
-    {
-      title: 'Evolução contínua',
-      icon: 'values-icons/evolution-icon.svg',
-    },
-    {
-      title: 'Performance acima de tudo',
-      icon: 'values-icons/performance-icon.svg',
-    },
-  ];
+  const websiteText = getWebsiteText();
+  const VALUES_DATA = websiteText.aboutPage.valuesSection;
+
+  const values = VALUES_DATA.values.map((value) => ({
+    title: value.title,
+    icon: STATIC_ICON_PATHS[value.id as keyof typeof STATIC_ICON_PATHS],
+  }));
 
   return (
     <section className={styles.valuesSection}>
       <div className={styles.innerWrapper}>
         <div className={styles.sectionLine}></div>
-        <h2 className={styles.title}>Nossos valores</h2>
+        <h2 className={styles.title}>{VALUES_DATA.title}</h2>
 
         <div className={styles.cardGrid}>
           {values.map((value, index) => (

@@ -9,8 +9,25 @@ import {
 } from '@/src/utils/data/SolutionsData';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { getWebsiteText } from '@/src/utils/website-text';
+
+const STATIC_ICON_PATHS = {
+  APIS: '/solutions-section-icons/apis.svg',
+  AUTOMATIONS: '/solutions-section-icons/automations.svg',
+  CRM: '/solutions-section-icons/crms.svg',
+  SITES: '/solutions-section-icons/sites.svg',
+  MONTHLY_FEE: '/solutions-section-icons/mensalidade.svg',
+  SUPPORT: '/solutions-section-icons/technical-support.svg',
+  HOSTING: '/solutions-section-icons/hosting-service.svg',
+  AI: '/solutions-section-icons/ai.svg',
+  SAAS: '/solutions-section-icons/saas.svg',
+  SYSTEMS: '/solutions-section-icons/systems.svg',
+  CONSULTING: '/solutions-section-icons/consultancy.svg',
+  APPS: '/solutions-section-icons/apps.svg',
+};
 
 export default function AlternateSolutionSection() {
+  const websiteText = getWebsiteText();
   const searchParams = useSearchParams();
   const router = useRouter();
   const serviceId = searchParams.get('service');
@@ -43,69 +60,23 @@ export default function AlternateSolutionSection() {
     setSelectedSolutionId(id);
   };
 
+  const SOLUTIONS_TEXT_DATA = websiteText.sections.solutionsSection.solutions;
+  const PAGE_TITLE = websiteText.solutionsPage.sectionTitle;
+
+  const solutions = SOLUTIONS_TEXT_DATA.map((solution) => ({
+    id: solution.id,
+    title: solution.title,
+    iconPath: STATIC_ICON_PATHS[solution.id as keyof typeof STATIC_ICON_PATHS],
+  }));
+
   const selectedSolution: SolutionDetail | undefined = detailedSolutions.find(
     (s) => s.id.toLowerCase() === selectedSolutionId?.toLowerCase(),
   );
 
-  const solutions = [
-    {
-      id: 'APIS',
-      title: "API's",
-      iconPath: '/solutions-section-icons/apis.svg',
-    },
-    {
-      id: 'AUTOMATIONS',
-      title: 'Automações',
-      iconPath: '/solutions-section-icons/automations.svg',
-    },
-    { id: 'CRM', title: 'CRM', iconPath: '/solutions-section-icons/crms.svg' },
-    {
-      id: 'SITES',
-      title: 'Sites',
-      iconPath: '/solutions-section-icons/sites.svg',
-    },
-    {
-      id: 'MONTHLY_FEE',
-      title: 'Mensalidade',
-      iconPath: '/solutions-section-icons/mensalidade.svg',
-    },
-    {
-      id: 'SUPPORT',
-      title: 'Suporte Técnico',
-      iconPath: '/solutions-section-icons/technical-support.svg',
-    },
-    {
-      id: 'HOSTING',
-      title: 'Serviço de hospedagem',
-      iconPath: '/solutions-section-icons/hosting-service.svg',
-    },
-    { id: 'AI', title: 'IA', iconPath: '/solutions-section-icons/ai.svg' },
-    {
-      id: 'SAAS',
-      title: 'SAAS',
-      iconPath: '/solutions-section-icons/saas.svg',
-    },
-    {
-      id: 'SYSTEMS',
-      title: 'Sistemas',
-      iconPath: '/solutions-section-icons/systems.svg',
-    },
-    {
-      id: 'CONSULTING',
-      title: 'Consultoria em tecnologia',
-      iconPath: '/solutions-section-icons/consultancy.svg',
-    },
-    {
-      id: 'APPS',
-      title: 'APPS',
-      iconPath: '/solutions-section-icons/apps.svg',
-    },
-  ];
-
   return (
     <section className={styles.altSolutionsSection}>
       <div className={styles.innerWrapper}>
-        <h2 className={styles.title}>Conheça nossas soluções</h2>
+        <h2 className={styles.title}>{PAGE_TITLE}</h2>
 
         <div className={styles.cardGrid}>
           {solutions.map((solution, index) => (

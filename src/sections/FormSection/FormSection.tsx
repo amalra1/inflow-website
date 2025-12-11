@@ -12,6 +12,13 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 
 import { detailedSolutions } from '@/src/utils/data/SolutionsData';
+import { getWebsiteText } from '@/src/utils/website-text';
+
+const websiteText = getWebsiteText();
+const FORM_TEXT = websiteText.contactPage.formSection;
+const FORM_VALIDATION = FORM_TEXT.fields;
+const WHATSAPP_ALT_TEXT =
+  websiteText.sections.introSection.altTexts.designCircles;
 
 const SERVICE_OPTIONS = detailedSolutions.map((solution) => solution.title);
 const CARACTERES_CELULAR_PERMITIDOS = /^[0-9\(\)\-\+]{10,15}$/;
@@ -21,22 +28,20 @@ const GOOGLE_SHEET_ENDPOINT = process.env.NEXT_PUBLIC_GOOGLE_SHEET_ENDPOINT;
 const schema = z.object({
   nome: z
     .string()
-    .min(3, 'O nome deve ter pelo menos 3 caracteres.')
-    .max(50, 'O nome pode ter no máximo 50 caracteres.'),
-  email: z.string().email('Formato de e-mail inválido.'),
+    .min(3, FORM_VALIDATION.nome.validation.min)
+    .max(50, FORM_VALIDATION.nome.validation.max),
+  email: z.string().email(FORM_VALIDATION.email.validation.invalid),
   celular: z
     .string()
     .regex(
       CARACTERES_CELULAR_PERMITIDOS,
-      'O formato de celular é inválido. Permite apenas números, -, ( ), e +.',
+      FORM_VALIDATION.celular.validation.invalid,
     ),
   projeto: z
     .string()
-    .min(10, 'A descrição do projeto é muito curta.')
-    .max(1000, 'A descrição do projeto pode ter no máximo 1000 caracteres.'),
-  servicos: z
-    .array(z.string())
-    .min(1, 'Selecione pelo menos um serviço de interesse.'),
+    .min(10, FORM_VALIDATION.projeto.validation.min)
+    .max(1000, FORM_VALIDATION.projeto.validation.max),
+  servicos: z.array(z.string()).min(1, FORM_VALIDATION.servicos.validation.min),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -105,7 +110,7 @@ export default function FormSection() {
 
   const onSubmit = async (data: FormData) => {
     if (!GOOGLE_SHEET_ENDPOINT) {
-      setSnackbarMessage('Erro: Endpoint do formulário não configurado.');
+      setSnackbarMessage(FORM_TEXT.feedback.errorEndpoint);
       setSnackbarSeverity('error');
       setSnackbarOpen(true);
       return;
@@ -124,15 +129,13 @@ export default function FormSection() {
         body: JSON.stringify(data),
       });
 
-      setSnackbarMessage(
-        'Orçamento enviado com sucesso! Entraremos em contato.',
-      );
+      setSnackbarMessage(FORM_TEXT.feedback.success);
       setSnackbarSeverity('success');
 
       reset();
     } catch (error) {
       console.error('Erro ao enviar dados para o Google Sheets:', error);
-      setSnackbarMessage('Erro ao enviar. Tente novamente mais tarde.');
+      setSnackbarMessage(FORM_TEXT.feedback.errorFetch);
       setSnackbarSeverity('error');
     } finally {
       setSnackbarOpen(true);
@@ -142,9 +145,7 @@ export default function FormSection() {
   return (
     <section className={styles.formSection}>
       <div className={styles.innerWrapper}>
-        <h2 className={styles.title}>
-          Tem uma ideia em mente? Vamos trabalhar juntos!
-        </h2>
+        <h2 className={styles.title}>{FORM_TEXT.sectionTitle}</h2>
 
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
           <Controller
@@ -153,13 +154,13 @@ export default function FormSection() {
             render={({ field }) => (
               <div className={styles.inputGroup}>
                 <label htmlFor="nome" className={styles.label}>
-                  Nome
+                  {FORM_VALIDATION.nome.label}
                 </label>
                 <input
                   {...field}
                   type="text"
                   id="nome"
-                  placeholder="Digite seu nome"
+                  placeholder={FORM_VALIDATION.nome.placeholder}
                   className={`${styles.input} ${styles.inputFull}`}
                   maxLength={50}
                   required
@@ -176,13 +177,13 @@ export default function FormSection() {
               render={({ field }) => (
                 <div className={styles.inputGroup}>
                   <label htmlFor="email" className={styles.label}>
-                    E-mail
+                    {FORM_VALIDATION.email.label}
                   </label>
                   <input
                     {...field}
                     type="email"
                     id="email"
-                    placeholder="Digite seu melhor email"
+                    placeholder={FORM_VALIDATION.email.placeholder}
                     className={styles.input}
                     maxLength={100}
                     required
@@ -198,7 +199,7 @@ export default function FormSection() {
               render={({ field }) => (
                 <div className={styles.inputGroup}>
                   <label htmlFor="celular" className={styles.label}>
-                    Celular
+                    {FORM_VALIDATION.celular.label}
                   </label>
                   <input
                     {...field}
@@ -210,7 +211,7 @@ export default function FormSection() {
                     }}
                     type="tel"
                     id="celular"
-                    placeholder="Seu número de telefone"
+                    placeholder={FORM_VALIDATION.celular.placeholder}
                     className={styles.input}
                     maxLength={15}
                     required
@@ -227,12 +228,12 @@ export default function FormSection() {
             render={({ field }) => (
               <div className={styles.inputGroup}>
                 <label htmlFor="projeto" className={styles.label}>
-                  Conte-nos sobre seu projeto
+                  {FORM_VALIDATION.projeto.label}
                 </label>
                 <textarea
                   {...field}
                   id="projeto"
-                  placeholder="Conte-nos sobre seu projeto"
+                  placeholder={FORM_VALIDATION.projeto.placeholder}
                   className={`${styles.textarea} ${styles.inputFull}`}
                   rows={5}
                   maxLength={1000}
@@ -244,7 +245,9 @@ export default function FormSection() {
           />
 
           <div className={styles.servicesGroup}>
-            <p className={styles.servicesTitle}>Serviços de seu interesse</p>
+            <p className={styles.servicesTitle}>
+              {FORM_VALIDATION.servicos.title}
+            </p>
 
             <div className={styles.servicesGrid}>
               {SERVICE_OPTIONS.map((service) => (
@@ -276,7 +279,9 @@ export default function FormSection() {
               className={styles.submitButtonOverride}
               disabled={!isValid || isSubmitting}
             >
-              {isSubmitting ? 'Enviando...' : 'Solicitar orçamento'}
+              {isSubmitting
+                ? FORM_TEXT.submitButton.submitting
+                : FORM_TEXT.submitButton.default}
             </button>
           </div>
         </form>
@@ -284,7 +289,7 @@ export default function FormSection() {
 
       <Image
         src="/circles/intro-large-blue-circle.svg"
-        alt="Círculos de design de fundo"
+        alt={WHATSAPP_ALT_TEXT}
         width={350}
         height={350}
         className={styles.circlesDesignImageRight}

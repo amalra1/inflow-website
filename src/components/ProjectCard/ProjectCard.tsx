@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import styles from './ProjectCard.module.css';
 import Button from '@/src/components/Button/Button';
+import { getWebsiteText } from '@/src/utils/website-text';
 
 type ProjectCardProps = {
   title: string;
@@ -19,6 +20,11 @@ export default function ProjectCard({
   onDetailsClick,
   projectId,
 }: ProjectCardProps) {
+  const websiteText = getWebsiteText();
+  const CARD_TEXT = websiteText.components.projectCard;
+
+  const imageAltText = `${CARD_TEXT.imageAltPrefix} ${title}`;
+
   return (
     <div className={styles.cardWrapper}>
       <div className={styles.backgroundSquare} />
@@ -29,7 +35,7 @@ export default function ProjectCard({
           <div className={styles.imageWrapper}>
             <Image
               src={imageUrl}
-              alt={`Thumbnail do projeto ${title}`}
+              alt={imageAltText}
               width={200}
               height={125}
               className={styles.projectImage}
@@ -45,7 +51,7 @@ export default function ProjectCard({
               borderColor="var(--color-secondary)"
               className={styles.detailsButton}
             >
-              Saiba mais sobre o projeto
+              {CARD_TEXT.detailsButtonText}
             </Button>
 
             <Button
@@ -55,7 +61,7 @@ export default function ProjectCard({
               borderColor="var(--color-secondary)"
               className={styles.visitButton}
             >
-              Visitar projeto
+              {CARD_TEXT.visitButtonText}
             </Button>
           </div>
         </div>

@@ -4,12 +4,17 @@ import Header from '@/src/components/Header/Header';
 import Image from 'next/image';
 import ProjectsSection from '@/src/sections/ProjectsSection/ProjectsSection';
 import ContactSection from '@/src/sections/ContactSection/ContactSection';
+import websiteText from '@/src/utils/website-text/pt-br.json';
 
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
 const WHATSAPP_NUMBER = '4891186726';
 
-export default function AboutPage() {
+export default function PortfolioPage() {
+  const PORTFOLIO_DATA = websiteText.portfolioPage;
+  const WHATSAPP_ALT_TEXT = websiteText.homePage.whatsappButton.altText;
+
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`;
+
   return (
     <main className={styles.mainContainer}>
       <div className={styles.gradientWrapper}>
@@ -19,13 +24,15 @@ export default function AboutPage() {
 
         <section className={styles.highlightSection}>
           <div className={styles.highlightWrapper}>
-            <h2 className={styles.title}>Portfolio</h2>
+            <h2 className={styles.title}>
+              {PORTFOLIO_DATA.highlightSectionTitle}
+            </h2>
           </div>
         </section>
       </div>
 
       <ProjectsSection />
-      <ContactSection title="Entre em contato e vamos tirar a sua ideia do papel!" />
+      <ContactSection title={PORTFOLIO_DATA.contactSectionTitle} />
 
       <Footer />
       <a
@@ -36,7 +43,7 @@ export default function AboutPage() {
       >
         <Image
           src={WHATSAPP_ICON_PATH}
-          alt="WhatsApp"
+          alt={WHATSAPP_ALT_TEXT}
           width={35}
           height={35}
           className={styles.whatsappIcon}
