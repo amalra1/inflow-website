@@ -1,22 +1,23 @@
-import type { Metadata } from "next";
-import { Anton, DM_Sans } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Anton, DM_Sans } from 'next/font/google';
+import './globals.css';
 
 const anton = Anton({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-title",
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-title',
 });
 
 const dmSans = DM_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-body",
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-body',
 });
 
 export const metadata: Metadata = {
-  title: "Inflow",
-  description: "Portfolio Inflow",
+  title: 'InFlow Software House',
+  description:
+    'Software House especializada em criar soluções digitais sob medida do zero e do jeito que o seu projeto exige.',
 };
 
 export default function RootLayout({
@@ -26,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${anton.variable} ${dmSans.variable}`}>
-      <body className={`antialiased`}>
-        {children}
-      </body>
+      <body className={`antialiased`}>{children}</body>
     </html>
   );
 }
