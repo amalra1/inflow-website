@@ -1,6 +1,7 @@
 import styles from './TeamSection.module.css';
 import TeamMemberCard from '@/src/components/TeamMemberCard/TeamMemberCard';
 import { useI18n } from '@/src/context/i18n.context';
+import AnimateOnView from '@/src/components/AnimateOnView/AnimateOnView';
 
 const STATIC_TEAM_MEMBERS = [
   {
@@ -39,18 +40,28 @@ export default function TeamSection() {
   return (
     <section className={styles.teamSection}>
       <div className={styles.innerWrapper}>
-        <h2 className={styles.title}>{TEAM_DATA.title}</h2>
+        <AnimateOnView direction="left" delay={0.1} amount={0.5}>
+          <h2 className={styles.title}>{TEAM_DATA.title}</h2>
+        </AnimateOnView>
 
-        <div className={styles.titleLine}></div>
+        <AnimateOnView direction="left" delay={0.3} amount={0.5}>
+          <div className={styles.titleLine}></div>
+        </AnimateOnView>
 
         <div className={styles.cardGrid}>
           {teamMembers.map((member, index) => (
-            <TeamMemberCard
+            <AnimateOnView
               key={index}
-              photoUrl={member.photo}
-              name={member.name}
-              role={member.role}
-            />
+              direction="left"
+              delay={0.5 + index * 0.1}
+              amount={0.3}
+            >
+              <TeamMemberCard
+                photoUrl={member.photo}
+                name={member.name}
+                role={member.role}
+              />
+            </AnimateOnView>
           ))}
         </div>
       </div>

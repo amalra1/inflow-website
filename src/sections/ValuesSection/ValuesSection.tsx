@@ -1,6 +1,7 @@
 import styles from './ValuesSection.module.css';
 import ValueCard from '@/src/components/ValueCard/ValueCard';
 import { useI18n } from '@/src/context/i18n.context';
+import AnimateOnView from '@/src/components/AnimateOnView/AnimateOnView';
 
 const STATIC_ICON_PATHS = {
   TRANSPARENCY: 'values-icons/transparency-icon.svg',
@@ -23,12 +24,24 @@ export default function ValuesSection() {
   return (
     <section className={styles.valuesSection}>
       <div className={styles.innerWrapper}>
-        <div className={styles.sectionLine}></div>
-        <h2 className={styles.title}>{VALUES_DATA.title}</h2>
+        <AnimateOnView direction="left" delay={0.1} amount={0.5}>
+          <div className={styles.sectionLine}></div>
+        </AnimateOnView>
+
+        <AnimateOnView direction="left" delay={0.3} amount={0.5}>
+          <h2 className={styles.title}>{VALUES_DATA.title}</h2>
+        </AnimateOnView>
 
         <div className={styles.cardGrid}>
           {values.map((value, index) => (
-            <ValueCard key={index} iconPath={value.icon} title={value.title} />
+            <AnimateOnView
+              key={index}
+              direction="left"
+              delay={0.3}
+              amount={0.5}
+            >
+              <ValueCard iconPath={value.icon} title={value.title} />
+            </AnimateOnView>
           ))}
         </div>
       </div>
