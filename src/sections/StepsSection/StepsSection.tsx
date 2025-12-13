@@ -1,14 +1,14 @@
 import styles from './StepsSection.module.css';
 import StepItem from '@/src/components/StepItem/StepItem';
 import Image from 'next/image';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 const STEPS_IMAGE_PATH = '/steps-image.png';
 const BLUE_CIRCLE_IMAGE_PATH = '/circles/intro-large-blue-circle.svg';
 const GREY_CIRCLE_IMAGE_PATH = '/circles/grey-circle.svg';
 
 export default function StepsSection() {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const STEPS_CONTENT = websiteText.sections.stepsSection;
   const steps = STEPS_CONTENT.steps;
 

@@ -4,12 +4,12 @@ import styles from './AlternateSolutionsSection.module.css';
 import SolutionCard from '@/src/components/SolutionCard/SolutionCard';
 import SolutionDetails from '@/src/components/SolutionDetails/SolutionDetails';
 import {
-  detailedSolutions,
+  getDetailedSolutions,
   SolutionDetail,
 } from '@/src/utils/data/SolutionsData';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 const STATIC_ICON_PATHS = {
   APIS: '/solutions-section-icons/apis.svg',
@@ -27,7 +27,10 @@ const STATIC_ICON_PATHS = {
 };
 
 export default function AlternateSolutionSection() {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
+
+  const detailedSolutions = getDetailedSolutions(websiteText);
+
   const searchParams = useSearchParams();
   const router = useRouter();
   const serviceId = searchParams.get('service');

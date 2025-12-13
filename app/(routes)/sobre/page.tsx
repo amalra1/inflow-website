@@ -1,3 +1,5 @@
+'use client';
+
 import Footer from '@/src/components/Footer/Footer';
 import styles from './page.module.css';
 import Header from '@/src/components/Header/Header';
@@ -6,13 +8,13 @@ import HistorySection from '@/src/sections/HistorySection/HistorySection';
 import ValuesSection from '@/src/sections/ValuesSection/ValuesSection';
 import TeamSection from '@/src/sections/TeamSection/TeamSection';
 import ContactSection from '@/src/sections/ContactSection/ContactSection';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
 const WHATSAPP_NUMBER = '4891186726';
 
 export default function AboutPage() {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const ABOUT_DATA = websiteText.aboutPage;
   const WHATSAPP_ALT_TEXT = websiteText.homePage.whatsappButton.altText;
 

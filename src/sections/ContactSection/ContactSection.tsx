@@ -1,6 +1,6 @@
 import styles from './ContactSection.module.css';
 import Button from '@/src/components/Button/Button';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 type ContactSectionProps = {
   title: string;
@@ -11,7 +11,7 @@ export default function ContactSection({
   title,
   subtitle,
 }: ContactSectionProps) {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const ctaButtonText = websiteText.homePage.contactSection.ctaButtonText;
 
   return (

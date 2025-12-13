@@ -1,13 +1,13 @@
 import Button from '@/src/components/Button/Button';
 import styles from './IntroSection.module.css';
 import Image from 'next/image';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 const CIRCLE_IMAGE_PATH = '/circles/intro-large-blue-circle.svg';
 const INTRO_IMAGE_PATH = '/intro-image.svg';
 
 export default function IntroSection() {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const INTRO_TEXT = websiteText.sections.introSection;
 
   return (

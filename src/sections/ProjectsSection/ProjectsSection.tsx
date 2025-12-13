@@ -5,21 +5,25 @@ import { useState } from 'react';
 import Button from '@/src/components/Button/Button';
 import ProjectCard from '@/src/components/ProjectCard/ProjectCard';
 import {
-  projectsData,
+  getProjectsData,
   ProjectFilter,
   Project,
-  projectFilterTexts,
 } from '@/src/utils/data/Projects';
 import ProjectModal from '@/src/components/ProjectModal/ProjectModal';
-
-const FILTERS_BUTTONS = [
-  { id: 'all', label: projectFilterTexts.ALL }, // Usamos ALL do JSON
-  { id: ProjectFilter.ECOMMERCE, label: projectFilterTexts.ECOMMERCE },
-  { id: ProjectFilter.SITES, label: projectFilterTexts.SITES },
-  { id: ProjectFilter.OTHER, label: projectFilterTexts.OTHER },
-];
+import { useI18n } from '@/src/context/i18n.context';
 
 export default function ProjectsSection() {
+  const { text: websiteText } = useI18n();
+
+  const { projectsData, projectFilterTexts } = getProjectsData(websiteText);
+
+  const FILTERS_BUTTONS = [
+    { id: 'all', label: projectFilterTexts.ALL },
+    { id: ProjectFilter.ECOMMERCE, label: projectFilterTexts.ECOMMERCE },
+    { id: ProjectFilter.SITES, label: projectFilterTexts.SITES },
+    { id: ProjectFilter.OTHER, label: projectFilterTexts.OTHER },
+  ];
+
   const [activeFilter, setActiveFilter] = useState('all');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(

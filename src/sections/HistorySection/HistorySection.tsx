@@ -1,8 +1,8 @@
 import styles from './HistorySection.module.css';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 export default function HistorySection() {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const HISTORY_DATA = websiteText.aboutPage.historySection;
 
   return (

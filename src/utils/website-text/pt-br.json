@@ -294,7 +294,7 @@
       {
         "id": "segmentacao-tatuagens",
         "title": "Segmentação de Texturas em Imagens de Tatuagens – Filtros de Detecção e Análise Visual",
-        "summary": "Desenvolvimento de um sistema avançado de segmentação de textura para identificar padrões e delimitar áreas específicas dentro de tatuagens, utilizando filtros de detecção e algoritmos de visão computacional.",
+        "summary": "Um sistema de segmentação de textura para identificar padrões e delimitar áreas específicas dentro de tatuagens, utilizando filtros de detecção e algoritmos de visão computacional.",
         "descriptionList": [
           "Desenvolvemos um sistema de segmentação de textura em imagens de tatuagens, utilizando filtros avançados para detecção de bordas e separação precisa das regiões de interesse.",
           "O objetivo do projeto é identificar padrões, detalhes e delimitar áreas específicas dentro das tatuagens, permitindo análises mais profundas para aplicações como estética, catalogação, identificação e processamento visual.",
@@ -311,7 +311,7 @@
       {
         "id": "classificador-poses-fisiculturismo",
         "title": "Classificador de Poses de Fisiculturismo – Análise Automática com MediaPipe",
-        "summary": "Desenvolvimento de um classificador de poses de fisiculturismo usando a biblioteca MediaPipe para detectar, analisar e classificar automaticamente posturas clássicas em imagens e vídeos.",
+        "summary": "Um classificador de poses de fisiculturismo usando a biblioteca MediaPipe para detectar, analisar e classificar automaticamente posturas clássicas em imagens e vídeos.",
         "descriptionList": [
           "Desenvolvemos um classificador de poses de fisiculturismo utilizando a biblioteca MediaPipe, do Google, para detectar, analisar e classificar poses de musculação em imagens e vídeos.",
           "O objetivo do projeto é oferecer uma solução inteligente capaz de reconhecer automaticamente posturas clássicas do fisiculturismo, trazendo precisão, velocidade e padronização para avaliações visuais.",
@@ -328,7 +328,7 @@
       {
         "id": "sistema-osint",
         "title": "Sistema OSINT – Plataforma de Coleta e Análise de Informações Públicas",
-        "summary": "Desenvolvimento de um sistema completo baseado em OSINT (Open Source Intelligence) para coleta, monitoramento e análise de informações disponíveis em fontes abertas, fornecendo insights estratégicos em tempo real.",
+        "summary": "Sistema completo baseado em OSINT (Open Source Intelligence) para coleta, monitoramento e análise de informações disponíveis em fontes abertas, fornecendo insights estratégicos em tempo real.",
         "descriptionList": [
           "Estamos desenvolvendo um sistema completo baseado em OSINT (Open Source Intelligence), voltado para coleta, monitoramento e análise de informações disponíveis em fontes abertas.",
           "A solução foi projetada para fornecer dados organizados, em tempo real, permitindo que o usuário tenha insights estratégicos de forma rápida e confiável.",
@@ -363,7 +363,7 @@
       {
         "id": "transformacao-perspectiva",
         "title": "Transformação de Perspectiva em Imagens – Correção de Ângulo e Ajuste para Visualização Frontal",
-        "summary": "Desenvolvimento de um sistema de visão computacional para correção geométrica, capaz de transformar imagens inclinadas em visualizações frontais, alinhadas e retangulares, recuperando informações distorcidas.",
+        "summary": "Sistema de visão computacional para correção geométrica, capaz de transformar imagens inclinadas em visualizações frontais, alinhadas e retangulares, recuperando informações distorcidas.",
         "descriptionList": [
           "Desenvolvemos um sistema de transformação de perspectiva capaz de corrigir imagens capturadas em planos inclinados ou ângulos desfavoráveis, convertendo a área selecionada em uma visualização frontal, alinhada e retangular.",
           "O objetivo é oferecer precisão na correção geométrica, permitindo que informações distorcidas pela perspectiva sejam recuperadas de forma clara e fiel.",

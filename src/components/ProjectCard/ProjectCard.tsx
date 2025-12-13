@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import styles from './ProjectCard.module.css';
 import Button from '@/src/components/Button/Button';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 type ProjectCardProps = {
   title: string;
@@ -20,7 +20,7 @@ export default function ProjectCard({
   onDetailsClick,
   projectId,
 }: ProjectCardProps) {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const CARD_TEXT = websiteText.components.projectCard;
 
   const imageAltText = `${CARD_TEXT.imageAltPrefix} ${title}`;

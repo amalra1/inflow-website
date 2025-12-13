@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Anton, DM_Sans } from 'next/font/google';
+import { I18nProvider } from '@/src/context/i18n.context';
 import './globals.css';
 
 const anton = Anton({
@@ -27,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${anton.variable} ${dmSans.variable}`}>
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <I18nProvider>{children}</I18nProvider>
+      </body>
     </html>
   );
 }

@@ -1,6 +1,6 @@
 import styles from './ValuesSection.module.css';
 import ValueCard from '@/src/components/ValueCard/ValueCard';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 const STATIC_ICON_PATHS = {
   TRANSPARENCY: 'values-icons/transparency-icon.svg',
@@ -12,7 +12,7 @@ const STATIC_ICON_PATHS = {
 };
 
 export default function ValuesSection() {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const VALUES_DATA = websiteText.aboutPage.valuesSection;
 
   const values = VALUES_DATA.values.map((value) => ({

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './ValueCard.module.css';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 type ValueCardProps = {
   iconPath: string;
@@ -8,7 +8,7 @@ type ValueCardProps = {
 };
 
 export default function ValueCard({ iconPath, title }: ValueCardProps) {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const altPrefix = websiteText.components.valueCard.iconAltPrefix;
 
   const altText = `${altPrefix} ${title}`;

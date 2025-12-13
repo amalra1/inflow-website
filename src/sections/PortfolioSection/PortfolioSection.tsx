@@ -4,8 +4,8 @@ import styles from './PortfolioSection.module.css';
 import PortfolioCard from '@/src/components/PortfolioCard/PortfolioCard';
 import Button from '@/src/components/Button/Button';
 import Image from 'next/image';
-import { projectsData, Project } from '@/src/utils/data/Projects';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { getProjectsData, Project } from '@/src/utils/data/Projects';
+import { useI18n } from '@/src/context/i18n.context';
 
 import {
   Carousel,
@@ -27,8 +27,10 @@ const FEATURED_PROJECT_IDS = [
 ];
 
 export default function PortfolioSection() {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const PORTFOLIO_TEXT = websiteText.sections.portfolioSection;
+
+  const { projectsData } = getProjectsData(websiteText);
 
   const portfolioItems: Project[] = FEATURED_PROJECT_IDS.map((id) =>
     projectsData.find((project) => project.id === id),

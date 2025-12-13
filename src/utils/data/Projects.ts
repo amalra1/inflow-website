@@ -1,8 +1,12 @@
-import { getWebsiteText } from '@/src/utils/website-text';
+import { WebsiteText } from '@/src/utils/website-text';
 
-const websiteText = getWebsiteText();
-const PROJECTS_TEXT_DATA = websiteText.projects.data;
-export const projectFilterTexts = websiteText.projects.filters;
+export interface ProjectTextData {
+  id: string;
+  title: string;
+  summary: string;
+  descriptionList: string[];
+  features: string[];
+}
 
 export enum ProjectFilter {
   ALL = 'ALL',
@@ -72,19 +76,30 @@ const STATIC_PROJECT_DETAILS = {
   },
 };
 
-export const projectsData: Project[] = PROJECTS_TEXT_DATA.map((projectText) => {
-  const staticData =
-    STATIC_PROJECT_DETAILS[
-      projectText.id as keyof typeof STATIC_PROJECT_DETAILS
-    ];
+export function getProjectsData(websiteText: WebsiteText) {
+  const PROJECTS_TEXT_DATA: ProjectTextData[] = websiteText.projects.data;
+  const projectFilterTexts = websiteText.projects.filters;
 
-  if (!staticData) {
-    console.error(`Missing static config for project ID: ${projectText.id}`);
-    return null;
-  }
+  const projectsData: Project[] = PROJECTS_TEXT_DATA.map(
+    (projectText: ProjectTextData) => {
+      const staticData =
+        STATIC_PROJECT_DETAILS[
+          projectText.id as keyof typeof STATIC_PROJECT_DETAILS
+        ];
 
-  return {
-    ...projectText,
-    ...staticData,
-  } as Project;
-}).filter((project): project is Project => project !== null);
+      if (!staticData) {
+        console.error(
+          `Missing static config for project ID: ${projectText.id}`,
+        );
+        return null;
+      }
+
+      return {
+        ...projectText,
+        ...staticData,
+      } as Project;
+    },
+  ).filter((project: Project | null): project is Project => project !== null);
+
+  return { projectsData, projectFilterTexts };
+}

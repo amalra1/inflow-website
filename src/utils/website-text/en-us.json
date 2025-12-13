@@ -87,7 +87,7 @@
       "title": "Software House",
       "subtitle": "Specialized in custom development, merging technology with tangible results",
       "ctaContact": "Contact us",
-      "ctaPortfolio": "See our Case Studies"
+      "ctaPortfolio": "Check our Cases"
     },
     "solutionsSection": {
       "title": "Solutions",
@@ -294,7 +294,7 @@
       {
         "id": "segmentacao-tatuagens",
         "title": "Texture Segmentation in Tattoo Images – Detection and Visual Analysis Filters",
-        "summary": "Development of an advanced texture segmentation system to identify patterns and delimit specific areas within tattoos, using detection filters and computer vision algorithms.",
+        "summary": "A Texture segmentation system to identify patterns and delimit specific areas within tattoos, using detection filters and computer vision algorithms.",
         "descriptionList": [
           "We developed a texture segmentation system in tattoo images, using advanced filters for edge detection and precise separation of regions of interest.",
           "The project's goal is to identify patterns, details, and delimit specific areas within tattoos, allowing for deeper analysis for applications such as aesthetics, cataloging, identification, and visual processing.",
@@ -311,7 +311,7 @@
       {
         "id": "classificador-poses-fisiculturismo",
         "title": "Bodybuilding Pose Classifier – Automatic Analysis with MediaPipe",
-        "summary": "Development of a bodybuilding pose classifier using the MediaPipe library to detect, analyze, and classify classic postures in images and videos.",
+        "summary": "A bodybuilding pose classifier using the MediaPipe library to detect, analyze, and classify classic postures in images and videos.",
         "descriptionList": [
           "We developed a bodybuilding pose classifier using Google's MediaPipe library to detect, analyze, and classify bodybuilding poses in images and videos.",
           "The project's objective is to offer an intelligent solution capable of automatically recognizing classic bodybuilding postures, bringing precision, speed, and standardization to visual assessments.",
@@ -328,7 +328,7 @@
       {
         "id": "sistema-osint",
         "title": "OSINT System – Public Information Collection and Analysis Platform",
-        "summary": "Development of a complete system based on OSINT (Open Source Intelligence) for collecting, monitoring, and analyzing information available in open sources, providing strategic insights in real time.",
+        "summary": "System based on OSINT (Open Source Intelligence) for collecting, monitoring, and analyzing information available in open sources, providing strategic insights in real time.",
         "descriptionList": [
           "We are developing a complete system based on OSINT (Open Source Intelligence), focused on collecting, monitoring, and analyzing information available in open sources.",
           "The solution was designed to provide organized data in real time, allowing the user to gain strategic insights quickly and reliably.",
@@ -363,7 +363,7 @@
       {
         "id": "transformacao-perspectiva",
         "title": "Perspective Transformation in Images – Angle Correction and Adjustment for Frontal View",
-        "summary": "Development of a computer vision system for geometric correction, capable of transforming images inclined into frontal, aligned, and rectangular views, recovering distorted information.",
+        "summary": "Computer vision system for geometric correction, capable of transforming images inclined into frontal, aligned, and rectangular views, recovering distorted information.",
         "descriptionList": [
           "We developed a perspective transformation system capable of correcting images captured on inclined planes or unfavorable angles, converting the selected area into a frontal, aligned, and rectangular view.",
           "The objective is to offer precision in geometric correction, allowing information distorted by perspective to be recovered clearly and faithfully.",

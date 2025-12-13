@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Button from '@/src/components/Button/Button';
 import { Project } from '@/src/utils/data/Projects';
 import CustomModal from '@/src/components/CustomModal/CustomModal';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 type ProjectModalProps = {
   project: Project | undefined;
@@ -16,7 +16,7 @@ export default function ProjectModal({
   onClose,
   isOpen,
 }: ProjectModalProps) {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
 
   if (!isOpen || !project) return null;
 

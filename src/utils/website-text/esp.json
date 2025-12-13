@@ -1,0 +1,667 @@
+{
+  "constants": {
+    "SOCIAL_MEDIA_URLS": {
+      "instagram": "https://www.instagram.com/inflow.softwarehouse/",
+      "threads": "https://www.threads.com/@inflow.softwarehouse",
+      "tiktok": "https://www.tiktok.com/@inflow.softwarehouse",
+      "email": "inflow.agencia@gmail.com"
+    }
+  },
+  "homePage": {
+    "contactSection": {
+      "title": "¿Está interesado en trabajar con nosotros?",
+      "ctaButtonText": "Póngase en contacto"
+    },
+    "whatsappButton": {
+      "altText": "WhatsApp"
+    }
+  },
+  "components": {
+    "header": {
+      "navItems": [
+        { "name": "Inicio", "href": "/" },
+        { "name": "Sobre Inflow", "href": "/sobre" },
+        { "name": "Soluciones", "href": "/solucoes" },
+        { "name": "Portafolio", "href": "/portfolio" }
+      ],
+      "socialMedia": [
+        {
+          "name": "Instagram",
+          "alt": "Instagram",
+          "icon": "instagram-white.svg"
+        },
+        { "name": "Threads", "alt": "Threads", "icon": "threads-white.svg" },
+        { "name": "WhatsApp", "alt": "WhatsApp", "icon": "whatsapp-white.svg" },
+        { "name": "TikTok", "alt": "TikTok", "icon": "tiktok-white.svg" }
+      ],
+      "contactButtonText": "Contáctenos"
+    },
+    "solutionCard": {
+      "iconAltPrefix": "Icono para"
+    },
+    "valueCard": {
+      "iconAltPrefix": "Icono para"
+    },
+    "teamMemberCard": {
+      "photoAltPrefix": "Foto de"
+    },
+    "solutionDetails": {
+      "offeringsTitle": "Lo que ofrecemos:",
+      "ctaButtonText": "Solicitar presupuesto",
+      "imageAltPrefix": "Ilustración de"
+    },
+    "projectCard": {
+      "detailsButtonText": "Saber más sobre el proyecto",
+      "visitButtonText": "Visitar proyecto",
+      "imageAltPrefix": "Miniatura del proyecto"
+    },
+    "projectModal": {
+      "featuresTitle": "Entregas principales:",
+      "techsTitle": "Lenguaje utilizado:",
+      "closeButtonText": "Cerrar",
+      "budgetButtonText": "Pedir presupuesto"
+    },
+    "footer": {
+      "logoAltText": "Logotipo de Inflow Software House",
+      "navLinks": [
+        { "name": "Sobre Inflow", "href": "/sobre" },
+        { "name": "Portafolio", "href": "/portfolio" },
+        { "name": "Contáctenos", "href": "/contato" }
+      ],
+      "contactInfo": {
+        "emailTitle": "Correo electrónico",
+        "serviceTitle": "Atención al cliente",
+        "serviceDays": "De lunes a viernes",
+        "serviceHours": "09:00 a 18:00"
+      },
+      "socialHandle": "@inflow.softwarehouse",
+      "copyrightText": "© Inflow, 2025"
+    }
+  },
+  "sections": {
+    "introSection": {
+      "altTexts": {
+        "designCircles": "Círculos de diseño de fondo",
+        "mainIllustration": "Ilustración de Inflow Software House"
+      },
+      "title": "Casa de Software",
+      "subtitle": "Especializada en desarrollo a medida, uniendo tecnología y resultados reales",
+      "ctaContact": "Contáctenos",
+      "ctaPortfolio": "Conozca nuestros Casos"
+    },
+    "solutionsSection": {
+      "title": "Soluciones",
+      "solutions": [
+        {
+          "id": "APIS",
+          "title": "API's",
+          "description": [
+            "Creación e integración de APIs y pasarelas de pago;",
+            "Desarrollo de APIs y microservicios;",
+            "Integración de APIs de terceros (pagos, ERPs, CRMs);"
+          ]
+        },
+        {
+          "id": "AUTOMATIONS",
+          "title": "Automatizaciones",
+          "description": [
+            "Automatización de procesos empresariales;",
+            "Desarrollo de software para optimización de tareas;",
+            "Implementación de soluciones fintech;",
+            "Integración de sistemas legados y nuevos sistemas;"
+          ]
+        },
+        {
+          "id": "CRM",
+          "title": "CRM",
+          "description": [
+            "Automatización de marketing y CRM;",
+            "Desarrollo de sistemas ERP, CRM y SCM;",
+            "Creación de sistema para captación y cualificación de leads;"
+          ]
+        },
+        {
+          "id": "SITES",
+          "title": "Sitios Web",
+          "description": [
+            "Creación y diseño de sitios web institucionales y e-commerces;",
+            "Optimización SEO para sitios web y plataformas;",
+            "Diseño web (UI/UX);"
+          ]
+        },
+        {
+          "id": "MONTHLY_FEE",
+          "title": "Cuota Mensual",
+          "description": [
+            "Copia de seguridad, recuperación de desastres y seguridad de datos;",
+            "Alojamiento y mantenimiento de sitios web;",
+            "Monitoreo y gestión de sistemas;",
+            "Soporte técnico continuo y mantenimiento preventivo;"
+          ]
+        },
+        {
+          "id": "SUPPORT",
+          "title": "Soporte Técnico",
+          "description": [
+            "Actualizaciones y mejoras evolutivas de software;",
+            "Gestión de incidentes y resolución de bugs;"
+          ]
+        },
+        {
+          "id": "HOSTING",
+          "title": "Servicio de Alojamiento",
+          "description": [
+            "Configuración y mantenimiento de servidores (dedicados, VPS, cloud);",
+            "Migración a la nube;",
+            "Optimización de rendimiento y escalabilidad de sistemas;",
+            "Gestión de cloud computing (AWS, Azure, Google Cloud);"
+          ]
+        },
+        {
+          "id": "AI",
+          "title": "IA",
+          "description": [
+            "Ciencia de datos y predicción;",
+            "Desarrollo de chatbots y asistentes virtuales;",
+            "Desarrollo de soluciones de inteligencia artificial y machine learning;",
+            "Creación de bots y chatbots para atención al cliente y ventas;"
+          ]
+        },
+        {
+          "id": "SAAS",
+          "title": "SAAS",
+          "description": [
+            "Desarrollo de plataformas SaaS (Software as a Service);",
+            "Desarrollo de sistemas para sectores específicos (inmobiliario, salud, educación, retail);",
+            "Plataformas de marketplace y portales de servicios;",
+            "Prospección y venta de licencias de software;"
+          ]
+        },
+        {
+          "id": "SYSTEMS",
+          "title": "Sistemas",
+          "description": [
+            "Análisis y visualización de datos.",
+            "Desarrollo de dashboards y BI (Business Intelligence);",
+            "Desarrollo de sistemas ERP, CRM, SCM, API y ONIT;",
+            "Implementación de bases de datos relacionales y no relacionales;",
+            "Sistemas para control y gestión financiera;"
+          ]
+        },
+        {
+          "id": "CONSULTING",
+          "title": "Consultoría en tecnología",
+          "description": [
+            "Arquitectura de soluciones de software;",
+            "Auditoría de seguridad y conformidad;",
+            "Consultoría en análisis y levantamiento de requisitos;",
+            "Consultoría en transformación digital;",
+            "Planificación y gestión de proyectos Agile;",
+            "Capacitación técnica para equipos y clientes;"
+          ]
+        },
+        {
+          "id": "APPS",
+          "title": "APPs",
+          "description": [
+            "Desarrollo de aplicaciones móviles (iOS, Android);",
+            "Desarrollo de aplicaciones web;",
+            "Desarrollo de juegos digitales;",
+            "Desarrollo de soluciones para e-learning (LMS);",
+            "Desarrollo de sistemas embebidos;",
+            "Desarrollo de software para dispositivos wearables;",
+            "Implementación y mantenimiento de blogs y portales de contenido;"
+          ]
+        }
+      ]
+    },
+    "portfolioSection": {
+      "title": "Portafolio",
+      "altTexts": {
+        "designCircles": "Círculos de diseño de fondo"
+      },
+      "ctaButtonText": "Ver más"
+    },
+    "stepsSection": {
+      "titlePart1": "Transforme su idea en",
+      "titlePart2Highlight": " realidad",
+      "altTexts": {
+        "designCircles": "Círculos de diseño de fondo",
+        "mainIllustration": "Imagen que ilustra los pasos de desarrollo"
+      },
+      "steps": [
+        {
+          "title": "Su Idea",
+          "description": "Para que Inflow sepa si somos una buena opción para su proyecto, siempre comenzamos con preguntas de filtrado para asegurar que somos la elección correcta para su empresa."
+        },
+        {
+          "title": "Reunión Inicial",
+          "description": "En esta reunión, discutiremos juntos la estrategia que proponemos para alcanzar los objetivos de su sitio web o sistema. Estableceremos un canal de comunicación para mantener la actualización del proyecto, donde podrá seguir todo el proceso de principio a fin."
+        },
+        {
+          "title": "Metodología Ágil y Scrum",
+          "description": "En esta etapa, tendremos una reunión de equipo con el gerente de proyecto, el desarrollador líder y el diseñador. Luego, trabajaremos utilizando la metodología Ágil Scrum para garantizar la entrega de su proyecto dentro del plazo y presupuesto previstos."
+        },
+        {
+          "title": "Su sitio web o sistema se lanza",
+          "description": "Se realizarán las verificaciones finales del sitio web o sistema, asegurando que todos los píxeles de seguimiento, enlaces y la interfaz de usuario sean compatibles con todos los dispositivos. También realizaremos algunas pruebas para asegurar que el sitio esté optimizado para la experiencia del usuario."
+        }
+      ]
+    }
+  },
+  "projects": {
+    "filters": {
+      "ALL": "Todos",
+      "ECOMMERCE": "E-commerce",
+      "SITES": "Sitios Web",
+      "OTHER": "Otros"
+    },
+    "data": [
+      {
+        "id": "renovaderme",
+        "title": "Renovaderme – Página de Ventas Estratégica para Producto de Skincare",
+        "summary": "Página de ventas de Renovaderme, un producto de cuidado de la piel, con foco total en la conversión.",
+        "descriptionList": [
+          "Desarrollamos la página de ventas de Renovaderme, un producto de cuidado de la piel, con foco total en la conversión.",
+          "Nuestro trabajo incluyó desde la creación del diseño completo hasta la estructuración estratégica de los bloques, siguiendo principios de copy y UX para guiar al visitante hasta la compra final.",
+          "Creamos un recorrido visual claro, destacando beneficios, diferenciales, pruebas sociales y llamadas a la acción, resultando en una página moderna, persuasiva y optimizada para las ventas."
+        ],
+        "features": [
+          "Diseño exclusivo enfocado en la conversión;",
+          "Construcción completa de la landing page;",
+          "Estructura estratégica de los bloques para guiar al usuario;",
+          "Secciones de prueba social, beneficios y urgencia;",
+          "Experiencia visual alineada con el posicionamiento de la marca."
+        ]
+      },
+      {
+        "id": "metodo-superar-digital",
+        "title": "Método Superar – Página de Ventas para Producto Digital",
+        "summary": "Página de ventas del Método Superar, un producto digital enfocado en la transformación personal.",
+        "descriptionList": [
+          "Desarrollamos la página de ventas del Método Superar, un producto digital enfocado en la transformación personal.",
+          "Nuestro equipo creó todo el diseño de la landing page y estructuró estratégicamente cada bloque para guiar al usuario por un recorrido claro, envolvente y orientado a la conversión.",
+          "Organizamos la página para transmitir autoridad, explicar el método, presentar resultados reales e incentivar al visitante a tomar la decisión final de compra."
+        ],
+        "features": [
+          "Diseño exclusivo para producto digital;",
+          "Estructura completa de la landing page;",
+          "Secuencia estratégica de bloques basada en el recorrido de decisión;",
+          "Secciones de beneficios, prueba social y autoridad;",
+          "Construcción orientada a la conversión y claridad de la oferta."
+        ]
+      },
+      {
+        "id": "segmentacao-tatuagens",
+        "title": "Segmentación de Texturas en Imágenes de Tatuajes – Filtros de Detección y Análisis Visual",
+        "summary": "Un sistema de segmentación de textura para identificar patrones y delimitar áreas específicas dentro de tatuajes, utilizando filtros de detección y algoritmos de visión por computadora.",
+        "descriptionList": [
+          "Desarrollamos un sistema de segmentación de textura en imágenes de tatuajes, utilizando filtros avanzados para detección de bordes y separación precisa de las regiones de interés.",
+          "El objetivo del proyecto es identificar patrones, detalles y delimitar áreas específicas dentro de los tatuajes, permitiendo análisis más profundos para aplicaciones como estética, catalogación, identificación y procesamiento visual.",
+          "La solución combina filtros personalizados, técnicas de visión por computadora y algoritmos de segmentación para garantizar resultados consistentes, incluso en imágenes complejas."
+        ],
+        "features": [
+          "Implementación de filtros avanzados de detección de bordes;",
+          "Segmentación precisa de texturas en áreas tatuadas;",
+          "Análisis y procesamiento de imágenes con alta fidelidad;",
+          "Separación automática de las regiones de interés, y",
+          "Sistema robusto para uso en estudios visuales y aplicaciones prácticas."
+        ]
+      },
+      {
+        "id": "classificador-poses-fisiculturismo",
+        "title": "Clasificador de Poses de Culturismo – Análisis Automático con MediaPipe",
+        "summary": "Un clasificador de poses de culturismo utilizando la biblioteca MediaPipe para detectar, analizar y clasificar automáticamente posturas clásicas en imágenes y videos.",
+        "descriptionList": [
+          "Desarrollamos un clasificador de poses de culturismo utilizando la biblioteca MediaPipe de Google, para detectar, analizar y clasificar poses de musculación en imágenes y videos.",
+          "El objetivo del proyecto es ofrecer una solución inteligente capaz de reconocer automáticamente posturas clásicas del culturismo, aportando precisión, velocidad y estandarización a las evaluaciones visuales.",
+          "La tecnología identifica puntos corporales, analiza ángulos, compara patrones y devuelve la clasificación de la pose, permitiendo su uso en entrenamientos, competiciones, aplicaciones fitness y sistemas de seguimiento físico."
+        ],
+        "features": [
+          "Implementación de la biblioteca MediaPipe para detección corporal;",
+          "Clasificación automática de poses de culturismo;",
+          "Análisis de imágenes y videos en tiempo real;",
+          "Algoritmo entrenado para reconocer poses específicas de la modalidad;",
+          "Sistema moderno, rápido y altamente preciso."
+        ]
+      },
+      {
+        "id": "sistema-osint",
+        "title": "Sistema OSINT – Plataforma de Recolección y Análisis de Información Pública",
+        "summary": "Sistema completo basado en OSINT (Open Source Intelligence) para recolección, monitoreo y análisis de información disponible en fuentes abiertas, proporcionando insights estratégicos en tiempo real.",
+        "descriptionList": [
+          "Estamos desarrollando un sistema completo basado en OSINT (Open Source Intelligence), enfocado en la recolección, monitoreo y análisis de información disponible en fuentes abiertas.",
+          "La solución fue diseñada para proporcionar datos organizados, en tiempo real, permitiendo al usuario tener insights estratégicos de forma rápida y confiable.",
+          "El sistema se lanzará junto con el sitio web oficial, proporcionando una experiencia completa: presentación institucional en el sitio y acceso directo a la plataforma en vivo, con todas las funcionalidades activas."
+        ],
+        "features": [
+          "Desarrollo completo de sistema basado en OSINT;",
+          "Recolección automatizada de información de fuentes públicas;",
+          "Análisis y organización inteligente de los datos;",
+          "Paneles intuitivos para visualización y seguimiento;",
+          "Lanzamiento integrado al sitio web institucional;",
+          "Experiencia enfocada en eficiencia, claridad y confiabilidad."
+        ]
+      },
+      {
+        "id": "blocks-candy-crush",
+        "title": "Blocks – Juego Estilo Candy Crush Desarrollado en C con Allegro",
+        "summary": "Creación de un juego con mecánica de match-3 similar a Candy Crush, desarrollado enteramente en lenguaje C con el uso de la biblioteca Allegro para gráficos y animaciones, garantizando una experiencia de bajo nivel rápida y fluida.",
+        "descriptionList": [
+          "Creamos Blocks, un juego inspirado en la mecánica de Candy Crush, totalmente desarrollado en lenguaje C utilizando la biblioteca Allegro para gráficos, entrada de usuario y gestión de animaciones.",
+          "El proyecto reproduce la lógica clásica de combinar piezas, puntuar y avanzar fases, ofreciendo una experiencia fluida y dinámica incluso en un entorno de bajo nivel.",
+          "Toda la lógica del juego —detección de combinaciones, caída de bloques, reposicionamiento, puntuación e interfaz— fue implementada manualmente, demostrando dominio de estructuras de datos, programación procedural y manipulación gráfica."
+        ],
+        "features": [
+          "Desarrollo completo del juego en C;",
+          "Uso de la biblioteca Allegro para gráficos, sprites y eventos;",
+          "Mecánica de match-3 inspirada en Candy Crush;",
+          "Sistema de puntuación, detección de combinaciones y reposición de bloques, y",
+          "Juego ligero, responsivo y con lógica original escrita desde cero."
+        ]
+      },
+      {
+        "id": "transformacao-perspectiva",
+        "title": "Transformación de Perspectiva en Imágenes – Corrección de Ángulo y Ajuste para Visualización Frontal",
+        "summary": "Sistema de visión por computadora para corrección geométrica, capaz de transformar imágenes inclinadas en visualizaciones frontales, alineadas y rectangulares, recuperando información distorsionada.",
+        "descriptionList": [
+          "Desarrollamos un sistema de transformación de perspectiva capaz de corregir imágenes capturadas en planos inclinados o ángulos desfavorables, convirtiendo el área seleccionada en una visualización frontal, alineada y rectangular.",
+          "El objetivo es ofrecer precisión en la corrección geométrica, permitiendo que la información distorsionada por la perspectiva sea recuperada de forma clara y fiel.",
+          "La solución utiliza técnicas avanzadas de visión por computadora para identificar puntos de referencia, calcular la proyección y aplicar la transformación necesaria para generar una imagen corregida y más adecuada para análisis, lectura o procesamiento."
+        ],
+        "features": [
+          "Corrección automática de perspectiva en imágenes inclinadas;",
+          "Transformación geométrica para visualización frontal rectangular;",
+          "Ajuste preciso de planos distorsionados;",
+          "Identificación de puntos y proyección por algoritmos de visión por computadora, y",
+          "Resultados consistentes y listos para análisis o uso técnico."
+        ]
+      }
+    ]
+  },
+  "aboutPage": {
+    "highlightSectionTitle": "Conozca más sobre Inflow",
+    "missionSection": {
+      "title": "Nuestra Misión",
+      "description": "Nuestra misión es desarrollar soluciones digitales a medida que transformen ideas en experiencias funcionales, intuitivas y de alto rendimiento. Buscamos garantizar el 100% de satisfacción del cliente a través de la transparencia, calidad superior y obsesión por la usabilidad. Actuamos con innovación continua, creando sistemas escalables y seguros que aportan valor real a los negocios, siempre con soporte especializado y compromiso con resultados consistentes."
+    },
+    "visionSection": {
+      "title": "Nuestra Visión",
+      "description": "Nuestra visión es ser reconocida como referencia nacional en desarrollo de software y aplicaciones personalizadas, destacándose por la excelencia técnica, simplicidad inteligente y enfoque absoluto en la experiencia del usuario. Queremos liderar la transformación digital, anticipando tendencias y ofreciendo soluciones innovadoras que superen las expectativas, consolidando una cultura de evolución continua e impacto positivo en el mercado."
+    },
+    "contactSectionTitle": "Póngase en contacto y ¡vamos a sacar su idea del papel!",
+    "historySection": {
+      "aboutUs": {
+        "title": "Sobre nosotros",
+        "paragraphs": [
+          "Inflow es una casa de software especializada en crear soluciones digitales a medida desde cero y de la manera que su proyecto lo requiere.",
+          "Desarrollamos sistemas y aplicaciones personalizadas, con un equipo técnico experimentado y preparado para transformar su idea en tecnología funcional."
+        ]
+      },
+      "ourHistory": {
+        "title": "Nuestra Historia",
+        "paragraphs": [
+          "Comenzamos a través de un grupo de amigos apasionados por desarrollar ideas.",
+          "Queremos que tenga total claridad antes de iniciar cualquier proyecto. Por eso, ofrecemos un presupuesto gratuito y sin compromiso, para que sepa exactamente la inversión necesaria.",
+          "Con Inflow, su software o aplicación se desarrolla desde cero, totalmente personalizado y alineado a sus necesidades, siempre con alta calidad y dentro de su presupuesto."
+        ]
+      }
+    },
+    "valuesSection": {
+      "title": "Nuestros valores",
+      "values": [
+        { "id": "TRANSPARENCY", "title": "Transparencia" },
+        { "id": "SIMPLICITY", "title": "Simplicidad Inteligente" },
+        { "id": "USABILITY", "title": "Obsesión por la usabilidad" },
+        { "id": "PURPOSE", "title": "Código con propósito" },
+        { "id": "EVOLUTION", "title": "Evolución continua" },
+        { "id": "PERFORMANCE", "title": "Rendimiento por encima de todo" }
+      ]
+    },
+    "teamSection": {
+      "title": "Nuestro Equipo",
+      "roles": {
+        "DESIGNER": "Diseñador",
+        "COMMERCIAL": "Comercial",
+        "DEVELOPER": "Desarrollador"
+      }
+    }
+  },
+  "solutionsPage": {
+    "sectionTitle": "Conozca nuestras soluciones",
+    "contactSection": {
+      "title": "¿Programamos una conversación?",
+      "subtitle": "Pida un presupuesto sin compromiso"
+    },
+    "detailedSolutions": [
+      {
+        "id": "APIS",
+        "title": "API's",
+        "description": [
+          "Transforme la comunicación entre sistemas y potencie sus negocios con nuestras soluciones de APIs. Desarrollamos e integramos APIs personalizadas y microservicios que conectan sus sistemas internos y plataformas externas de forma segura, rápida y escalable."
+        ],
+        "detailsList": [
+          "Creación e integración de enlaces y pasarelas de pago: facilite transacciones online de forma confiable y eficiente.",
+          "Desarrollo de APIs y microservicios a medida: automatice procesos, mejore el rendimiento y garantice la integración total entre sus sistemas.",
+          "Integración con APIs de terceros (pagos, ERPs, CRMs): conecte sus herramientas favoritas y optimice su flujo de trabajo sin complicaciones.",
+          "Conecte sus herramientas favoritas y optimice su flujo de trabajo sin complicaciones."
+        ],
+        "conclusion": "Con nuestras soluciones, su negocio gana agilidad, seguridad e innovación, entregando experiencias más completas para sus clientes y operaciones más inteligentes para su equipo."
+      },
+      {
+        "id": "AUTOMATIONS",
+        "title": "Automatizaciones",
+        "description": [
+          "Lleve la eficiencia de su negocio a un nuevo nivel con nuestras soluciones de automatización inteligente. Desarrollamos sistemas que reducen tareas manuales, agilizan procesos y conectan diferentes plataformas, permitiendo que su equipo se centre en lo que realmente importa: generar resultados."
+        ],
+        "detailsList": [
+          "Automatización de procesos empresariales: elimine el retrabajo y gane productividad con flujos de trabajo optimizados.",
+          "Desarrollo de software para automatización industrial: aumente el rendimiento operativo y reduzca errores en procesos complejos.",
+          "Implementación de soluciones fintech: automatice transacciones financieras, pagos e integraciones con plataformas financieras.",
+          "Integración de sistemas legados y nuevos sistemas: conecte herramientas antiguas y nuevas sin pérdida de datos ni productividad."
+        ],
+        "conclusion": "Con nuestras automatizaciones, su empresa alcanza agilidad, precisión e innovación, garantizando procesos más inteligentes y resultados medibles."
+      },
+      {
+        "id": "CRM",
+        "title": "CRM",
+        "description": [
+          "Maximice la relación con sus clientes y potencie sus ventas con nuestras soluciones de CRM y automatización de marketing. Creamos sistemas inteligentes que conectan procesos comerciales, marketing y atención al cliente, garantizando que su empresa esté siempre a la vanguardia en la gestión de clientes y oportunidades."
+        ],
+        "detailsList": [
+          "Automatización de marketing y CRM: gestione campañas, leads e interacciones de forma integrada y eficiente.",
+          "Desarrollo de sistemas ERP, CRM y SCM: soluciones completas que centralizan datos, procesos e información estratégica de su negocio.",
+          "Creación de sistemas para captación y cualificación de leads: transforme oportunidades en clientes reales con procesos inteligentes de nutrición y seguimiento."
+        ],
+        "conclusion": "Con nuestras soluciones de CRM, su empresa gana eficiencia operativa, inteligencia estratégica y resultados concretos, entregando experiencias más personalizadas para cada cliente."
+      },
+      {
+        "id": "SITES",
+        "title": "Sitios Web",
+        "description": [
+          "Fortalezca su presencia digital con sitios web y e-commerces modernos, funcionales y atractivos. Desarrollamos soluciones que unen diseño, rendimiento y experiencia del usuario, asegurando que su marca se destaque y convierta visitantes en clientes."
+        ],
+        "detailsList": [
+          "Creación y diseño de sitios web institucionales y e-commerces: sitios personalizados que reflejan la identidad de su marca y generan resultados.",
+          "Optimización SEO para sitios web y plataformas: mejore su posicionamiento en los motores de búsqueda y aumente el tráfico cualificado.",
+          "Diseño web (UI/UX): experiencia del usuario planificada para involucrar a los visitantes y facilitar la navegación."
+        ],
+        "conclusion": "Con nuestros servicios de sitios web, su empresa conquista visibilidad, credibilidad y rendimiento, entregando experiencias digitales que encantan y convierten."
+      },
+      {
+        "id": "MONTHLY_FEE",
+        "title": "Cuota Mensual",
+        "description": [
+          "Garantice la continuidad, seguridad y rendimiento de sus sistemas con nuestros servicios de cuota mensual. Cuidamos el mantenimiento y la protección de su infraestructura digital para que su empresa funcione sin interrupciones, de forma confiable y segura."
+        ],
+        "detailsList": [
+          "Copia de seguridad, recuperación de desastres y seguridad de datos: protección completa de su información crítica contra pérdidas y amenazas digitales.",
+          "Alojamiento y mantenimiento de sitios web: sitios siempre disponibles y actualizados, sin preocupaciones técnicas.",
+          "Monitoreo y gestión de sistemas: supervisión constante para identificar y corregir problemas antes de que impacten en su negocio.",
+          "Soporte técnico continuo y mantenimiento preventivo: asistencia especializada para garantizar que sus sistemas operen con máxima eficiencia."
+        ],
+        "conclusion": "Con nuestros servicios de cuota mensual, su empresa conquista tranquilidad operativa, seguridad digital y soporte continuo, permitiéndole enfocarse en el crecimiento y los resultados de su negocio."
+      },
+      {
+        "id": "SUPPORT",
+        "title": "Soporte Técnico",
+        "description": [
+          "Mantenga sus sistemas siempre actualizados, seguros y funcionando con eficiencia con nuestro servicio de soporte técnico especializado. Garantizamos que sus softwares operen sin interrupciones, con mejoras continuas y resolución rápida de problemas."
+        ],
+        "detailsList": [
+          "Actualizaciones y mejoras evolutivas de software: acompañe la evolución tecnológica sin perder rendimiento o funcionalidades.",
+          "Gestión de incidentes y resolución de bugs: identificación y corrección rápida de fallas, asegurando que su operación continúe sin impactos."
+        ],
+        "conclusion": "Con nuestro soporte técnico, su empresa gana continuidad operativa, confiabilidad y tranquilidad, permitiendo que su equipo se centre en lo que realmente importa: entregar resultados."
+      },
+      {
+        "id": "HOSTING",
+        "title": "Servicio de Alojamiento",
+        "description": [
+          "Asegure que sus sistemas y aplicaciones funcionen con rendimiento máximo, seguridad y escalabilidad con nuestras soluciones de alojamiento profesional. Cuidamos toda la infraestructura para que su empresa opere de forma confiable, sin interrupciones."
+        ],
+        "detailsList": [
+          "Configuración y mantenimiento de servidores (dedicados, VPS, cloud): ambientes preparados para alto rendimiento y estabilidad.",
+          "Migración a la nube: mueva sus sistemas con seguridad y sin pérdida de datos, aprovechando todos los beneficios del cloud computing.",
+          "Optimización de rendimiento y escalabilidad de sistemas: prepare su infraestructura para crecer junto con su demanda.",
+          "Servicios de cloud computing (AWS, Azure, Google Cloud): aproveche tecnología de punta para alojar, gestionar y expandir sus sistemas con eficiencia."
+        ],
+        "conclusion": "Con nuestro servicio de alojamiento, su empresa conquista confiabilidad, seguridad y flexibilidad, garantizando que sus operaciones digitales estén siempre listas para el futuro."
+      },
+      {
+        "id": "AI",
+        "title": "Inteligencia Artificial (IA)",
+        "description": [
+          "Transforme datos en decisiones estratégicas y soluciones inteligentes con nuestras tecnologías de inteligencia artificial. Desarrollamos sistemas que automatizan procesos, optimizan resultados y mejoran la experiencia del cliente de forma innovadora."
+        ],
+        "detailsList": [
+          "Ciencia de datos y predicción: análisis avanzado de datos para orientar decisiones e identificar oportunidades de crecimiento.",
+          "Desarrollo de chatbots y asistentes virtuales: automatización inteligente de atención al cliente y soporte, proporcionando respuestas rápidas y personalizadas.",
+          "Desarrollo de soluciones de inteligencia artificial y machine learning: sistemas que aprenden y evolucionan con el tiempo, aumentando la eficiencia de su negocio.",
+          "Implementación de chatbots para atención al cliente y ventas: impulse conversiones y mejore la experiencia del cliente con interacciones automatizadas e inteligentes."
+        ],
+        "conclusion": "Con nuestras soluciones de IA, su empresa gana innovación, eficiencia operativa y ventaja competitiva, entregando experiencias más rápidas, inteligentes y personalizadas a sus clientes."
+      },
+      {
+        "id": "SAAS",
+        "title": "SaaS (Software as a Service)",
+        "description": [
+          "Impulse su negocio con plataformas SaaS modernas, escalables y a medida. Creamos soluciones que hacen que el software sea accesible a través de la nube, permitiendo que empresas de diferentes sectores optimicen procesos, amplíen la presencia digital y aumenten los ingresos."
+        ],
+        "detailsList": [
+          "Desarrollo de plataformas SaaS: soluciones completas y personalizadas, accesibles desde cualquier lugar, en cualquier momento.",
+          "Sistemas para sectores específicos (inmobiliario, salud, educación, retail): softwares adaptados a las necesidades de su mercado, garantizando máxima eficiencia.",
+          "Plataformas de marketplace y portales de servicios: conecte usuarios y proveedores en un ecosistema digital inteligente y funcional.",
+          "Prospección y venta de licencias de software: soporte completo para la comercialización y gestión de licencias, potenciando sus ingresos."
+        ],
+        "conclusion": "Con nuestras soluciones SaaS, su empresa conquista flexibilidad, escalabilidad e innovación, entregando experiencias digitales de alto valor para clientes y usuarios."
+      },
+      {
+        "id": "SYSTEMS",
+        "title": "Sistemas",
+        "description": [
+          "Optimice la gestión de su negocio con nuestras soluciones completas de desarrollo y análisis de sistemas. Creamos plataformas que conectan datos, procesos y equipos, proporcionando decisiones más rápidas y estratégicas."
+        ],
+        "detailsList": [
+          "Análisis y visualización de datos: transforme información en insights claros para decisiones precisas y estratégicas.",
+          "Desarrollo de dashboards y BI (Business Intelligence): siga indicadores clave de rendimiento de forma práctica e interactiva.",
+          "Desarrollo de sistemas ERP, CRM, SCM, API y ONIT: soluciones integradas que conectan todos los sectores de su empresa.",
+          "Implementación de bases de datos relacionales y no relacionales: organice y gestione datos de forma eficiente y segura.",
+          "Sistemas para control y gestión financiera: siga ingresos, gastos y flujo de caja con sistemas inteligentes y confiables."
+        ],
+        "conclusion": "Con nuestras soluciones de sistemas, su empresa conquista eficiencia operativa, control estratégico y tecnología de punta, entregando más productividad y mejores resultados."
+      },
+      {
+        "id": "CONSULTING",
+        "title": "Consultoría en Tecnología",
+        "description": [
+          "Impulse la innovación y la eficiencia de su negocio con nuestra consultoría especializada en tecnología. Ayudamos a empresas a planificar, implementar y gestionar soluciones digitales de forma estratégica, segura y alineada con los objetivos del negocio."
+        ],
+        "detailsList": [
+          "Arquitectura de soluciones de software: planificación y estructuración de sistemas escalables, seguros y de alto rendimiento.",
+          "Auditoría de seguridad y conformidad: análisis completo para garantizar que sus sistemas cumplan con estándares de seguridad y regulaciones.",
+          "Consultoría en análisis y levantamiento de requisitos: identificamos necesidades y las transformamos en soluciones tecnológicas eficientes.",
+          "Consultoría en transformación digital: guiamos a su empresa en la modernización de procesos y en la adopción de nuevas tecnologías.",
+          "Planificación y gestión de proyectos Agile: seguimiento de proyectos de forma ágil, garantizando entregas dentro del plazo y presupuesto.",
+          "Capacitación técnica para equipos y clientes: entrenamiento práctico para maximizar el uso de las soluciones implementadas."
+        ],
+        "conclusion": "Con nuestras soluciones de sistemas, su empresa conquista eficiencia operativa, control estratégico y tecnología de punta, entregando más productividad y mejores resultados."
+      },
+      {
+        "id": "APPS",
+        "title": "APPs",
+        "description": [
+          "Conecte su empresa al mundo digital con aplicaciones y soluciones móviles y web personalizadas, que ofrecen experiencias intuitivas y atraen a sus usuarios de forma eficaz. Desarrollamos desde aplicaciones corporativas hasta soluciones interactivas e innovadoras para diferentes plataformas."
+        ],
+        "detailsList": [
+          "Desarrollo de aplicaciones móviles (iOS, Android): soluciones nativas e híbridas para alcance en todas las plataformas.",
+          "Desarrollo de aplicaciones web: aplicaciones online rápidas, seguras y accesibles desde cualquier dispositivo.",
+          "Desarrollo de juegos digitales: experiencias interactivas para entretenimiento o compromiso de usuarios.",
+          "Desarrollo de landing pages y embudos de ventas: conversión optimizada de visitantes en clientes.",
+          "Desarrollo de soluciones para e-learning (LMS): plataformas educativas eficientes y escalables.",
+          "Desarrollo de sistemas embebidos: software integrado en dispositivos físicos para control y automatización.",
+          "Desarrollo de software para dispositivos wearables: innovación y conectividad en tecnología vestible.",
+          "Implementación y mantenimiento de blogs y portales de contenido: gestión completa de presencia digital y publicaciones."
+        ],
+        "conclusion": "Con nuestras soluciones de aplicaciones, su empresa gana innovación, interactividad y presencia digital, ofreciendo experiencias completas e impactantes para clientes, colaboradores y usuarios."
+      }
+    ]
+  },
+  "portfolioPage": {
+    "highlightSectionTitle": "Portafolio",
+    "contactSectionTitle": "¡Póngase en contacto y vamos a sacar su idea del papel!"
+  },
+  "contactPage": {
+    "highlightSectionTitle": "Contáctenos",
+    "formSection": {
+      "sectionTitle": "¿Tiene una idea en mente? ¡Trabajemos juntos!",
+      "fields": {
+        "nome": {
+          "label": "Nombre",
+          "placeholder": "Ingrese su nombre",
+          "validation": {
+            "min": "El nombre debe tener al menos 3 caracteres.",
+            "max": "El nombre puede tener un máximo de 50 caracteres."
+          }
+        },
+        "email": {
+          "label": "Correo electrónico",
+          "placeholder": "Ingrese su mejor correo electrónico",
+          "validation": {
+            "invalid": "Formato de correo electrónico inválido."
+          }
+        },
+        "celular": {
+          "label": "Móvil",
+          "placeholder": "Su número de teléfono",
+          "validation": {
+            "invalid": "El formato del móvil es inválido. Permite solo números, -, ( ), y +."
+          }
+        },
+        "projeto": {
+          "label": "Cuéntenos sobre su proyecto",
+          "placeholder": "Cuéntenos sobre su proyecto",
+          "validation": {
+            "min": "La descripción del proyecto es demasiado corta.",
+            "max": "La descripción del proyecto puede tener un máximo de 1000 caracteres."
+          }
+        },
+        "servicos": {
+          "title": "Servicios de su interés",
+          "validation": {
+            "min": "Seleccione al menos un servicio de interés."
+          }
+        }
+      },
+      "submitButton": {
+        "default": "Solicitar presupuesto",
+        "submitting": "Enviando..."
+      },
+      "feedback": {
+        "errorEndpoint": "Error: Endpoint del formulario no configurado.",
+        "success": "¡Presupuesto enviado con éxito! Nos pondremos en contacto con usted.",
+        "errorFetch": "Error al enviar. Intente de nuevo más tarde."
+      }
+    }
+  }
+}

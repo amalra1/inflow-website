@@ -1,0 +1,32 @@
+.languageSwitcher {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.langButton {
+  background: none;
+  color: var(--color-base);
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+.langButton:hover,
+.langButton:focus {
+  color: var(--color-main);
+}
+
+.langButton.active {
+  background-color: var(--color-main);
+  color: var(--color-base);
+  border-color: var(--color-main);
+  cursor: default;
+  pointer-events: none;
+  transform: scale(1.05);
+}

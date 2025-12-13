@@ -1,6 +1,6 @@
 import styles from './TeamSection.module.css';
 import TeamMemberCard from '@/src/components/TeamMemberCard/TeamMemberCard';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 const STATIC_TEAM_MEMBERS = [
   {
@@ -26,7 +26,7 @@ const STATIC_TEAM_MEMBERS = [
 ];
 
 export default function TeamSection() {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const TEAM_DATA = websiteText.aboutPage.teamSection;
   const ROLES = TEAM_DATA.roles;
 

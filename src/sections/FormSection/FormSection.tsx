@@ -11,40 +11,12 @@ import * as z from 'zod';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 
-import { detailedSolutions } from '@/src/utils/data/SolutionsData';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { getDetailedSolutions } from '@/src/utils/data/SolutionsData';
+import { useI18n } from '@/src/context/i18n.context';
 
-const websiteText = getWebsiteText();
-const FORM_TEXT = websiteText.contactPage.formSection;
-const FORM_VALIDATION = FORM_TEXT.fields;
-const WHATSAPP_ALT_TEXT =
-  websiteText.sections.introSection.altTexts.designCircles;
-
-const SERVICE_OPTIONS = detailedSolutions.map((solution) => solution.title);
 const CARACTERES_CELULAR_PERMITIDOS = /^[0-9\(\)\-\+]{10,15}$/;
 const REGEX_FILTRO_INPUT = /[0-9\(\)\-\+]/g;
 const GOOGLE_SHEET_ENDPOINT = process.env.NEXT_PUBLIC_GOOGLE_SHEET_ENDPOINT;
-
-const schema = z.object({
-  nome: z
-    .string()
-    .min(3, FORM_VALIDATION.nome.validation.min)
-    .max(50, FORM_VALIDATION.nome.validation.max),
-  email: z.string().email(FORM_VALIDATION.email.validation.invalid),
-  celular: z
-    .string()
-    .regex(
-      CARACTERES_CELULAR_PERMITIDOS,
-      FORM_VALIDATION.celular.validation.invalid,
-    ),
-  projeto: z
-    .string()
-    .min(10, FORM_VALIDATION.projeto.validation.min)
-    .max(1000, FORM_VALIDATION.projeto.validation.max),
-  servicos: z.array(z.string()).min(1, FORM_VALIDATION.servicos.validation.min),
-});
-
-type FormData = z.infer<typeof schema>;
 
 const Alert = (props: AlertProps) => {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -56,6 +28,39 @@ const ErrorMessage = ({ message }: { message: string | undefined }) => {
 };
 
 export default function FormSection() {
+  const { text: websiteText } = useI18n();
+
+  const detailedSolutions = getDetailedSolutions(websiteText);
+
+  const FORM_TEXT = websiteText.contactPage.formSection;
+  const FORM_VALIDATION = FORM_TEXT.fields;
+  const WHATSAPP_ALT_TEXT =
+    websiteText.sections.introSection.altTexts.designCircles;
+  const SERVICE_OPTIONS = detailedSolutions.map((solution) => solution.title);
+
+  const schema = z.object({
+    nome: z
+      .string()
+      .min(3, FORM_VALIDATION.nome.validation.min)
+      .max(50, FORM_VALIDATION.nome.validation.max),
+    email: z.string().email(FORM_VALIDATION.email.validation.invalid),
+    celular: z
+      .string()
+      .regex(
+        CARACTERES_CELULAR_PERMITIDOS,
+        FORM_VALIDATION.celular.validation.invalid,
+      ),
+    projeto: z
+      .string()
+      .min(10, FORM_VALIDATION.projeto.validation.min)
+      .max(1000, FORM_VALIDATION.projeto.validation.max),
+    servicos: z
+      .array(z.string())
+      .min(1, FORM_VALIDATION.servicos.validation.min),
+  });
+
+  type FormData = z.infer<typeof schema>;
+
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
   const [snackbarSeverity, setSnackbarSeverity] = useState<'success' | 'error'>(
@@ -300,7 +305,7 @@ export default function FormSection() {
         open={snackbarOpen}
         autoHideDuration={5000}
         onClose={handleCloseSnackbar}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
         <Alert
           onClose={handleCloseSnackbar}

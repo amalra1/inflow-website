@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 const STATIC_ICON_PATHS = {
   APIS: '/solutions-section-icons/apis.svg',
@@ -28,7 +28,7 @@ const STATIC_ICON_PATHS = {
 };
 
 export default function SolutionsSection() {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const [isMobile, setIsMobile] = useState(false);
 
   const SOLUTIONS_TEXT = websiteText.sections.solutionsSection;

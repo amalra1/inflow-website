@@ -1,7 +1,7 @@
 import styles from './Footer.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 const INFLOW_LOGO_PATH = '/inflow-logo-2.png';
 const INSTAGRAM_ICON_PATH = '/social-networks-logos/instagram.svg';
@@ -9,7 +9,7 @@ const THREADS_ICON_PATH = '/social-networks-logos/threads.svg';
 const TIKTOK_ICON_PATH = '/social-networks-logos/tiktok.svg';
 
 export default function Footer() {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
 
   const FOOTER_DATA = websiteText.components.footer;
   const SOCIAL_URLS = websiteText.constants.SOCIAL_MEDIA_URLS;

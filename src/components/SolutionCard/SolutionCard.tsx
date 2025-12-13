@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './SolutionCard.module.css';
 import React from 'react';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 type SolutionCardProps = {
   iconPath: string;
@@ -21,7 +21,7 @@ export default function SolutionCard({
   onClick,
   isActive = false,
 }: SolutionCardProps) {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const altPrefix = websiteText.components.solutionCard.iconAltPrefix;
   const altText = `${altPrefix} ${title}`;
   const destinationHref = `/solucoes?service=${solutionId}`;

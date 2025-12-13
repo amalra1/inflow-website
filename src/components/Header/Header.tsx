@@ -7,7 +7,8 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import Logo from '../Logo/Logo';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 type HeaderProps = {
   variant: 'default' | 'alternate';
@@ -17,7 +18,7 @@ const ICON_BASE_PATH = '/social-networks-logos/';
 const WHATSAPP_NUMBER = '4891186726';
 
 export default function Header({ variant }: HeaderProps) {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const { constants, components } = websiteText;
   const HEADER_DATA = components.header;
   const SOCIAL_URLS = constants.SOCIAL_MEDIA_URLS;
@@ -55,22 +56,27 @@ export default function Header({ variant }: HeaderProps) {
     <header className={styles.header}>
       <div className={styles.socialBarWrapper}>
         <div className={styles.socialIconsWrapper}>
-          {HEADER_DATA.socialMedia.map((social) => (
-            <a
-              key={social.name}
-              href={getSocialHref(social.name)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={`${ICON_BASE_PATH}${social.icon}`}
-                alt={social.alt}
-                width={24}
-                height={24}
-                className={styles.socialIcon}
-              />
-            </a>
-          ))}
+          <div className={styles.socialMediaGroup}>
+            {HEADER_DATA.socialMedia.map((social) => (
+              <a
+                key={social.name}
+                href={getSocialHref(social.name)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={`${ICON_BASE_PATH}${social.icon}`}
+                  alt={social.alt}
+                  width={24}
+                  height={24}
+                  className={styles.socialIcon}
+                />
+              </a>
+            ))}
+          </div>
+          <div className={styles.languageSwitcherWrapper}>
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
       <div className={styles.headerInnerWrapper}>

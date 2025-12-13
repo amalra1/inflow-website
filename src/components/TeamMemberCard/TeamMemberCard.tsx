@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './TeamMemberCard.module.css';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 type TeamMemberCardProps = {
   photoUrl: string;
@@ -13,7 +13,7 @@ export default function TeamMemberCard({
   name,
   role,
 }: TeamMemberCardProps) {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
   const altPrefix = websiteText.components.teamMemberCard.photoAltPrefix;
 
   const altText = `${altPrefix} ${name}`;

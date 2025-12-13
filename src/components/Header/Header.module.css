@@ -13,17 +13,23 @@
 }
 
 .socialIconsWrapper {
-  width: 100%;
-  margin: 0 auto;
-
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
 
   padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.languageSwitcherWrapper {
+  margin-left: auto;
+}
+
+.socialMediaGroup {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
 .alternateSocialIcons {
@@ -142,17 +148,20 @@
 }
 
 @media (max-width: 600px) {
-  .socialBarWrapper {
+  .socialMediaGroup {
     display: none;
   }
 
-  .headerInnerWrapper {
+  .socialIconsWrapper {
+    justify-content: flex-end;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-top: 20px;
+    padding-bottom: 0;
   }
 
   .headerRight,
   .alternateHeaderRight {
-    margin-top: 0;
     transform: none;
     gap: 15px;
   }
@@ -179,7 +188,7 @@
   .mobileNavOpen {
     display: flex;
     height: calc(100vh - 80px);
-    top: 80px;
+    top: 120px;
     max-height: none;
     overflow-y: auto;
 

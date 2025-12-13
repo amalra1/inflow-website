@@ -2,14 +2,14 @@ import styles from './SolutionDetails.module.css';
 import Image from 'next/image';
 import Button from '@/src/components/Button/Button';
 import { SolutionDetail } from '@/src/utils/data/SolutionsData';
-import { getWebsiteText } from '@/src/utils/website-text';
+import { useI18n } from '@/src/context/i18n.context';
 
 type SolutionDetailsProps = {
   solution: SolutionDetail;
 };
 
 export default function SolutionDetails({ solution }: SolutionDetailsProps) {
-  const websiteText = getWebsiteText();
+  const { text: websiteText } = useI18n();
 
   if (!solution) return null;
 
