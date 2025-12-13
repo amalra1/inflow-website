@@ -14,9 +14,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import AnimateOnView from '@/src/components/AnimateOnView/AnimateOnView';
 
 const CIRCLE_BACKGROUND_PATH = '/circles/intro-large-blue-circle.svg';
-
 const FEATURED_PROJECT_IDS = [
   'renovaderme',
   'transformacao-perspectiva',
@@ -49,40 +49,45 @@ export default function PortfolioSection() {
       <div className={styles.blueBackground} />
 
       <div className={styles.innerWrapper}>
-        <h2 className={styles.title}>{PORTFOLIO_TEXT.title}</h2>
-        <Carousel
-          className="w-full relative"
-          opts={{
-            align: 'start',
-            loop: true,
-          }}
-        >
-          <CarouselContent className="-ml-8">
-            {portfolioItems.map((item, index) => (
-              <CarouselItem
-                key={index}
-                className="pl-8 md:basis-1/2 lg:basis-1/3"
-              >
-                <div className="p-1">
-                  <PortfolioCard
-                    imageUrl={item.imageUrl}
-                    description={item.summary}
-                    link={item.projectLink}
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
+        <AnimateOnView direction="left" delay={0} amount={0.5}>
+          <h2 className={styles.title}>{PORTFOLIO_TEXT.title}</h2>
+        </AnimateOnView>
 
-          <CarouselPrevious
-            className="-left-4 z-1 w-12 h-12"
-            style={{ color: 'var(--color-main)' }}
-          />
-          <CarouselNext
-            className="-right-4 z-1 w-12 h-12"
-            style={{ color: 'var(--color-main)' }}
-          />
-        </Carousel>
+        <AnimateOnView direction="left" delay={0.3} amount={0.3}>
+          <Carousel
+            className="w-full relative"
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+          >
+            <CarouselContent className="-ml-8">
+              {portfolioItems.map((item, index) => (
+                <CarouselItem
+                  key={index}
+                  className="pl-8 md:basis-1/2 lg:basis-1/3"
+                >
+                  <div className="p-1">
+                    <PortfolioCard
+                      imageUrl={item.imageUrl}
+                      description={item.summary}
+                      link={item.projectLink}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+
+            <CarouselPrevious
+              className="-left-4 z-1 w-12 h-12"
+              style={{ color: 'var(--color-main)' }}
+            />
+            <CarouselNext
+              className="-right-4 z-1 w-12 h-12"
+              style={{ color: 'var(--color-main)' }}
+            />
+          </Carousel>
+        </AnimateOnView>
 
         <div className={styles.ctaWrapper}>
           <Button

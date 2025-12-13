@@ -11,21 +11,8 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { useI18n } from '@/src/context/i18n.context';
-
-const STATIC_ICON_PATHS = {
-  APIS: '/solutions-section-icons/apis.svg',
-  AUTOMATIONS: '/solutions-section-icons/automations.svg',
-  CRM: '/solutions-section-icons/crms.svg',
-  SITES: '/solutions-section-icons/sites.svg',
-  MONTHLY_FEE: '/solutions-section-icons/mensalidade.svg',
-  SUPPORT: '/solutions-section-icons/technical-support.svg',
-  HOSTING: '/solutions-section-icons/hosting-service.svg',
-  AI: '/solutions-section-icons/ai.svg',
-  SAAS: '/solutions-section-icons/saas.svg',
-  SYSTEMS: '/solutions-section-icons/systems.svg',
-  CONSULTING: '/solutions-section-icons/consultancy.svg',
-  APPS: '/solutions-section-icons/apps.svg',
-};
+import AnimateOnView from '@/src/components/AnimateOnView/AnimateOnView';
+import { STATIC_ICON_PATHS } from '@/src/utils/constants/image-paths';
 
 export default function SolutionsSection() {
   const { text: websiteText } = useI18n();
@@ -57,49 +44,52 @@ export default function SolutionsSection() {
   const renderSolutions = () => {
     if (isMobile) {
       return (
-        <Carousel
-          className={styles.carouselContainer}
-          opts={{
-            align: 'start',
-            loop: true,
-          }}
-        >
-          <CarouselContent className={styles.carouselContent}>
-            {solutions.map((solution, index) => (
-              <CarouselItem key={index} className="pl-1">
-                <div className="p-3">
-                  <SolutionCard
-                    iconPath={solution.iconPath}
-                    title={solution.title}
-                    description={[]}
-                    solutionId={solution.id}
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious
-            className="-left-4 z-1 w-12 h-12"
-            style={{ color: 'var(--color-main)' }}
-          />
-          <CarouselNext
-            className="-right-4 z-1 w-12 h-12"
-            style={{ color: 'var(--color-main)' }}
-          />
-        </Carousel>
+        <AnimateOnView direction="left" delay={0} amount={0.5}>
+          <Carousel
+            className={styles.carouselContainer}
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+          >
+            <CarouselContent className={styles.carouselContent}>
+              {solutions.map((solution, index) => (
+                <CarouselItem key={index} className="pl-1">
+                  <div className="p-3">
+                    <SolutionCard
+                      iconPath={solution.iconPath}
+                      title={solution.title}
+                      description={[]}
+                      solutionId={solution.id}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious
+              className="-left-4 z-1 w-12 h-12"
+              style={{ color: 'var(--color-main)' }}
+            />
+            <CarouselNext
+              className="-right-4 z-1 w-12 h-12"
+              style={{ color: 'var(--color-main)' }}
+            />
+          </Carousel>
+        </AnimateOnView>
       );
     }
 
     return (
       <div className={styles.cardGrid}>
         {solutions.map((solution, index) => (
-          <SolutionCard
-            key={index}
-            iconPath={solution.iconPath}
-            title={solution.title}
-            description={[]}
-            solutionId={solution.id}
-          />
+          <AnimateOnView key={index} direction="left" delay={0.1} amount={0.3}>
+            <SolutionCard
+              iconPath={solution.iconPath}
+              title={solution.title}
+              description={[]}
+              solutionId={solution.id}
+            />
+          </AnimateOnView>
         ))}
       </div>
     );
@@ -108,7 +98,10 @@ export default function SolutionsSection() {
   return (
     <section className={styles.solutionsSection}>
       <div className={styles.innerWrapper}>
-        <h2 className={styles.title}>{SOLUTIONS_TEXT.title}</h2>
+        <AnimateOnView direction="left" delay={0} amount={0.5}>
+          <h2 className={styles.title}>{SOLUTIONS_TEXT.title}</h2>
+        </AnimateOnView>
+
         {renderSolutions()}
       </div>
     </section>
