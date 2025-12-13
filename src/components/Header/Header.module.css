@@ -162,6 +162,7 @@
 
   .headerRight,
   .alternateHeaderRight {
+    margin-top: 5px;
     transform: none;
     gap: 15px;
   }
