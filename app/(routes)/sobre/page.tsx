@@ -9,6 +9,7 @@ import ValuesSection from '@/src/sections/ValuesSection/ValuesSection';
 import TeamSection from '@/src/sections/TeamSection/TeamSection';
 import ContactSection from '@/src/sections/ContactSection/ContactSection';
 import { useI18n } from '@/src/context/i18n.context';
+import AnimateOnView from '@/src/components/AnimateOnView/AnimateOnView';
 
 const WHATSAPP_ICON_PATH = '/social-networks-logos/whatsapp.svg';
 const WHATSAPP_NUMBER = '4891186726';
@@ -29,7 +30,11 @@ export default function AboutPage() {
 
         <section className={styles.highlightSection}>
           <div className={styles.highlightWrapper}>
-            <h2 className={styles.title}>{ABOUT_DATA.highlightSectionTitle}</h2>
+            <AnimateOnView direction="left" delay={0.3}>
+              <h2 className={styles.title}>
+                {ABOUT_DATA.highlightSectionTitle}
+              </h2>
+            </AnimateOnView>
           </div>
         </section>
       </div>
@@ -39,26 +44,34 @@ export default function AboutPage() {
 
       <section className={styles.missionSection}>
         <div className={styles.missionWrapper}>
-          <h2 className={styles.missionTitle}>
-            {ABOUT_DATA.missionSection.title}
-          </h2>
+          <AnimateOnView direction="left" delay={0.1} amount={0.5}>
+            <h2 className={styles.missionTitle}>
+              {ABOUT_DATA.missionSection.title}
+            </h2>
+          </AnimateOnView>
           <div className={styles.missionDescriptionWrapper}>
-            <p className={styles.missionDescription}>
-              {ABOUT_DATA.missionSection.description}
-            </p>
+            <AnimateOnView direction="left" delay={0.3} amount={0.5}>
+              <p className={styles.missionDescription}>
+                {ABOUT_DATA.missionSection.description}
+              </p>
+            </AnimateOnView>
           </div>
         </div>
       </section>
 
       <section className={styles.visionSection}>
         <div className={styles.visionWrapper}>
-          <h2 className={styles.visionTitle}>
-            {ABOUT_DATA.visionSection.title}
-          </h2>
+          <AnimateOnView direction="right" delay={0.1} amount={0.5}>
+            <h2 className={styles.visionTitle}>
+              {ABOUT_DATA.visionSection.title}
+            </h2>
+          </AnimateOnView>
           <div className={styles.visionDescriptionWrapper}></div>
-          <p className={styles.visionDescription}>
-            {ABOUT_DATA.visionSection.description}
-          </p>
+          <AnimateOnView direction="right" delay={0.3} amount={0.5}>
+            <p className={styles.visionDescription}>
+              {ABOUT_DATA.visionSection.description}
+            </p>
+          </AnimateOnView>
         </div>
       </section>
 
